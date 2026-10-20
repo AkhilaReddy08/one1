@@ -37,7 +37,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: white;
+    background: pink ;
     box-shadow: 0 2px 15px #2527470c;
 }
 
