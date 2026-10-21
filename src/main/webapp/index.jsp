@@ -4,16 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Label Akhila | Traditional Telugu Wear</title>
+<title>FreshBasket | Online Grocery Store</title>
 
 <style>
 :root {
-  --maroon: #70202d;
-  --red: #9d3440;
-  --gold: #c79b45;
-  --cream: #fff9ef;
-  --green: #465a3d;
-  --text: #382821;
+  --green: #218838;
+  --dark-green: #14532d;
+  --light-green: #eaf7e9;
+  --orange: #ff9f1c;
+  --cream: #f8fbf5;
+  --text: #25352a;
+  --muted: #718071;
+  --white: #ffffff;
 }
 
 * {
@@ -22,8 +24,10 @@
   box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--cream);
   line-height: 1.6;
@@ -33,280 +37,269 @@ button, input, select {
   font: inherit;
 }
 
-button {
-  cursor: pointer;
-}
+button { cursor: pointer; }
 
-.top-strip {
-  background: var(--maroon);
-  color: #fff4d6;
-  text-align: center;
+.promo {
+  background: var(--dark-green);
+  color: white;
   padding: 8px;
+  text-align: center;
   font-size: 13px;
-  letter-spacing: 1px;
 }
 
 header {
-  background: #fffdf8;
+  background: white;
   padding: 16px 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  border-bottom: 1px solid #eadcc5;
+  border-bottom: 1px solid #e3eadf;
 }
 
-.brand {
-  color: var(--maroon);
-  font-family: Georgia, serif;
-  font-size: 29px;
-  font-weight: bold;
+.logo {
+  color: var(--green);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
-.brand span {
+.logo span { color: var(--orange); }
+
+.logo small {
   display: block;
-  color: #96713b;
-  font-family: Arial, sans-serif;
   font-size: 10px;
-  letter-spacing: 3px;
-  text-align: center;
+  color: var(--muted);
+  letter-spacing: 2px;
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 nav a {
-  text-decoration: none;
   color: var(--text);
-  font-size: 14px;
+  text-decoration: none;
   font-weight: 600;
+  font-size: 14px;
 }
 
-nav a:hover {
-  color: var(--red);
-}
+nav a:hover { color: var(--green); }
 
-.cart-button, .primary-button {
-  background: var(--maroon);
-  color: white;
+.cart-button, .green-button {
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
+  background: var(--green);
+  color: white;
   padding: 11px 18px;
+  font-weight: bold;
 }
 
-.cart-button:hover, .primary-button:hover {
-  background: var(--red);
+.cart-button:hover, .green-button:hover {
+  background: var(--dark-green);
 }
 
 .hero {
-  min-height: 470px;
+  margin: 25px 6%;
+  padding: 55px 6%;
+  min-height: 340px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
-  padding: 60px 8%;
   color: white;
   background:
-    linear-gradient(90deg,
-      rgba(40, 22, 15, .83),
-      rgba(40, 22, 15, .35)),
-    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85")
+    linear-gradient(90deg, rgba(13, 55, 26, .92), rgba(13, 55, 26, .25)),
+    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=85")
     center/cover;
 }
 
-.hero-content {
-  max-width: 580px;
-}
+.hero-content { max-width: 530px; }
 
 .eyebrow {
-  color: #f4d38c;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  color: #ffe3a5;
   font-size: 12px;
+  letter-spacing: 2px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .hero h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(36px, 5vw, 60px);
+  font-size: clamp(35px, 5vw, 54px);
   line-height: 1.15;
-  margin: 16px 0;
+  margin: 12px 0;
 }
 
 .hero p {
-  font-size: 16px;
-  max-width: 470px;
-  margin-bottom: 24px;
-  color: #fff6e9;
+  margin-bottom: 23px;
+  max-width: 430px;
 }
 
-.gold-button {
-  background: var(--gold);
-  color: #2e2116;
-  padding: 13px 24px;
+.orange-button {
+  background: var(--orange);
   border: none;
-  border-radius: 4px;
+  padding: 13px 22px;
+  border-radius: 6px;
+  color: #30230f;
   font-weight: bold;
 }
 
-.section {
-  padding: 55px 6%;
-}
+.section { padding: 42px 6%; }
 
-.section-heading {
+.heading {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
-.section-heading .eyebrow {
-  color: #a47b36;
+.heading h2 {
+  font-size: 30px;
+  color: var(--dark-green);
 }
 
-.section-heading h2 {
-  font: bold 34px Georgia, serif;
-  color: var(--maroon);
-  margin: 5px 0;
-}
-
-.section-heading p {
-  color: #77685d;
-}
+.heading p { color: var(--muted); }
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .category {
-  text-align: center;
-  background: #fff;
+  border: 1px solid #e3eadf;
+  background: white;
   padding: 12px;
-  border: 1px solid #eee0cb;
-  border-radius: 10px;
+  border-radius: 12px;
+  text-align: center;
   cursor: pointer;
   transition: .2s;
 }
 
 .category:hover {
   transform: translateY(-4px);
-  border-color: var(--gold);
+  border-color: var(--green);
 }
 
 .category img {
   width: 100%;
-  height: 145px;
+  height: 105px;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
 .category h3 {
-  font: bold 17px Georgia, serif;
-  color: var(--maroon);
-  margin-top: 9px;
+  font-size: 14px;
+  margin-top: 8px;
 }
 
-.shop-section {
-  background: #f5ecdd;
+.shop {
+  background: #f0f6ec;
 }
 
 .shop-tools {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 25px;
-  flex-wrap: wrap;
 }
 
 .shop-tools input, .shop-tools select {
-  background: white;
-  border: 1px solid #d8c6ac;
-  border-radius: 5px;
+  border: 1px solid #d6e0d1;
+  border-radius: 7px;
   padding: 12px;
-  min-width: 200px;
+  background: white;
+  min-width: 180px;
 }
 
-.shop-tools input {
-  flex: 1;
-}
+.shop-tools input { flex: 1; }
 
 .products {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 20px;
 }
 
 .product {
   background: white;
-  border-radius: 9px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 3px 12px #5a34200d;
+  border: 1px solid #e6ece2;
   transition: .2s;
 }
 
 .product:hover {
   transform: translateY(-4px);
-  box-shadow: 0 9px 22px #5a34201b;
+  box-shadow: 0 8px 22px #163d1714;
 }
+
+.image-wrap { position: relative; }
 
 .product img {
   width: 100%;
-  height: 265px;
+  height: 205px;
   object-fit: cover;
-  background: #eadfce;
+  display: block;
+  background: #e5eee0;
 }
 
-.product-info {
-  padding: 15px;
-}
-
-.tag {
-  color: #826331;
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fff0ce;
+  color: #8c5510;
   font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 5px;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
+
+.product-info { padding: 14px; }
 
 .product h3 {
-  font: bold 18px Georgia, serif;
-  margin: 4px 0;
-  color: var(--maroon);
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+.unit {
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .rating {
-  color: #b17b20;
-  font-size: 13px;
+  color: #d58a08;
+  font-size: 12px;
+  margin: 5px 0;
 }
 
 .price {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: bold;
+  color: var(--dark-green);
   margin: 7px 0 12px;
 }
 
 .old-price {
-  font-size: 13px;
-  font-weight: normal;
-  color: #8c8178;
+  color: #90998d;
+  font-size: 12px;
   text-decoration: line-through;
+  font-weight: normal;
   margin-left: 5px;
 }
 
 .add-button {
   width: 100%;
+  border: 1px solid var(--green);
   background: white;
-  border: 1px solid var(--maroon);
-  color: var(--maroon);
-  border-radius: 4px;
-  padding: 10px;
+  color: var(--green);
+  border-radius: 6px;
+  padding: 9px;
   font-weight: bold;
 }
 
 .add-button:hover {
-  background: var(--maroon);
+  background: var(--green);
   color: white;
 }
 
@@ -314,203 +307,284 @@ nav a:hover {
   grid-column: 1 / -1;
   text-align: center;
   padding: 30px;
-}
-
-.craft-banner {
-  background: var(--green);
-  color: white;
-  text-align: center;
-  padding: 48px 8%;
-}
-
-.craft-banner h2 {
-  font: bold 32px Georgia, serif;
-  margin-bottom: 10px;
-}
-
-.craft-banner p {
-  max-width: 650px;
-  margin: auto;
-  color: #f2ead8;
+  background: white;
+  border-radius: 10px;
 }
 
 .benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 25px;
+  gap: 20px;
 }
 
 .benefit {
-  background: #fffdf8;
-  padding: 22px;
-  border-radius: 8px;
-  border: 1px solid #eddfc8;
+  background: white;
+  padding: 24px;
+  border: 1px solid #e3eadf;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.benefit .symbol {
-  font-size: 28px;
-}
+.benefit .icon { font-size: 35px; }
 
 .benefit h3 {
-  color: var(--maroon);
-  margin: 5px 0;
+  color: var(--dark-green);
+  margin: 8px 0;
 }
 
-footer {
-  background: #351d1b;
-  color: #fff1df;
+.benefit p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.newsletter {
+  margin: 10px 6% 40px;
+  padding: 30px;
+  background: var(--light-green);
+  border-radius: 12px;
   text-align: center;
-  padding: 35px 15px;
+}
+
+.newsletter h2 { color: var(--dark-green); }
+
+footer {
+  background: #153b24;
+  color: white;
+  padding: 35px 6%;
+  text-align: center;
 }
 
 footer h2 {
-  font: bold 27px Georgia, serif;
-  color: #e5c17d;
+  color: #b5e5a6;
+  font-size: 26px;
 }
 
 footer p {
+  color: #d8e5d5;
   font-size: 13px;
   margin-top: 7px;
 }
 
-.cart-notice {
+.notice {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--green);
+  padding: 14px 20px;
+  background: var(--dark-green);
   color: white;
-  padding: 14px 22px;
-  border-radius: 6px;
-  box-shadow: 0 5px 20px #0002;
+  border-radius: 8px;
   display: none;
-  z-index: 5;
+  z-index: 10;
+  box-shadow: 0 5px 20px #0002;
+  max-width: 90%;
 }
 
-@media(max-width: 950px) {
-  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cart-panel {
+  position: fixed;
+  z-index: 20;
+  inset: 0 0 0 auto;
+  width: min(420px, 100%);
+  background: white;
+  box-shadow: -5px 0 25px #0002;
+  padding: 22px;
+  display: none;
+  overflow-y: auto;
+}
+
+.cart-panel.open { display: block; }
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  border: none;
+  background: #eef4ea;
+  border-radius: 6px;
+  padding: 7px 12px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8eee5;
+}
+
+.cart-item h4 { font-size: 14px; }
+
+.cart-item small { color: var(--muted); }
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.qty-controls button {
+  border: 1px solid #d7e2d2;
+  background: #f5f9f2;
+  border-radius: 4px;
+  padding: 2px 9px;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.checkout {
+  width: 100%;
+  padding: 13px;
+  background: var(--orange);
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.empty-cart {
+  color: var(--muted);
+  padding: 25px 0;
+  text-align: center;
+}
+
+@media(max-width: 1000px) {
   .categories { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  header { justify-content: center; }
+  .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-@media(max-width: 560px) {
-  header { padding: 15px; }
-  nav { justify-content: center; gap: 13px; }
-  .hero { min-height: 400px; padding: 40px 7%; }
-  .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .products { gap: 12px; }
-  .product img { height: 190px; }
-  .product-info { padding: 10px; }
-  .product h3 { font-size: 16px; }
-  .price { font-size: 17px; }
-  .section { padding: 38px 4%; }
+@media(max-width: 700px) {
+  header { justify-content: center; }
+  nav { justify-content: center; }
+  .hero { margin: 15px; padding: 35px 25px; }
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .benefits { grid-template-columns: 1fr; }
+  .section { padding: 32px 4%; }
+}
+
+@media(max-width: 430px) {
+  .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .products { gap: 10px; }
+  .product img { height: 150px; }
+  .product-info { padding: 10px; }
+  .product h3 { font-size: 14px; }
+  .price { font-size: 16px; }
   .shop-tools input, .shop-tools select { width: 100%; }
+  .heading h2 { font-size: 25px; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="top-strip">
-  CELEBRATE YOUR ROOTS • TRADITIONAL WEAR FOR EVERY OCCASION
+<div class="promo">
+  FRESHNESS AT YOUR DOORSTEP | FREE DELIVERY ON ORDERS ABOVE ₹499
 </div>
 
 <header>
-  <div class="brand">
-    Label Akhila
-    <span>ETHNIC • ELEGANT • TIMELESS</span>
+  <div class="logo">
+    Fresh<span>Basket</span>
+    <small>FRESH FOOD • HAPPY HOME</small>
   </div>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#categories">Collections</a>
+    <a href="#categories">Categories</a>
     <a href="#shop">Shop</a>
-    <a href="#story">Our Story</a>
+    <a href="#benefits">Why Us?</a>
   </nav>
 
   <button class="cart-button" onclick="showCart()">
-    🛍 Cart (<span id="cart-count">0</span>)
+    🛒 Cart (<span id="cart-count">0</span>)
   </button>
 </header>
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="eyebrow">మన సంప్రదాయం • Our Heritage</div>
-    <h1>Tradition Looks Beautiful on You.</h1>
+    <div class="eyebrow">Fresh Every Day 🌿</div>
+    <h1>Good Food.<br>Good Mood.</h1>
     <p>
-      From graceful sarees to dreamy half sarees,
-      discover the beauty of Telugu traditions with
-      outfits made for your special moments.
+      Bring home farm-fresh vegetables, juicy fruits,
+      everyday groceries and household essentials
+      at prices your family will love.
     </p>
-    <button class="gold-button"
+    <button class="orange-button"
       onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
-      Explore Collection →
+      Shop Groceries →
     </button>
   </div>
 </section>
 
 <section class="section" id="categories">
-  <div class="section-heading">
-    <div class="eyebrow">Find Your Style</div>
-    <h2>Our Traditional Collections</h2>
-    <p>A beautiful outfit for every celebration.</p>
+  <div class="heading">
+    <h2>Shop by Category</h2>
+    <p>Everything your kitchen needs, all in one place.</p>
   </div>
 
   <div class="categories">
-    <div class="category" onclick="chooseCategory('Saree')">
-      <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=500&q=80" alt="Traditional saree">
-      <h3>Sarees</h3>
+    <div class="category" onclick="chooseCategory('Vegetables')">
+      <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="Fresh vegetables">
+      <h3>🥦 Vegetables</h3>
     </div>
 
-    <div class="category" onclick="chooseCategory('Half Saree')">
-      <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=500&q=80" alt="Ethnic festive outfit">
-      <h3>Half Sarees</h3>
+    <div class="category" onclick="chooseCategory('Fruits')">
+      <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=400&q=80" alt="Fresh fruits">
+      <h3>🍎 Fruits</h3>
     </div>
 
-    <div class="category" onclick="chooseCategory('Lehenga')">
-      <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=500&q=80" alt="Festive fashion">
-      <h3>Lehengas</h3>
+    <div class="category" onclick="chooseCategory('Dairy')">
+      <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=400&q=80" alt="Milk and dairy">
+      <h3>🥛 Dairy</h3>
     </div>
 
-    <div class="category" onclick="chooseCategory('Anarkali')">
-      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80" alt="Elegant ethnic wear">
-      <h3>Anarkalis</h3>
+    <div class="category" onclick="chooseCategory('Staples')">
+      <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80" alt="Rice and grains">
+      <h3>🌾 Staples</h3>
     </div>
 
-    <div class="category" onclick="chooseCategory('Festive')">
-      <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=500&q=80" alt="Traditional festive fashion">
-      <h3>Festive Wear</h3>
+    <div class="category" onclick="chooseCategory('Snacks')">
+      <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=400&q=80" alt="Snacks">
+      <h3>🍪 Snacks</h3>
+    </div>
+
+    <div class="category" onclick="chooseCategory('Beverages')">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80" alt="Refreshing beverages">
+      <h3>🥤 Drinks</h3>
     </div>
   </div>
 </section>
 
-<section class="section shop-section" id="shop">
-  <div class="section-heading">
-    <div class="eyebrow">Made for Your Moments</div>
-    <h2>Shop Our Collection</h2>
-    <p>Traditional beauty at prices you'll love.</p>
+<section class="section shop" id="shop">
+  <div class="heading">
+    <h2>Fresh Picks for You</h2>
+    <p>Quality groceries at everyday prices.</p>
   </div>
 
   <div class="shop-tools">
-    <input id="search" type="search"
-      placeholder="Search sarees, lehengas..."
-      oninput="renderProducts()"
-      aria-label="Search products">
+    <input type="search" id="search"
+      placeholder="🔍 Search groceries..."
+      aria-label="Search groceries"
+      oninput="renderProducts()">
 
     <select id="category-filter" onchange="renderProducts()"
-      aria-label="Filter by category">
-      <option value="All">All Collections</option>
-      <option value="Saree">Sarees</option>
-      <option value="Half Saree">Half Sarees</option>
-      <option value="Lehenga">Lehengas</option>
-      <option value="Anarkali">Anarkalis</option>
-      <option value="Festive">Festive Wear</option>
+      aria-label="Filter category">
+      <option value="All">All Categories</option>
+      <option value="Vegetables">Vegetables</option>
+      <option value="Fruits">Fruits</option>
+      <option value="Dairy">Dairy</option>
+      <option value="Staples">Staples</option>
+      <option value="Snacks">Snacks</option>
+      <option value="Beverages">Beverages</option>
     </select>
 
-    <select id="sort" onchange="renderProducts()"
-      aria-label="Sort products">
-      <option value="default">Sort: Featured</option>
+    <select id="sort" onchange="renderProducts()" aria-label="Sort products">
+      <option value="default">Featured</option>
       <option value="low">Price: Low to High</option>
       <option value="high">Price: High to Low</option>
     </select>
@@ -519,125 +593,133 @@ footer p {
   <div class="products" id="products"></div>
 </section>
 
-<section class="craft-banner" id="story">
-  <div class="eyebrow">మన తెలుగు సంస్కృతి</div>
-  <h2>Every Thread Tells a Story</h2>
-  <p>
-    Inspired by the colors of Telugu festivals, the beauty
-    of handwoven fabrics, and the warmth of our village roots,
-    Label Akhila brings traditional fashion closer to you.
-    Celebrate Sankranti, Ugadi, weddings and every little moment
-    in an outfit that feels special.
-  </p>
-</section>
-
-<section class="section">
-  <div class="section-heading">
-    <div class="eyebrow">The Label Akhila Promise</div>
-    <h2>Shopping Made Special</h2>
+<section class="section" id="benefits">
+  <div class="heading">
+    <h2>Why Shop With FreshBasket?</h2>
+    <p>We make everyday grocery shopping simple.</p>
   </div>
 
   <div class="benefits">
     <div class="benefit">
-      <div class="symbol">🌸</div>
-      <h3>Ethnic Elegance</h3>
-      <p>Traditional-inspired styles for celebrations and everyday beauty.</p>
+      <div class="icon">🥬</div>
+      <h3>Fresh Quality</h3>
+      <p>Fresh-looking produce and everyday essentials in one convenient shop.</p>
     </div>
+
     <div class="benefit">
-      <div class="symbol">💛</div>
+      <div class="icon">💰</div>
       <h3>Budget Friendly</h3>
-      <p>Beautiful styles across different budgets, with clear pricing.</p>
+      <p>Clear prices and a range of products for your daily shopping needs.</p>
     </div>
+
     <div class="benefit">
-      <div class="symbol">🎁</div>
-      <h3>Made for Moments</h3>
-      <p>Find outfits for family functions, festivals and weddings.</p>
+      <div class="icon">🚚</div>
+      <h3>Easy Shopping</h3>
+      <p>Browse products, manage your cart and review your order total.</p>
     </div>
   </div>
 </section>
 
+<section class="newsletter">
+  <h2>Your Kitchen Deserves the Freshest!</h2>
+  <p>Explore everyday essentials and make grocery shopping easier.</p>
+  <br>
+  <button class="green-button"
+    onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+    Start Shopping
+  </button>
+</section>
+
 <footer>
-  <h2>Label Akhila</h2>
-  <p>సంప్రదాయం మీ అందం • Tradition is your beauty.</p>
-  <p>© 2026 Label Akhila. All rights reserved.</p>
-  <p>Prices and product images are illustrative demo content.</p>
+  <h2>FreshBasket 🛒</h2>
+  <p>Your neighborhood grocery store, right at your fingertips.</p>
+  <p>Home | Categories | Shop | Contact</p>
+  <p>© 2026 FreshBasket. Demo e-commerce application.</p>
+  <p>Product images and prices are illustrative demo content.</p>
 </footer>
 
-<div class="cart-notice" id="notice" role="status"></div>
+<div class="notice" id="notice" role="status"></div>
+
+<aside class="cart-panel" id="cart-panel" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h2>🛒 Your Cart</h2>
+    <button class="close-button" onclick="closeCart()">✕ Close</button>
+  </div>
+
+  <div id="cart-items"></div>
+
+  <div class="cart-total" id="cart-total">Total: ₹0</div>
+
+  <p style="font-size:12px;color:#718071;margin-bottom:15px">
+    Delivery charges and payment are not connected in this demo.
+  </p>
+
+  <button class="checkout" onclick="checkout()">
+    Proceed to Checkout →
+  </button>
+</aside>
 
 <script>
 const products = [
   {
-    id: 1,
-    name: "Classic Banarasi Saree",
-    category: "Saree",
-    price: 1499,
-    old: 1999,
-    rating: "4.8",
-    image: "photo-1610030469983-98e550d6193c"
+    id: 1, name: "Fresh Tomatoes", category: "Vegetables",
+    price: 35, old: 45, unit: "500 g", rating: "4.7",
+    image: "photo-1546094096-0df4bcaaa337", badge: "Fresh Pick"
   },
   {
-    id: 2,
-    name: "Festive Half Saree",
-    category: "Half Saree",
-    price: 2299,
-    old: 2999,
-    rating: "4.9",
-    image: "photo-1583391733956-6c78276477e8"
+    id: 2, name: "Green Broccoli", category: "Vegetables",
+    price: 65, old: 80, unit: "1 piece", rating: "4.6",
+    image: "photo-1459411621453-7b03977f4bfc", badge: "Popular"
   },
   {
-    id: 3,
-    name: "Royal Ethnic Lehenga",
-    category: "Lehenga",
-    price: 2499,
-    old: 3299,
-    rating: "4.7",
-    image: "photo-1595777457583-95e059d581b8"
+    id: 3, name: "Fresh Red Apples", category: "Fruits",
+    price: 120, old: 150, unit: "1 kg", rating: "4.8",
+    image: "photo-1560806887-1e4cd0b6cbd6", badge: "Best Seller"
   },
   {
-    id: 4,
-    name: "Elegant Anarkali Suit",
-    category: "Anarkali",
-    price: 1299,
-    old: 1699,
-    rating: "4.6",
-    image: "photo-1617627143750-d86bc21e42bb"
+    id: 4, name: "Sweet Bananas", category: "Fruits",
+    price: 50, old: 60, unit: "1 dozen", rating: "4.7",
+    image: "photo-1571771894821-ce9b6c11b08e", badge: "Value Pack"
   },
   {
-    id: 5,
-    name: "Temple Border Saree",
-    category: "Saree",
-    price: 1799,
-    old: 2299,
-    rating: "4.8",
-    image: "photo-1610030469983-98e550d6193c"
+    id: 5, name: "Fresh Milk", category: "Dairy",
+    price: 32, old: 36, unit: "500 ml", rating: "4.8",
+    image: "photo-1563636619-e9143da7973b", badge: "Daily Essential"
   },
   {
-    id: 6,
-    name: "Wedding Glow Lehenga",
-    category: "Lehenga",
-    price: 3499,
-    old: 4299,
-    rating: "4.9",
-    image: "photo-1595777457583-95e059d581b8"
+    id: 6, name: "Farm Fresh Eggs", category: "Dairy",
+    price: 75, old: 90, unit: "6 pieces", rating: "4.7",
+    image: "photo-1506976785307-8732e854ad03", badge: "Popular"
   },
   {
-    id: 7,
-    name: "Traditional Festive Set",
-    category: "Festive",
-    price: 1899,
-    old: 2499,
-    rating: "4.7",
-    image: "photo-1609357605129-26f69add5d6e"
+    id: 7, name: "Premium Basmati Rice", category: "Staples",
+    price: 110, old: 135, unit: "1 kg", rating: "4.9",
+    image: "photo-1586201375761-83865001e31c", badge: "Top Rated"
   },
   {
-    id: 8,
-    name: "Graceful Anarkali",
-    category: "Anarkali",
-    price: 1599,
-    old: 1999,
-    rating: "4.8",
-    image: "photo-1617627143750-d86bc21e42bb"
+    id: 8, name: "Whole Wheat Atta", category: "Staples",
+    price: 55, old: 65, unit: "1 kg", rating: "4.6",
+    image: "photo-1627485937980-221c88ac04f9", badge: "Daily Essential"
+  },
+  {
+    id: 9, name: "Potato Chips", category: "Snacks",
+    price: 20, old: 25, unit: "1 pack", rating: "4.5",
+    image: "photo-1566478989037-eec170784d0b", badge: "Snack Time"
+  },
+  {
+    id: 10, name: "Mixed Nuts", category: "Snacks",
+    price: 150, old: 180, unit: "200 g", rating: "4.8",
+    image: "photo-1505576399274-565b52d4ac71", badge: "Healthy Pick"
+  },
+  {
+    id: 11, name: "Orange Juice", category: "Beverages",
+    price: 90, old: 110, unit: "1 litre", rating: "4.6",
+    image: "photo-1600271886742-f049cd451bba", badge: "Refreshing"
+  },
+  {
+    id: 12, name: "Fresh Lemon Drink", category: "Beverages",
+    price: 45, old: 55, unit: "500 ml", rating: "4.5",
+    image: "photo-1513558161293-cdaf765edfd7", badge: "Cool Choice"
   }
 ];
 
@@ -653,12 +735,13 @@ function money(value) {
 
 function renderProducts() {
   const search = document.getElementById("search").value
-    .toLowerCase().trim();
+    .trim().toLowerCase();
   const category = document.getElementById("category-filter").value;
   const sort = document.getElementById("sort").value;
 
   let list = products.filter(p =>
-    p.name.toLowerCase().includes(search) &&
+    (p.name.toLowerCase().includes(search) ||
+     p.category.toLowerCase().includes(search)) &&
     (category === "All" || p.category === category)
   );
 
@@ -669,27 +752,30 @@ function renderProducts() {
 
   if (!list.length) {
     container.innerHTML =
-      '<div class="no-results">No matching outfits found. Try another search.</div>';
+      '<div class="no-results">No products found. Try another search.</div>';
     return;
   }
 
   container.innerHTML = list.map(p => `
     <article class="product">
-      <img
-        src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=650&q=80"
-        alt="${p.name}"
-        loading="lazy"
-        onerror="this.onerror=null;this.src='https://placehold.co/500x600/F5E8D6/70202D?text=Label+Akhila'">
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=600&q=80"
+          alt="${p.name}"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/500x400/eaf7e9/218838?text=FreshBasket'">
+        <span class="product-badge">${p.badge}</span>
+      </div>
       <div class="product-info">
-        <div class="tag">${p.category}</div>
         <h3>${p.name}</h3>
-        <div class="rating">★ ${p.rating} <span style="color:#887b70">Customer rating (demo)</span></div>
+        <div class="unit">${p.unit}</div>
+        <div class="rating">★ ${p.rating} <span style="color:#718071">(Demo rating)</span></div>
         <div class="price">
           ${money(p.price)}
           <span class="old-price">${money(p.old)}</span>
         </div>
         <button class="add-button" onclick="addToCart(${p.id})">
-          Add to Cart +
+          + Add to Cart
         </button>
       </div>
     </article>
@@ -704,34 +790,118 @@ function chooseCategory(category) {
 
 function addToCart(id) {
   const product = products.find(p => p.id === id);
-  cart.push(product);
-  document.getElementById("cart-count").textContent = cart.length;
+  const existing = cart.find(item => item.id === id);
+
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({...product, quantity: 1});
+  }
+
+  updateCart();
+  showNotice(product.name + " added to your cart!");
+}
+
+function updateCart() {
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.getElementById("cart-count").textContent = count;
+
+  const container = document.getElementById("cart-items");
+
+  if (!cart.length) {
+    container.innerHTML = '<div class="empty-cart">Your cart is empty.<br>Start adding fresh groceries!</div>';
+  } else {
+    container.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <div>
+          <h4>${item.name}</h4>
+          <small>${money(item.price)} × ${item.quantity}</small>
+          <div><strong>${money(item.price * item.quantity)}</strong></div>
+        </div>
+        <div class="qty-controls">
+          <button onclick="changeQuantity(${item.id}, -1)" aria-label="Decrease quantity">−</button>
+          <span>${item.quantity}</span>
+          <button onclick="changeQuantity(${item.id}, 1)" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  const total = cart.reduce((sum, item) =>
+    sum + item.price * item.quantity, 0);
+
+  document.getElementById("cart-total").textContent =
+    "Total: " + money(total);
+}
+
+function changeQuantity(id, amount) {
+  const item = cart.find(p => p.id === id);
+  if (!item) return;
+
+  item.quantity += amount;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter(p => p.id !== id);
+  }
+
+  updateCart();
+}
+
+function showCart() {
+  updateCart();
+  document.getElementById("cart-panel").classList.add("open");
+}
+
+function closeCart() {
+  document.getElementById("cart-panel").classList.remove("open");
+}
+
+function showNotice(message) {
   const notice = document.getElementById("notice");
-  notice.textContent = product.name + " added to cart!";
+  notice.textContent = message;
   notice.style.display = "block";
+
   clearTimeout(window.noticeTimeout);
   window.noticeTimeout = setTimeout(() => {
     notice.style.display = "none";
   }, 2500);
 }
 
-function showCart() {
+function checkout() {
   if (!cart.length) {
-    alert("Your cart is empty. Explore our traditional collection!");
+    showNotice("Your cart is empty. Add some groceries first.");
     return;
   }
 
-  const total = cart.reduce((sum, p) => sum + p.price, 0);
-  const items = cart.map(p => p.name + " — " + money(p.price)).join("\n");
+  const total = cart.reduce((sum, item) =>
+    sum + item.price * item.quantity, 0);
 
   alert(
-    "YOUR LABEL AKHILA CART\n\n" + items +
-    "\n\nTotal: " + money(total) +
-    "\n\nThis is a demo cart. Online checkout is not connected yet."
+    "FRESHBASKET ORDER SUMMARY\n\n" +
+    cart.map(item =>
+      item.name + " × " + item.quantity + " — " +
+      money(item.price * item.quantity)
+    ).join("\n") +
+    "\n\nOrder Total: " + money(total) +
+    "\n\nThis is a demo checkout. No payment or order has been placed."
   );
 }
 
+const originalAddToCart = addToCart;
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  const existing = cart.find(item => item.id === id);
+
+  if (existing) existing.quantity++;
+  else cart.push({...product, quantity: 1});
+
+  updateCart();
+  showNotice(product.name + " added to your cart!");
+}
+
 renderProducts();
+updateCart();
 </script>
 
 </body>
