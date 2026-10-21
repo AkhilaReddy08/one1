@@ -4,18 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreshBasket | Online Grocery Store</title>
+
+<title>Travel Diaries | Discover Your Next Adventure</title>
 
 <style>
 :root {
-  --green: #218838;
-  --dark-green: #14532d;
-  --light-green: #eaf7e9;
-  --orange: #ff9f1c;
-  --cream: #f8fbf5;
-  --text: #25352a;
-  --muted: #718071;
+  --navy: #142b3b;
+  --blue: #287f8c;
+  --teal: #4aa6a1;
+  --gold: #e8b86d;
+  --cream: #f7f8f5;
   --white: #ffffff;
+  --muted: #77838a;
+  --border: #e4e9e8;
 }
 
 * {
@@ -27,9 +28,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
   background: var(--cream);
+  color: var(--navy);
   line-height: 1.6;
 }
 
@@ -39,869 +40,1354 @@ button, input, select {
 
 button { cursor: pointer; }
 
-.promo {
-  background: var(--dark-green);
+a { color: inherit; }
+
+.announcement {
+  text-align: center;
+  background: var(--navy);
   color: white;
   padding: 8px;
-  text-align: center;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 header {
-  background: white;
-  padding: 16px 6%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  align-items: center;
+  padding: 17px 6%;
+  gap: 22px;
   flex-wrap: wrap;
-  border-bottom: 1px solid #e3eadf;
+  background: white;
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
-  color: var(--green);
-  font-size: 28px;
-  font-weight: 800;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--navy);
   letter-spacing: -1px;
 }
 
-.logo span { color: var(--orange); }
+.logo span { color: var(--teal); }
 
 .logo small {
   display: block;
-  font-size: 10px;
+  font: 10px "Segoe UI", Arial, sans-serif;
+  letter-spacing: 3px;
   color: var(--muted);
-  letter-spacing: 2px;
 }
 
 nav {
   display: flex;
-  gap: 22px;
+  align-items: center;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-nav a:hover { color: var(--green); }
+nav a:hover { color: var(--blue); }
 
-.cart-button, .green-button {
-  border: none;
-  border-radius: 7px;
-  background: var(--green);
-  color: white;
-  padding: 11px 18px;
-  font-weight: bold;
-}
-
-.cart-button:hover, .green-button:hover {
-  background: var(--dark-green);
-}
-
-.hero {
-  margin: 25px 6%;
-  padding: 55px 6%;
-  min-height: 340px;
-  border-radius: 18px;
+.header-actions {
   display: flex;
   align-items: center;
-  color: white;
-  background:
-    linear-gradient(90deg, rgba(13, 55, 26, .92), rgba(13, 55, 26, .25)),
-    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=85")
-    center/cover;
+  gap: 10px;
 }
 
-.hero-content { max-width: 530px; }
-
-.eyebrow {
-  color: #ffe3a5;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(35px, 5vw, 54px);
-  line-height: 1.15;
-  margin: 12px 0;
-}
-
-.hero p {
-  margin-bottom: 23px;
-  max-width: 430px;
-}
-
-.orange-button {
-  background: var(--orange);
-  border: none;
-  padding: 13px 22px;
+.button {
+  border: 0;
   border-radius: 6px;
-  color: #30230f;
-  font-weight: bold;
-}
-
-.section { padding: 42px 6%; }
-
-.heading {
-  text-align: center;
-  margin-bottom: 27px;
-}
-
-.heading h2 {
-  font-size: 30px;
-  color: var(--dark-green);
-}
-
-.heading p { color: var(--muted); }
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.category {
-  border: 1px solid #e3eadf;
-  background: white;
-  padding: 12px;
-  border-radius: 12px;
-  text-align: center;
-  cursor: pointer;
+  padding: 11px 17px;
+  font-weight: 600;
   transition: .2s;
 }
 
-.category:hover {
-  transform: translateY(-4px);
-  border-color: var(--green);
+.primary {
+  background: var(--blue);
+  color: white;
 }
 
-.category img {
-  width: 100%;
-  height: 105px;
-  object-fit: cover;
-  border-radius: 8px;
-}
+.primary:hover { background: var(--navy); }
 
-.category h3 {
-  font-size: 14px;
-  margin-top: 8px;
-}
-
-.shop {
-  background: #f0f6ec;
-}
-
-.shop-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 25px;
-}
-
-.shop-tools input, .shop-tools select {
-  border: 1px solid #d6e0d1;
-  border-radius: 7px;
-  padding: 12px;
+.outline {
   background: white;
-  min-width: 180px;
+  border: 1px solid var(--border);
+  color: var(--navy);
 }
 
-.shop-tools input { flex: 1; }
+.hero {
+  margin: 24px 4%;
+  min-height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 55px 7%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(9, 31, 43, .85), rgba(9, 31, 43, .14)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
 
-.products {
+.hero-content { max-width: 620px; }
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 6vw, 70px);
+  line-height: 1.08;
+  margin: 17px 0;
+}
+
+.hero p {
+  max-width: 490px;
+  color: #f0f4f4;
+  margin-bottom: 26px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gold-button {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 13px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.light-button {
+  background: #ffffff1c;
+  color: white;
+  border: 1px solid #ffffffa0;
+  padding: 13px 22px;
+  border-radius: 6px;
+}
+
+.search-panel {
+  position: relative;
+  z-index: 2;
+  margin: -45px auto 0;
+  width: 88%;
+  max-width: 1100px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px #152e3b12;
+  padding: 20px;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr auto;
+  gap: 15px;
+  align-items: end;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.field input, .field select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: #fcfdfc;
+  border-radius: 6px;
+  color: var(--navy);
+  min-width: 0;
+}
+
+.section { padding: 65px 6%; }
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading .eyebrow { color: var(--blue); }
+
+.section-heading h2 {
+  font: bold 36px Georgia, serif;
+  margin: 6px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.destination-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
 }
 
-.product {
+.destination {
+  position: relative;
+  min-height: 315px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
+  background: var(--navy);
+  isolation: isolate;
+}
+
+.destination img {
+  width: 100%;
+  height: 100%;
+  min-height: 315px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform .4s;
+  z-index: -2;
+}
+
+.destination:hover img { transform: scale(1.06); }
+
+.destination::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 35%, rgba(5, 24, 32, .88));
+  z-index: -1;
+}
+
+.destination-info {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+}
+
+.destination-info h3 {
+  font: bold 24px Georgia, serif;
+}
+
+.destination-info p {
+  font-size: 13px;
+  color: #f1f3f2;
+}
+
+.destination-info span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.package-section { background: #edf3f0; }
+
+.package-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.package-tools input, .package-tools select {
+  border: 1px solid #d9e3de;
+  padding: 12px;
+  border-radius: 6px;
+  background: white;
+}
+
+.package-tools input { flex: 1; min-width: 180px; }
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.package-card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #e6ece2;
+  border: 1px solid #e3eae6;
   transition: .2s;
 }
 
-.product:hover {
+.package-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 22px #163d1714;
+  box-shadow: 0 12px 28px #193d3010;
 }
 
-.image-wrap { position: relative; }
+.package-image {
+  height: 225px;
+  position: relative;
+}
 
-.product img {
+.package-image img {
   width: 100%;
-  height: 205px;
+  height: 100%;
   object-fit: cover;
-  display: block;
-  background: #e5eee0;
 }
 
-.product-badge {
+.package-tag {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #fff0ce;
-  color: #8c5510;
-  font-size: 11px;
-  padding: 4px 9px;
+  top: 12px;
+  left: 12px;
+  background: white;
+  padding: 5px 10px;
   border-radius: 5px;
-  font-weight: bold;
+  font-size: 11px;
+  font-weight: 700;
 }
 
-.product-info { padding: 14px; }
+.favorite {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: none;
+  background: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 19px;
+  color: #6c7c80;
+}
 
-.product h3 {
-  font-size: 16px;
+.favorite.active { color: #d84a5b; }
+
+.package-info { padding: 18px; }
+
+.package-info h3 {
+  font: bold 22px Georgia, serif;
   margin: 3px 0;
 }
 
-.unit {
+.location {
+  font-size: 13px;
   color: var(--muted);
+}
+
+.package-rating {
   font-size: 12px;
+  color: #b17c20;
+  margin: 9px 0;
 }
 
-.rating {
-  color: #d58a08;
-  font-size: 12px;
-  margin: 5px 0;
+.package-description {
+  color: #697981;
+  font-size: 13px;
+  min-height: 42px;
 }
 
-.price {
-  font-size: 19px;
-  font-weight: bold;
-  color: var(--dark-green);
-  margin: 7px 0 12px;
+.package-bottom {
+  border-top: 1px solid var(--border);
+  margin-top: 14px;
+  padding-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.old-price {
-  color: #90998d;
-  font-size: 12px;
-  text-decoration: line-through;
-  font-weight: normal;
-  margin-left: 5px;
+.package-price small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
 }
 
-.add-button {
-  width: 100%;
-  border: 1px solid var(--green);
-  background: white;
-  color: var(--green);
-  border-radius: 6px;
-  padding: 9px;
-  font-weight: bold;
+.package-price strong {
+  font-size: 21px;
+  color: var(--navy);
 }
 
-.add-button:hover {
-  background: var(--green);
+.book-button {
+  background: var(--blue);
   color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 13px;
+  font-size: 13px;
+  font-weight: 700;
 }
+
+.book-button:hover { background: var(--navy); }
 
 .no-results {
   grid-column: 1 / -1;
-  text-align: center;
-  padding: 30px;
   background: white;
   border-radius: 10px;
-}
-
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.benefit {
-  background: white;
-  padding: 24px;
-  border: 1px solid #e3eadf;
-  border-radius: 12px;
+  padding: 35px;
   text-align: center;
-}
-
-.benefit .icon { font-size: 35px; }
-
-.benefit h3 {
-  color: var(--dark-green);
-  margin: 8px 0;
-}
-
-.benefit p {
   color: var(--muted);
-  font-size: 14px;
 }
 
-.newsletter {
-  margin: 10px 6% 40px;
-  padding: 30px;
-  background: var(--light-green);
-  border-radius: 12px;
-  text-align: center;
-}
-
-.newsletter h2 { color: var(--dark-green); }
-
-footer {
-  background: #153b24;
-  color: white;
-  padding: 35px 6%;
-  text-align: center;
-}
-
-footer h2 {
-  color: #b5e5a6;
-  font-size: 26px;
-}
-
-footer p {
-  color: #d8e5d5;
-  font-size: 13px;
-  margin-top: 7px;
-}
-
-.notice {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 14px 20px;
-  background: var(--dark-green);
-  color: white;
-  border-radius: 8px;
-  display: none;
-  z-index: 10;
-  box-shadow: 0 5px 20px #0002;
-  max-width: 90%;
-}
-
-.cart-panel {
-  position: fixed;
-  z-index: 20;
-  inset: 0 0 0 auto;
-  width: min(420px, 100%);
-  background: white;
-  box-shadow: -5px 0 25px #0002;
-  padding: 22px;
-  display: none;
-  overflow-y: auto;
-}
-
-.cart-panel.open { display: block; }
-
-.cart-header {
-  display: flex;
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
   align-items: center;
-  justify-content: space-between;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.experience-copy h2 {
+  font: bold 38px Georgia, serif;
+  line-height: 1.2;
+  margin: 10px 0 18px;
+}
+
+.experience-copy p {
+  color: var(--muted);
   margin-bottom: 20px;
 }
 
-.close-button {
-  border: none;
-  background: #eef4ea;
-  border-radius: 6px;
-  padding: 7px 12px;
+.feature {
+  display: flex;
+  gap: 12px;
+  margin: 17px 0;
 }
 
-.cart-item {
+.feature-icon {
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  background: #e1f0e9;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.feature h3 { font-size: 15px; }
+
+.feature p {
+  margin: 2px 0 0;
+  font-size: 13px;
+}
+
+.stats {
+  background: var(--navy);
+  color: white;
+  padding: 36px 6%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 20px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold);
+  font: bold 32px Georgia, serif;
+}
+
+.stat span {
+  color: #d1dadd;
+  font-size: 13px;
+}
+
+.cta {
+  margin: 55px 6%;
+  padding: 45px 25px;
+  text-align: center;
+  border-radius: 14px;
+  background: #e3f0e9;
+}
+
+.cta h2 {
+  font: bold 34px Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #102633;
+  color: white;
+  padding: 38px 6%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 35px;
+}
+
+footer h3 {
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+footer p, footer a {
+  font-size: 13px;
+  color: #cad6da;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+footer a:hover { color: var(--gold); }
+
+.copyright {
+  border-top: 1px solid #ffffff25;
+  padding-top: 18px;
+  margin-top: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: #bac8ce;
+}
+
+/* Booking dialog */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #071b25b8;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-backdrop.open { display: flex; }
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 13px;
+  padding: 25px;
+}
+
+.modal-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 0;
-  border-bottom: 1px solid #e8eee5;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-.cart-item h4 { font-size: 14px; }
+.modal-header h2 { font: bold 27px Georgia, serif; }
 
-.cart-item small { color: var(--muted); }
-
-.qty-controls {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.qty-controls button {
-  border: 1px solid #d7e2d2;
-  background: #f5f9f2;
-  border-radius: 4px;
-  padding: 2px 9px;
-}
-
-.cart-total {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 20px 0;
-}
-
-.checkout {
-  width: 100%;
-  padding: 13px;
-  background: var(--orange);
+.modal-close {
   border: none;
-  border-radius: 7px;
-  font-weight: bold;
+  background: #eef3f0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 35px;
 }
 
-.empty-cart {
-  color: var(--muted);
-  padding: 25px 0;
-  text-align: center;
+.booking-form {
+  display: grid;
+  gap: 13px;
+}
+
+.booking-form label {
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.booking-form input, .booking-form select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 11px;
+}
+
+.booking-summary {
+  background: #edf5f0;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.toast {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: 20px;
+  background: var(--navy);
+  color: white;
+  padding: 13px 20px;
+  border-radius: 7px;
+  box-shadow: 0 5px 20px #0002;
+  display: none;
+  max-width: 90%;
 }
 
 @media(max-width: 1000px) {
-  .categories { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-
-@media(max-width: 700px) {
+  .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .search-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   header { justify-content: center; }
-  nav { justify-content: center; }
-  .hero { margin: 15px; padding: 35px 25px; }
-  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .benefits { grid-template-columns: 1fr; }
-  .section { padding: 32px 4%; }
 }
 
-@media(max-width: 430px) {
-  .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .products { gap: 10px; }
-  .product img { height: 150px; }
-  .product-info { padding: 10px; }
-  .product h3 { font-size: 14px; }
-  .price { font-size: 16px; }
-  .shop-tools input, .shop-tools select { width: 100%; }
-  .heading h2 { font-size: 25px; }
+@media(max-width: 650px) {
+  nav { justify-content: center; gap: 14px; }
+  .hero { min-height: 440px; margin: 14px; padding: 30px 24px; }
+  .search-panel { margin-top: 0; width: calc(100% - 28px); }
+  .search-grid { grid-template-columns: 1fr; }
+  .destination-grid, .package-grid { grid-template-columns: 1fr; }
+  .destination, .destination img { min-height: 280px; }
+  .experience { grid-template-columns: 1fr; gap: 25px; }
+  .experience-image img { height: 280px; }
+  .experience-copy h2 { font-size: 32px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+  .section { padding: 43px 5%; }
+  .section-heading h2 { font-size: 29px; }
+  .package-tools input, .package-tools select { width: 100%; }
+  .cta { margin: 35px 5%; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="promo">
-  FRESHNESS AT YOUR DOORSTEP | FREE DELIVERY ON ORDERS ABOVE ₹499
+<div class="announcement">
+  YOUR NEXT ADVENTURE STARTS HERE · EXPLORE MORE, WORRY LESS
 </div>
 
 <header>
-  <div class="logo">
-    Fresh<span>Basket</span>
-    <small>FRESH FOOD • HAPPY HOME</small>
-  </div>
+  <a href="#home" class="logo" style="text-decoration:none">
+    Travel <span>Diaries.</span>
+    <small>COLLECT MOMENTS, NOT THINGS</small>
+  </a>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#categories">Categories</a>
-    <a href="#shop">Shop</a>
-    <a href="#benefits">Why Us?</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#packages">Tour Packages</a>
+    <a href="#about">About Us</a>
   </nav>
 
-  <button class="cart-button" onclick="showCart()">
-    🛒 Cart (<span id="cart-count">0</span>)
-  </button>
+  <div class="header-actions">
+    <button class="button outline" onclick="showFavorites()">
+      ♡ Saved (<span id="favorite-count">0</span>)
+    </button>
+    <button class="button primary" onclick="scrollToPackages()">
+      Explore Trips
+    </button>
+  </div>
 </header>
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="eyebrow">Fresh Every Day 🌿</div>
-    <h1>Good Food.<br>Good Mood.</h1>
+    <div class="eyebrow">Find Your Somewhere</div>
+    <h1>The world is a book. Go write your story.</h1>
     <p>
-      Bring home farm-fresh vegetables, juicy fruits,
-      everyday groceries and household essentials
-      at prices your family will love.
+      Discover breathtaking places, unforgettable experiences,
+      and thoughtfully planned journeys made for the way you travel.
     </p>
-    <button class="orange-button"
-      onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
-      Shop Groceries →
+    <div class="hero-buttons">
+      <button class="gold-button" onclick="scrollToPackages()">
+        Explore Destinations →
+      </button>
+      <button class="light-button" onclick="scrollToDestinations()">
+        Find Inspiration
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="search-panel" aria-label="Find a trip">
+  <div class="search-grid">
+    <div class="field">
+      <label for="destination-search">WHERE TO?</label>
+      <input id="destination-search" type="search"
+        placeholder="Search a destination...">
+    </div>
+
+    <div class="field">
+      <label for="travel-date">TRAVEL DATE</label>
+      <input id="travel-date" type="date">
+    </div>
+
+    <div class="field">
+      <label for="travelers">TRAVELERS</label>
+      <select id="travelers">
+        <option value="1">1 Traveler</option>
+        <option value="2" selected>2 Travelers</option>
+        <option value="3">3 Travelers</option>
+        <option value="4">4 Travelers</option>
+        <option value="5">5 Travelers</option>
+        <option value="6">6+ Travelers</option>
+      </select>
+    </div>
+
+    <button class="button primary" onclick="searchTrips()">
+      Search Trips
     </button>
   </div>
 </section>
 
-<section class="section" id="categories">
-  <div class="heading">
-    <h2>Shop by Category</h2>
-    <p>Everything your kitchen needs, all in one place.</p>
+<section class="section" id="destinations">
+  <div class="section-heading">
+    <div class="eyebrow">Places Worth Exploring</div>
+    <h2>Popular Destinations</h2>
+    <p>From peaceful mountain escapes to tropical adventures.</p>
   </div>
 
-  <div class="categories">
-    <div class="category" onclick="chooseCategory('Vegetables')">
-      <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="Fresh vegetables">
-      <h3>🥦 Vegetables</h3>
-    </div>
+  <div class="destination-grid">
+    <article class="destination" onclick="selectDestination('Bali')">
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=85"
+        alt="Bali tropical landscape" loading="lazy">
+      <div class="destination-info">
+        <span>ISLAND ESCAPE</span>
+        <h3>Bali, Indonesia</h3>
+        <p>Temples, beaches and tropical sunsets</p>
+      </div>
+    </article>
 
-    <div class="category" onclick="chooseCategory('Fruits')">
-      <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=400&q=80" alt="Fresh fruits">
-      <h3>🍎 Fruits</h3>
-    </div>
+    <article class="destination" onclick="selectDestination('Switzerland')">
+      <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=85"
+        alt="Swiss mountain scenery" loading="lazy">
+      <div class="destination-info">
+        <span>ALPINE ADVENTURE</span>
+        <h3>Switzerland</h3>
+        <p>Mountain villages and scenic railways</p>
+      </div>
+    </article>
 
-    <div class="category" onclick="chooseCategory('Dairy')">
-      <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=400&q=80" alt="Milk and dairy">
-      <h3>🥛 Dairy</h3>
-    </div>
+    <article class="destination" onclick="selectDestination('Maldives')">
+      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=85"
+        alt="Maldives tropical sea" loading="lazy">
+      <div class="destination-info">
+        <span>BEACH PARADISE</span>
+        <h3>Maldives</h3>
+        <p>Crystal waters and island living</p>
+      </div>
+    </article>
 
-    <div class="category" onclick="chooseCategory('Staples')">
-      <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80" alt="Rice and grains">
-      <h3>🌾 Staples</h3>
-    </div>
-
-    <div class="category" onclick="chooseCategory('Snacks')">
-      <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=400&q=80" alt="Snacks">
-      <h3>🍪 Snacks</h3>
-    </div>
-
-    <div class="category" onclick="chooseCategory('Beverages')">
-      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80" alt="Refreshing beverages">
-      <h3>🥤 Drinks</h3>
-    </div>
+    <article class="destination" onclick="selectDestination('Manali')">
+      <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=85"
+        alt="Mountain landscape in India" loading="lazy">
+      <div class="destination-info">
+        <span>MOUNTAIN RETREAT</span>
+        <h3>Manali, India</h3>
+        <p>Himalayan views and cozy escapes</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<section class="section shop" id="shop">
-  <div class="heading">
-    <h2>Fresh Picks for You</h2>
-    <p>Quality groceries at everyday prices.</p>
+<section class="section package-section" id="packages">
+  <div class="section-heading">
+    <div class="eyebrow">Handpicked for You</div>
+    <h2>Explore Our Tour Packages</h2>
+    <p>Find your next escape, with packages for different budgets.</p>
   </div>
 
-  <div class="shop-tools">
-    <input type="search" id="search"
-      placeholder="🔍 Search groceries..."
-      aria-label="Search groceries"
-      oninput="renderProducts()">
+  <div class="package-tools">
+    <input id="package-search" type="search"
+      placeholder="Search trips or destinations..."
+      oninput="renderPackages()" aria-label="Search packages">
 
-    <select id="category-filter" onchange="renderProducts()"
-      aria-label="Filter category">
-      <option value="All">All Categories</option>
-      <option value="Vegetables">Vegetables</option>
-      <option value="Fruits">Fruits</option>
-      <option value="Dairy">Dairy</option>
-      <option value="Staples">Staples</option>
-      <option value="Snacks">Snacks</option>
-      <option value="Beverages">Beverages</option>
+    <select id="trip-type" onchange="renderPackages()" aria-label="Filter by trip type">
+      <option value="All">All Experiences</option>
+      <option value="Beach">Beach Holidays</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Culture">Culture & Heritage</option>
+      <option value="Romantic">Romantic Getaways</option>
     </select>
 
-    <select id="sort" onchange="renderProducts()" aria-label="Sort products">
-      <option value="default">Featured</option>
+    <select id="price-sort" onchange="renderPackages()" aria-label="Sort by price">
+      <option value="default">Recommended</option>
       <option value="low">Price: Low to High</option>
       <option value="high">Price: High to Low</option>
     </select>
   </div>
 
-  <div class="products" id="products"></div>
+  <div class="package-grid" id="package-grid"></div>
 </section>
 
-<section class="section" id="benefits">
-  <div class="heading">
-    <h2>Why Shop With FreshBasket?</h2>
-    <p>We make everyday grocery shopping simple.</p>
-  </div>
-
-  <div class="benefits">
-    <div class="benefit">
-      <div class="icon">🥬</div>
-      <h3>Fresh Quality</h3>
-      <p>Fresh-looking produce and everyday essentials in one convenient shop.</p>
+<section class="section" id="about">
+  <div class="experience">
+    <div class="experience-image">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=85"
+        alt="Beautiful lake surrounded by mountains" loading="lazy">
     </div>
 
-    <div class="benefit">
-      <div class="icon">💰</div>
-      <h3>Budget Friendly</h3>
-      <p>Clear prices and a range of products for your daily shopping needs.</p>
-    </div>
+    <div class="experience-copy">
+      <div class="eyebrow">The Travel Diaries Difference</div>
+      <h2>Every journey deserves a beautiful beginning.</h2>
+      <p>
+        We believe travel is more than visiting a destination.
+        It is about discovering new cultures, sharing experiences,
+        and creating memories that stay with you.
+      </p>
 
-    <div class="benefit">
-      <div class="icon">🚚</div>
-      <h3>Easy Shopping</h3>
-      <p>Browse products, manage your cart and review your order total.</p>
+      <div class="feature">
+        <div class="feature-icon">🧭</div>
+        <div>
+          <h3>Thoughtfully Curated Trips</h3>
+          <p>Explore itineraries designed around memorable experiences.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🌍</div>
+        <div>
+          <h3>Destinations for Every Traveler</h3>
+          <p>From peaceful escapes to adventure-filled holidays.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💙</div>
+        <div>
+          <h3>Travel Your Way</h3>
+          <p>Choose destinations and trips that match your interests.</p>
+        </div>
+      </div>
+
+      <button class="button primary" onclick="scrollToPackages()">
+        Find Your Next Trip →
+      </button>
     </div>
   </div>
 </section>
 
-<section class="newsletter">
-  <h2>Your Kitchen Deserves the Freshest!</h2>
-  <p>Explore everyday essentials and make grocery shopping easier.</p>
-  <br>
-  <button class="green-button"
-    onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
-    Start Shopping
+<section class="stats">
+  <div class="stat">
+    <strong>25+</strong>
+    <span>Destinations to Discover</span>
+  </div>
+  <div class="stat">
+    <strong>50+</strong>
+    <span>Travel Experiences</span>
+  </div>
+  <div class="stat">
+    <strong>4.8/5</strong>
+    <span>Demo Rating</span>
+  </div>
+  <div class="stat">
+    <strong>24/7</strong>
+    <span>Travel Inspiration</span>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="eyebrow">Your Story Is Waiting</div>
+  <h2>Where will you go next?</h2>
+  <p>Your next unforgettable memory could be just one trip away.</p>
+  <button class="button primary" onclick="scrollToPackages()">
+    Discover Your Journey →
   </button>
 </section>
 
 <footer>
-  <h2>FreshBasket 🛒</h2>
-  <p>Your neighborhood grocery store, right at your fingertips.</p>
-  <p>Home | Categories | Shop | Contact</p>
-  <p>© 2026 FreshBasket. Demo e-commerce application.</p>
-  <p>Product images and prices are illustrative demo content.</p>
-</footer>
+  <div class="footer-grid">
+    <div>
+      <h3>Travel Diaries.</h3>
+      <p>
+        Inspiring travelers to see more of the world,
+        embrace new experiences, and collect memories.
+      </p>
+    </div>
 
-<div class="notice" id="notice" role="status"></div>
+    <div>
+      <h3>Explore</h3>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Tour Packages</a>
+      <a href="#about">Our Story</a>
+    </div>
 
-<aside class="cart-panel" id="cart-panel" aria-label="Shopping cart">
-  <div class="cart-header">
-    <h2>🛒 Your Cart</h2>
-    <button class="close-button" onclick="closeCart()">✕ Close</button>
+    <div>
+      <h3>Travel Categories</h3>
+      <a href="#packages">Beach Holidays</a>
+      <a href="#packages">Mountain Adventures</a>
+      <a href="#packages">Cultural Journeys</a>
+    </div>
   </div>
 
-  <div id="cart-items"></div>
+  <div class="copyright">
+    © 2026 Travel Diaries. All rights reserved.
+    <br>Demo website. Prices, ratings and availability are illustrative.
+  </div>
+</footer>
 
-  <div class="cart-total" id="cart-total">Total: ₹0</div>
+<div class="modal-backdrop" id="booking-modal"
+  onclick="backdropClose(event)">
+  <div class="modal" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
 
-  <p style="font-size:12px;color:#718071;margin-bottom:15px">
-    Delivery charges and payment are not connected in this demo.
-  </p>
+    <div class="modal-header">
+      <div>
+        <div class="eyebrow">Start Your Journey</div>
+        <h2 id="modal-title">Plan Your Trip</h2>
+      </div>
+      <button class="modal-close" onclick="closeBooking()">✕</button>
+    </div>
 
-  <button class="checkout" onclick="checkout()">
-    Proceed to Checkout →
-  </button>
-</aside>
+    <div class="booking-summary" id="booking-summary"></div>
+
+    <form class="booking-form" id="booking-form">
+      <div>
+        <label for="guest-name">Your Full Name</label>
+        <input id="guest-name" required placeholder="Enter your name">
+      </div>
+
+      <div>
+        <label for="guest-email">Email Address</label>
+        <input id="guest-email" type="email" required
+          placeholder="you@example.com">
+      </div>
+
+      <div>
+        <label for="booking-date">Preferred Travel Date</label>
+        <input id="booking-date" type="date" required>
+      </div>
+
+      <div>
+        <label for="booking-guests">Number of Travelers</label>
+        <select id="booking-guests">
+          <option value="1">1 Traveler</option>
+          <option value="2">2 Travelers</option>
+          <option value="3">3 Travelers</option>
+          <option value="4">4 Travelers</option>
+          <option value="5">5 Travelers</option>
+          <option value="6">6 Travelers</option>
+        </select>
+      </div>
+
+      <div class="booking-summary" id="booking-total"></div>
+
+      <button type="submit" class="button primary">
+        Confirm Demo Booking
+      </button>
+      <p style="font-size:11px;color:#77838a">
+        Demo only. No payment is collected and no real reservation is made.
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
 
 <script>
-const products = [
+const packages = [
   {
-    id: 1, name: "Fresh Tomatoes", category: "Vegetables",
-    price: 35, old: 45, unit: "500 g", rating: "4.7",
-    image: "photo-1546094096-0df4bcaaa337", badge: "Fresh Pick"
+    id: 1,
+    name: "Bali Tropical Escape",
+    destination: "Bali, Indonesia",
+    type: "Beach",
+    days: 5,
+    price: 32999,
+    rating: "4.9",
+    tag: "BEST SELLER",
+    image: "photo-1537996194471-e657df975ab4",
+    description: "Explore lush rice terraces, beautiful temples and tropical beaches."
   },
   {
-    id: 2, name: "Green Broccoli", category: "Vegetables",
-    price: 65, old: 80, unit: "1 piece", rating: "4.6",
-    image: "photo-1459411621453-7b03977f4bfc", badge: "Popular"
+    id: 2,
+    name: "Swiss Alpine Adventure",
+    destination: "Switzerland",
+    type: "Adventure",
+    days: 7,
+    price: 89999,
+    rating: "4.8",
+    tag: "ADVENTURE",
+    image: "photo-1531366936337-7c912a4589a7",
+    description: "Discover alpine villages, mountain views and scenic train journeys."
   },
   {
-    id: 3, name: "Fresh Red Apples", category: "Fruits",
-    price: 120, old: 150, unit: "1 kg", rating: "4.8",
-    image: "photo-1560806887-1e4cd0b6cbd6", badge: "Best Seller"
+    id: 3,
+    name: "Maldives Island Retreat",
+    destination: "Maldives",
+    type: "Romantic",
+    days: 4,
+    price: 45999,
+    rating: "4.9",
+    tag: "ROMANTIC",
+    image: "photo-1514282401047-d79a71a590e8",
+    description: "Enjoy turquoise waters, island scenery and relaxing beach days."
   },
   {
-    id: 4, name: "Sweet Bananas", category: "Fruits",
-    price: 50, old: 60, unit: "1 dozen", rating: "4.7",
-    image: "photo-1571771894821-ce9b6c11b08e", badge: "Value Pack"
+    id: 4,
+    name: "Manali Mountain Trails",
+    destination: "Manali, India",
+    type: "Adventure",
+    days: 5,
+    price: 14999,
+    rating: "4.7",
+    tag: "POPULAR",
+    image: "photo-1626621341517-bbf3d9990a23",
+    description: "Experience Himalayan scenery, mountain roads and fresh air."
   },
   {
-    id: 5, name: "Fresh Milk", category: "Dairy",
-    price: 32, old: 36, unit: "500 ml", rating: "4.8",
-    image: "photo-1563636619-e9143da7973b", badge: "Daily Essential"
+    id: 5,
+    name: "Jaipur Royal Heritage",
+    destination: "Jaipur, India",
+    type: "Culture",
+    days: 3,
+    price: 9999,
+    rating: "4.6",
+    tag: "CULTURE",
+    image: "photo-1477587458883-47145ed94245",
+    description: "Explore colorful markets, grand forts and Rajasthan's rich heritage."
   },
   {
-    id: 6, name: "Farm Fresh Eggs", category: "Dairy",
-    price: 75, old: 90, unit: "6 pieces", rating: "4.7",
-    image: "photo-1506976785307-8732e854ad03", badge: "Popular"
+    id: 6,
+    name: "Kerala Backwater Escape",
+    destination: "Alleppey, India",
+    type: "Romantic",
+    days: 4,
+    price: 17999,
+    rating: "4.8",
+    tag: "RELAX & UNWIND",
+    image: "photo-1602216056096-3b40cc0c9944",
+    description: "Discover tranquil backwaters, tropical greenery and local cuisine."
   },
   {
-    id: 7, name: "Premium Basmati Rice", category: "Staples",
-    price: 110, old: 135, unit: "1 kg", rating: "4.9",
-    image: "photo-1586201375761-83865001e31c", badge: "Top Rated"
+    id: 7,
+    name: "Goa Coastal Holiday",
+    destination: "Goa, India",
+    type: "Beach",
+    days: 4,
+    price: 12999,
+    rating: "4.7",
+    tag: "BEACH TIME",
+    image: "photo-1512343879784-a960bf40e7f2",
+    description: "Spend your days exploring sandy beaches and coastal towns."
   },
   {
-    id: 8, name: "Whole Wheat Atta", category: "Staples",
-    price: 55, old: 65, unit: "1 kg", rating: "4.6",
-    image: "photo-1627485937980-221c88ac04f9", badge: "Daily Essential"
+    id: 8,
+    name: "Agra Heritage Journey",
+    destination: "Agra, India",
+    type: "Culture",
+    days: 2,
+    price: 7999,
+    rating: "4.6",
+    tag: "HERITAGE",
+    image: "photo-1564507592333-c60657eea523",
+    description: "Discover iconic architecture and the history of Mughal India."
   },
   {
-    id: 9, name: "Potato Chips", category: "Snacks",
-    price: 20, old: 25, unit: "1 pack", rating: "4.5",
-    image: "photo-1566478989037-eec170784d0b", badge: "Snack Time"
-  },
-  {
-    id: 10, name: "Mixed Nuts", category: "Snacks",
-    price: 150, old: 180, unit: "200 g", rating: "4.8",
-    image: "photo-1505576399274-565b52d4ac71", badge: "Healthy Pick"
-  },
-  {
-    id: 11, name: "Orange Juice", category: "Beverages",
-    price: 90, old: 110, unit: "1 litre", rating: "4.6",
-    image: "photo-1600271886742-f049cd451bba", badge: "Refreshing"
-  },
-  {
-    id: 12, name: "Fresh Lemon Drink", category: "Beverages",
-    price: 45, old: 55, unit: "500 ml", rating: "4.5",
-    image: "photo-1513558161293-cdaf765edfd7", badge: "Cool Choice"
+    id: 9,
+    name: "Santorini Sunset Escape",
+    destination: "Santorini, Greece",
+    type: "Romantic",
+    days: 6,
+    price: 74999,
+    rating: "4.9",
+    tag: "SIGNATURE",
+    image: "photo-1533105079780-92b9be482077",
+    description: "Enjoy whitewashed villages, sea views and unforgettable sunsets."
   }
 ];
 
-let cart = [];
+let favorites = new Set();
+let selectedPackage = null;
 
-function money(value) {
+function money(amount) {
   return new Intl.NumberFormat("en-IN", {
     style: "currency",
     currency: "INR",
     maximumFractionDigits: 0
-  }).format(value);
+  }).format(amount);
 }
 
-function renderProducts() {
-  const search = document.getElementById("search").value
-    .trim().toLowerCase();
-  const category = document.getElementById("category-filter").value;
-  const sort = document.getElementById("sort").value;
+function renderPackages() {
+  const search = document.getElementById("package-search")
+    .value.trim().toLowerCase();
 
-  let list = products.filter(p =>
-    (p.name.toLowerCase().includes(search) ||
-     p.category.toLowerCase().includes(search)) &&
-    (category === "All" || p.category === category)
+  const type = document.getElementById("trip-type").value;
+  const sort = document.getElementById("price-sort").value;
+
+  let list = packages.filter(p =>
+    (p.name + " " + p.destination + " " + p.type)
+      .toLowerCase().includes(search) &&
+    (type === "All" || p.type === type)
   );
 
   if (sort === "low") list.sort((a, b) => a.price - b.price);
   if (sort === "high") list.sort((a, b) => b.price - a.price);
 
-  const container = document.getElementById("products");
+  const container = document.getElementById("package-grid");
 
   if (!list.length) {
     container.innerHTML =
-      '<div class="no-results">No products found. Try another search.</div>';
+      '<div class="no-results">No trips found. Try another destination or category.</div>';
     return;
   }
 
   container.innerHTML = list.map(p => `
-    <article class="product">
-      <div class="image-wrap">
+    <article class="package-card">
+      <div class="package-image">
         <img
-          src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=600&q=80"
-          alt="${p.name}"
+          src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=800&q=85"
+          alt="${p.destination}"
           loading="lazy"
-          onerror="this.onerror=null;this.src='https://placehold.co/500x400/eaf7e9/218838?text=FreshBasket'">
-        <span class="product-badge">${p.badge}</span>
-      </div>
-      <div class="product-info">
-        <h3>${p.name}</h3>
-        <div class="unit">${p.unit}</div>
-        <div class="rating">★ ${p.rating} <span style="color:#718071">(Demo rating)</span></div>
-        <div class="price">
-          ${money(p.price)}
-          <span class="old-price">${money(p.old)}</span>
-        </div>
-        <button class="add-button" onclick="addToCart(${p.id})">
-          + Add to Cart
+          onerror="this.onerror=null;this.src='https://placehold.co/800x500/e3f0e9/142b3b?text=Travel+Diaries'">
+
+        <span class="package-tag">${p.tag}</span>
+
+        <button
+          class="favorite ${favorites.has(p.id) ? "active" : ""}"
+          aria-label="${favorites.has(p.id) ? "Remove from" : "Add to"} favorites"
+          aria-pressed="${favorites.has(p.id)}"
+          onclick="toggleFavorite(${p.id})">
+          ${favorites.has(p.id) ? "♥" : "♡"}
         </button>
+      </div>
+
+      <div class="package-info">
+        <div class="location">📍 ${p.destination}</div>
+        <h3>${p.name}</h3>
+        <div class="package-rating">★ ${p.rating}
+          <span style="color:#77838a">(Demo rating)</span>
+        </div>
+        <p class="package-description">${p.description}</p>
+
+        <div style="font-size:12px;color:#77838a;margin-top:8px">
+          🗓 ${p.days} days · ${p.type}
+        </div>
+
+        <div class="package-bottom">
+          <div class="package-price">
+            <small>Starting from / person</small>
+            <strong>${money(p.price)}</strong>
+          </div>
+          <button class="book-button" onclick="openBooking(${p.id})">
+            View & Book
+          </button>
+        </div>
       </div>
     </article>
   `).join("");
 }
 
-function chooseCategory(category) {
-  document.getElementById("category-filter").value = category;
-  renderProducts();
-  document.getElementById("shop").scrollIntoView({behavior: "smooth"});
-}
+function toggleFavorite(id) {
+  const p = packages.find(item => item.id === id);
 
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  const existing = cart.find(item => item.id === id);
-
-  if (existing) {
-    existing.quantity++;
+  if (favorites.has(id)) {
+    favorites.delete(id);
+    showToast(p.name + " removed from saved trips.");
   } else {
-    cart.push({...product, quantity: 1});
+    favorites.add(id);
+    showToast(p.name + " saved to your favorites!");
   }
 
-  updateCart();
-  showNotice(product.name + " added to your cart!");
+  document.getElementById("favorite-count").textContent = favorites.size;
+  renderPackages();
 }
 
-function updateCart() {
-  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-  document.getElementById("cart-count").textContent = count;
-
-  const container = document.getElementById("cart-items");
-
-  if (!cart.length) {
-    container.innerHTML = '<div class="empty-cart">Your cart is empty.<br>Start adding fresh groceries!</div>';
-  } else {
-    container.innerHTML = cart.map(item => `
-      <div class="cart-item">
-        <div>
-          <h4>${item.name}</h4>
-          <small>${money(item.price)} × ${item.quantity}</small>
-          <div><strong>${money(item.price * item.quantity)}</strong></div>
-        </div>
-        <div class="qty-controls">
-          <button onclick="changeQuantity(${item.id}, -1)" aria-label="Decrease quantity">−</button>
-          <span>${item.quantity}</span>
-          <button onclick="changeQuantity(${item.id}, 1)" aria-label="Increase quantity">+</button>
-        </div>
-      </div>
-    `).join("");
-  }
-
-  const total = cart.reduce((sum, item) =>
-    sum + item.price * item.quantity, 0);
-
-  document.getElementById("cart-total").textContent =
-    "Total: " + money(total);
-}
-
-function changeQuantity(id, amount) {
-  const item = cart.find(p => p.id === id);
-  if (!item) return;
-
-  item.quantity += amount;
-
-  if (item.quantity <= 0) {
-    cart = cart.filter(p => p.id !== id);
-  }
-
-  updateCart();
-}
-
-function showCart() {
-  updateCart();
-  document.getElementById("cart-panel").classList.add("open");
-}
-
-function closeCart() {
-  document.getElementById("cart-panel").classList.remove("open");
-}
-
-function showNotice(message) {
-  const notice = document.getElementById("notice");
-  notice.textContent = message;
-  notice.style.display = "block";
-
-  clearTimeout(window.noticeTimeout);
-  window.noticeTimeout = setTimeout(() => {
-    notice.style.display = "none";
-  }, 2500);
-}
-
-function checkout() {
-  if (!cart.length) {
-    showNotice("Your cart is empty. Add some groceries first.");
+function showFavorites() {
+  if (!favorites.size) {
+    showToast("No saved trips yet. Tap ♡ on a package to save it.");
     return;
   }
 
-  const total = cart.reduce((sum, item) =>
-    sum + item.price * item.quantity, 0);
+  document.getElementById("package-search").value = "";
+  document.getElementById("trip-type").value = "All";
+
+  const saved = packages.filter(p => favorites.has(p.id));
+  document.getElementById("price-sort").value = "default";
+
+  renderPackages();
+
+  // Display only saved packages.
+  document.getElementById("package-grid").innerHTML = saved.map(p => `
+    <article class="package-card">
+      <div class="package-image">
+        <img src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=800&q=85"
+          alt="${p.destination}">
+        <button class="favorite active" onclick="toggleFavorite(${p.id})">♥</button>
+      </div>
+      <div class="package-info">
+        <div class="location">📍 ${p.destination}</div>
+        <h3>${p.name}</h3>
+        <p class="package-description">${p.description}</p>
+        <div class="package-bottom">
+          <div class="package-price">
+            <small>Starting from / person</small>
+            <strong>${money(p.price)}</strong>
+          </div>
+          <button class="book-button" onclick="openBooking(${p.id})">View & Book</button>
+        </div>
+      </div>
+    </article>
+  `).join("");
+
+  document.getElementById("packages").scrollIntoView({behavior: "smooth"});
+  showToast("Showing your saved trips.");
+}
+
+function scrollToPackages() {
+  document.getElementById("packages").scrollIntoView({behavior: "smooth"});
+}
+
+function scrollToDestinations() {
+  document.getElementById("destinations").scrollIntoView({behavior: "smooth"});
+}
+
+function selectDestination(name) {
+  document.getElementById("destination-search").value = name;
+  document.getElementById("package-search").value = name;
+  document.getElementById("trip-type").value = "All";
+  renderPackages();
+  scrollToPackages();
+}
+
+function searchTrips() {
+  const query = document.getElementById("destination-search").value.trim();
+
+  document.getElementById("package-search").value = query;
+  document.getElementById("trip-type").value = "All";
+  renderPackages();
+  scrollToPackages();
+
+  if (query && !packages.some(p =>
+    (p.name + " " + p.destination + " " + p.type)
+      .toLowerCase().includes(query.toLowerCase()))) {
+    showToast("No matching packages. Try another destination.");
+  }
+}
+
+function openBooking(id) {
+  selectedPackage = packages.find(p => p.id === id);
+
+  document.getElementById("modal-title").textContent =
+    "Book " + selectedPackage.name;
+
+  document.getElementById("booking-summary").innerHTML =
+    "<strong>" + selectedPackage.destination + "</strong><br>" +
+    selectedPackage.days + " days · " + selectedPackage.type +
+    "<br>Starting at " + money(selectedPackage.price) + " per person";
+
+  const dateInput = document.getElementById("booking-date");
+  const searchDate = document.getElementById("travel-date").value;
+
+  dateInput.value = searchDate || "";
+  dateInput.min = new Date().toLocaleDateString("en-CA");
+  document.getElementById("booking-guests").value =
+    document.getElementById("travelers").value;
+
+  updateBookingTotal();
+
+  document.getElementById("booking-modal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function updateBookingTotal() {
+  if (!selectedPackage) return;
+
+  const guests = Number(document.getElementById("booking-guests").value);
+
+  document.getElementById("booking-total").innerHTML =
+    "<strong>Estimated package total: " +
+    money(selectedPackage.price * guests) +
+    "</strong><br><small>For " + guests +
+    " traveler(s). Illustrative price only.</small>";
+}
+
+document.getElementById("booking-guests")
+  .addEventListener("change", updateBookingTotal);
+
+function closeBooking() {
+  document.getElementById("booking-modal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function backdropClose(event) {
+  if (event.target.id === "booking-modal") closeBooking();
+}
+
+document.getElementById("booking-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (!selectedPackage) return;
+
+  const name = document.getElementById("guest-name").value.trim();
+  const email = document.getElementById("guest-email").value.trim();
+  const date = document.getElementById("booking-date").value;
+  const guests = Number(document.getElementById("booking-guests").value);
+
+  if (!name || !email || !date) {
+    showToast("Please complete all booking fields.");
+    return;
+  }
+
+  if (date < new Date().toLocaleDateString("en-CA")) {
+    showToast("Please choose today or a future travel date.");
+    return;
+  }
+
+  const reference = "TD" + Date.now().toString().slice(-7);
+  const total = selectedPackage.price * guests;
+
+  closeBooking();
 
   alert(
-    "FRESHBASKET ORDER SUMMARY\n\n" +
-    cart.map(item =>
-      item.name + " × " + item.quantity + " — " +
-      money(item.price * item.quantity)
-    ).join("\n") +
-    "\n\nOrder Total: " + money(total) +
-    "\n\nThis is a demo checkout. No payment or order has been placed."
+    "TRAVEL DIARIES — DEMO BOOKING\n\n" +
+    "Reference: " + reference + "\n" +
+    "Traveler: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Destination: " + selectedPackage.destination + "\n" +
+    "Travel date: " + date + "\n" +
+    "Travelers: " + guests + "\n" +
+    "Estimated total: " + money(total) + "\n\n" +
+    "This is a demonstration only. No real booking has been created and no payment has been collected."
   );
+
+  this.reset();
+});
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.style.display = "block";
+
+  clearTimeout(window.toastTimeout);
+  window.toastTimeout = setTimeout(() => {
+    toast.style.display = "none";
+  }, 2800);
 }
 
-const originalAddToCart = addToCart;
+// Set minimum date to today for the travel search.
+const today = new Date();
+const localToday = new Date(
+  today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().slice(0, 10);
 
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  const existing = cart.find(item => item.id === id);
+document.getElementById("travel-date").min = localToday;
+document.getElementById("booking-date").min = localToday;
 
-  if (existing) existing.quantity++;
-  else cart.push({...product, quantity: 1});
-
-  updateCart();
-  showNotice(product.name + " added to your cart!");
-}
-
-renderProducts();
-updateCart();
+renderPackages();
 </script>
 
 </body>
