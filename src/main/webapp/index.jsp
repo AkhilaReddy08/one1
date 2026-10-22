@@ -4,19 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Travel Diaries | Discover Your Next Adventure</title>
+<title>Saffron & Spice | Restaurant</title>
 
 <style>
 :root {
-  --navy: #142b3b;
-  --blue: #287f8c;
-  --teal: #4aa6a1;
-  --gold: #e8b86d;
-  --cream: #f7f8f5;
-  --white: #ffffff;
-  --muted: #77838a;
-  --border: #e4e9e8;
+  --red: #a9432e;
+  --dark: #38271f;
+  --gold: #d8a64e;
+  --cream: #fffaf2;
+  --muted: #786f65;
 }
 
 * {
@@ -30,133 +26,104 @@ html { scroll-behavior: smooth; }
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: var(--cream);
-  color: var(--navy);
+  color: var(--dark);
   line-height: 1.6;
 }
 
-button, input, select {
-  font: inherit;
-}
-
+button, input, select { font: inherit; }
 button { cursor: pointer; }
-
-a { color: inherit; }
+a { text-decoration: none; color: inherit; }
 
 .announcement {
   text-align: center;
-  background: var(--navy);
+  padding: 9px;
+  background: var(--dark);
   color: white;
-  padding: 8px;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 6%;
-  gap: 22px;
-  flex-wrap: wrap;
+  padding: 18px 6%;
   background: white;
-  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .logo {
-  font-family: Georgia, serif;
-  font-size: 27px;
-  font-weight: bold;
-  color: var(--navy);
-  letter-spacing: -1px;
+  font: bold 27px Georgia, serif;
 }
 
-.logo span { color: var(--teal); }
-
-.logo small {
-  display: block;
-  font: 10px "Segoe UI", Arial, sans-serif;
-  letter-spacing: 3px;
-  color: var(--muted);
-}
+.logo span { color: var(--red); }
 
 nav {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 nav a {
   font-size: 14px;
   font-weight: 600;
-  text-decoration: none;
 }
 
-nav a:hover { color: var(--blue); }
+nav a:hover { color: var(--red); }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.button {
-  border: 0;
-  border-radius: 6px;
+.btn {
   padding: 11px 17px;
-  font-weight: 600;
-  transition: .2s;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 .primary {
-  background: var(--blue);
+  background: var(--red);
   color: white;
 }
 
-.primary:hover { background: var(--navy); }
+.primary:hover { background: var(--dark); }
 
-.outline {
+.secondary {
   background: white;
-  border: 1px solid var(--border);
-  color: var(--navy);
+  color: var(--dark);
+  border: 1px solid #e7d8c8;
 }
 
 .hero {
-  margin: 24px 4%;
-  min-height: 500px;
-  border-radius: 16px;
-  overflow: hidden;
+  margin: 22px 3%;
+  min-height: 480px;
+  padding: 55px 7%;
   display: flex;
   align-items: center;
-  padding: 55px 7%;
+  border-radius: 15px;
   color: white;
   background:
-    linear-gradient(90deg, rgba(9, 31, 43, .85), rgba(9, 31, 43, .14)),
-    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85")
+    linear-gradient(90deg, #21130ee8, #21130e24),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85")
     center/cover;
 }
 
-.hero-content { max-width: 620px; }
+.hero-content { max-width: 600px; }
 
 .eyebrow {
   color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 3px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .hero h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(40px, 6vw, 70px);
-  line-height: 1.08;
-  margin: 17px 0;
+  font: bold clamp(42px, 6vw, 68px)/1.1 Georgia, serif;
+  margin: 18px 0;
 }
 
 .hero p {
-  max-width: 490px;
-  color: #f0f4f4;
-  margin-bottom: 26px;
+  max-width: 470px;
+  margin-bottom: 25px;
 }
 
 .hero-buttons {
@@ -167,70 +134,23 @@ nav a:hover { color: var(--blue); }
 
 .gold-button {
   background: var(--gold);
-  color: var(--navy);
-  border: none;
-  padding: 13px 22px;
+  color: var(--dark);
+  border: 0;
   border-radius: 6px;
-  font-weight: 700;
+  padding: 13px 20px;
+  font-weight: bold;
 }
 
-.light-button {
-  background: #ffffff1c;
-  color: white;
-  border: 1px solid #ffffffa0;
-  padding: 13px 22px;
-  border-radius: 6px;
-}
-
-.search-panel {
-  position: relative;
-  z-index: 2;
-  margin: -45px auto 0;
-  width: 88%;
-  max-width: 1100px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 12px 35px #152e3b12;
-  padding: 20px;
-}
-
-.search-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr auto;
-  gap: 15px;
-  align-items: end;
-}
-
-.field label {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
-.field input, .field select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--border);
-  background: #fcfdfc;
-  border-radius: 6px;
-  color: var(--navy);
-  min-width: 0;
-}
-
-.section { padding: 65px 6%; }
+.section { padding: 60px 6%; }
 
 .section-heading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.section-heading .eyebrow { color: var(--blue); }
-
 .section-heading h2 {
   font: bold 36px Georgia, serif;
-  margin: 6px 0;
+  margin: 7px 0;
 }
 
 .section-heading p {
@@ -238,439 +158,317 @@ nav a:hover { color: var(--blue); }
   font-size: 14px;
 }
 
-.destination-grid {
+.categories {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
-.destination {
+.category {
   position: relative;
-  min-height: 315px;
+  height: 230px;
   border-radius: 12px;
   overflow: hidden;
-  color: white;
   cursor: pointer;
-  background: var(--navy);
-  isolation: isolate;
+  color: white;
+  background: var(--dark);
 }
 
-.destination img {
+.category img {
   width: 100%;
   height: 100%;
-  min-height: 315px;
   object-fit: cover;
+  transition: .3s;
+}
+
+.category:hover img { transform: scale(1.07); }
+
+.category-info {
   position: absolute;
-  inset: 0;
-  transition: transform .4s;
-  z-index: -2;
+  inset: auto 15px 15px;
+  z-index: 1;
+  text-shadow: 0 2px 8px #000;
 }
 
-.destination:hover img { transform: scale(1.06); }
+.category-info h3 { font: bold 24px Georgia, serif; }
 
-.destination::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent 35%, rgba(5, 24, 32, .88));
-  z-index: -1;
-}
+.menu-section { background: #f4ebdf; }
 
-.destination-info {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  right: 18px;
-}
-
-.destination-info h3 {
-  font: bold 24px Georgia, serif;
-}
-
-.destination-info p {
-  font-size: 13px;
-  color: #f1f3f2;
-}
-
-.destination-info span {
-  color: var(--gold);
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.package-section { background: #edf3f0; }
-
-.package-tools {
+.menu-tools {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
-.package-tools input, .package-tools select {
-  border: 1px solid #d9e3de;
+.menu-tools input,
+.menu-tools select {
   padding: 12px;
+  border: 1px solid #dfd0bf;
   border-radius: 6px;
   background: white;
 }
 
-.package-tools input { flex: 1; min-width: 180px; }
+.menu-tools input { flex: 1; min-width: 180px; }
 
-.package-grid {
+.menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
-.package-card {
+.food-card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #e3eae6;
   transition: .2s;
 }
 
-.package-card:hover {
+.food-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px #193d3010;
+  box-shadow: 0 12px 25px #38271f15;
 }
 
-.package-image {
-  height: 225px;
+.food-image {
+  height: 215px;
   position: relative;
 }
 
-.package-image img {
+.food-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.package-tag {
+.tag {
   position: absolute;
   top: 12px;
   left: 12px;
   background: white;
-  padding: 5px 10px;
+  padding: 5px 9px;
+  font-size: 10px;
+  font-weight: bold;
   border-radius: 5px;
-  font-size: 11px;
-  font-weight: 700;
 }
 
-.favorite {
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  border: none;
-  background: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 19px;
-  color: #6c7c80;
+.food-info { padding: 17px; }
+
+.food-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-.favorite.active { color: #d84a5b; }
+.food-title h3 { font: bold 21px Georgia, serif; }
 
-.package-info { padding: 18px; }
-
-.package-info h3 {
-  font: bold 22px Georgia, serif;
-  margin: 3px 0;
+.price {
+  color: var(--red);
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-.location {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.package-rating {
+.rating {
+  color: #a57525;
   font-size: 12px;
-  color: #b17c20;
-  margin: 9px 0;
+  margin: 8px 0;
 }
 
-.package-description {
-  color: #697981;
+.food-info p {
+  color: var(--muted);
   font-size: 13px;
   min-height: 42px;
 }
 
-.package-bottom {
-  border-top: 1px solid var(--border);
-  margin-top: 14px;
-  padding-top: 14px;
+.food-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  border-top: 1px solid #eee3d4;
+  padding-top: 13px;
+  margin-top: 13px;
 }
 
-.package-price small {
-  display: block;
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.package-price strong {
-  font-size: 21px;
-  color: var(--navy);
-}
-
-.book-button {
-  background: var(--blue);
+.add-btn {
+  background: var(--dark);
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 10px 13px;
-  font-size: 13px;
-  font-weight: 700;
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-.book-button:hover { background: var(--navy); }
+.add-btn:hover { background: var(--red); }
 
-.no-results {
-  grid-column: 1 / -1;
-  background: white;
-  border-radius: 10px;
-  padding: 35px;
-  text-align: center;
-  color: var(--muted);
-}
-
-.experience {
+.story {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 45px;
   align-items: center;
+  gap: 40px;
 }
 
-.experience-image img {
+.story img {
   width: 100%;
-  height: 400px;
+  height: 380px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
-.experience-copy h2 {
-  font: bold 38px Georgia, serif;
-  line-height: 1.2;
-  margin: 10px 0 18px;
+.story h2 {
+  font: bold 38px/1.15 Georgia, serif;
+  margin: 12px 0;
 }
 
-.experience-copy p {
+.story p {
   color: var(--muted);
   margin-bottom: 20px;
 }
 
-.feature {
-  display: flex;
-  gap: 12px;
-  margin: 17px 0;
-}
-
-.feature-icon {
-  flex-shrink: 0;
-  width: 43px;
-  height: 43px;
-  background: #e1f0e9;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-}
-
-.feature h3 { font-size: 15px; }
-
-.feature p {
-  margin: 2px 0 0;
-  font-size: 13px;
-}
-
 .stats {
-  background: var(--navy);
+  background: var(--dark);
   color: white;
-  padding: 36px 6%;
+  padding: 35px 6%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   gap: 20px;
 }
 
-.stat strong {
+.stats strong {
   display: block;
   color: var(--gold);
-  font: bold 32px Georgia, serif;
+  font: bold 30px Georgia, serif;
 }
 
-.stat span {
-  color: #d1dadd;
-  font-size: 13px;
-}
-
-.cta {
+.reservation {
+  background: #f2e2ca;
   margin: 55px 6%;
-  padding: 45px 25px;
-  text-align: center;
-  border-radius: 14px;
-  background: #e3f0e9;
+  padding: 35px;
+  border-radius: 13px;
 }
 
-.cta h2 {
+.reservation h2 {
   font: bold 34px Georgia, serif;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.cta p {
+.reservation > p {
   color: var(--muted);
   margin-bottom: 20px;
 }
 
-footer {
-  background: #102633;
-  color: white;
-  padding: 38px 6%;
-}
-
-.footer-grid {
+.reserve-form {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 35px;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
-footer h3 {
-  font-family: Georgia, serif;
-  margin-bottom: 10px;
-}
-
-footer p, footer a {
-  font-size: 13px;
-  color: #cad6da;
-}
-
-footer a {
+.reserve-form label {
   display: block;
-  text-decoration: none;
-  margin: 5px 0;
-}
-
-footer a:hover { color: var(--gold); }
-
-.copyright {
-  border-top: 1px solid #ffffff25;
-  padding-top: 18px;
-  margin-top: 28px;
-  text-align: center;
   font-size: 12px;
-  color: #bac8ce;
-}
-
-/* Booking dialog */
-
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: #071b25b8;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-
-.modal-backdrop.open { display: flex; }
-
-.modal {
-  width: 100%;
-  max-width: 480px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: white;
-  border-radius: 13px;
-  padding: 25px;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.modal-header h2 { font: bold 27px Georgia, serif; }
-
-.modal-close {
-  border: none;
-  background: #eef3f0;
-  border-radius: 5px;
-  padding: 5px 10px;
-  height: 35px;
-}
-
-.booking-form {
-  display: grid;
-  gap: 13px;
-}
-
-.booking-form label {
-  font-size: 12px;
-  font-weight: 700;
-  display: block;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
-.booking-form input, .booking-form select {
+.reserve-form input,
+.reserve-form select {
   width: 100%;
-  border: 1px solid var(--border);
+  padding: 12px;
+  border: 1px solid #dfcfb9;
   border-radius: 6px;
-  padding: 11px;
+  background: white;
 }
 
-.booking-summary {
-  background: #edf5f0;
-  padding: 13px;
-  border-radius: 7px;
-  font-size: 14px;
+.reserve-form button { grid-column: 1 / -1; }
+
+footer {
+  background: #261b16;
+  color: white;
+  padding: 35px 6%;
+}
+
+footer p {
+  color: #d9ccc1;
+  font-size: 13px;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #ffffff30;
+  padding-top: 18px;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #d9ccc1;
 }
 
 .toast {
+  display: none;
   position: fixed;
-  z-index: 100;
   bottom: 20px;
   right: 20px;
-  background: var(--navy);
+  background: var(--dark);
   color: white;
   padding: 13px 20px;
   border-radius: 7px;
-  box-shadow: 0 5px 20px #0002;
+  z-index: 20;
+}
+
+.cart-panel {
   display: none;
-  max-width: 90%;
+  position: fixed;
+  z-index: 15;
+  inset: 0;
+  background: #0009;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-@media(max-width: 1000px) {
-  .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .search-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cart-panel.open { display: flex; }
+
+.cart-box {
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow: auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee3d4;
+}
+
+.cart-row button {
+  border: none;
+  background: none;
+  color: var(--red);
+  font-weight: bold;
+}
+
+@media(max-width:950px) {
   header { justify-content: center; }
+  .categories { grid-template-columns: repeat(2, 1fr); }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media(max-width: 650px) {
-  nav { justify-content: center; gap: 14px; }
-  .hero { min-height: 440px; margin: 14px; padding: 30px 24px; }
-  .search-panel { margin-top: 0; width: calc(100% - 28px); }
-  .search-grid { grid-template-columns: 1fr; }
-  .destination-grid, .package-grid { grid-template-columns: 1fr; }
-  .destination, .destination img { min-height: 280px; }
-  .experience { grid-template-columns: 1fr; gap: 25px; }
-  .experience-image img { height: 280px; }
-  .experience-copy h2 { font-size: 32px; }
+@media(max-width:650px) {
+  nav { justify-content: center; gap: 12px; }
+  .hero { margin: 12px; padding: 30px 22px; min-height: 400px; }
+  .section { padding: 42px 5%; }
+  .categories, .menu-grid, .story { grid-template-columns: 1fr; }
+  .story img { height: 260px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr; gap: 22px; }
-  .section { padding: 43px 5%; }
-  .section-heading h2 { font-size: 29px; }
-  .package-tools input, .package-tools select { width: 100%; }
-  .cta { margin: 35px 5%; }
+  .reserve-form { grid-template-columns: 1fr; }
+  .reserve-form button { grid-column: auto; }
+  .reservation { margin: 30px 5%; padding: 22px; }
+  .menu-tools input, .menu-tools select { width: 100%; }
 }
 </style>
 </head>
@@ -678,716 +476,440 @@ footer a:hover { color: var(--gold); }
 <body>
 
 <div class="announcement">
-  YOUR NEXT ADVENTURE STARTS HERE · EXPLORE MORE, WORRY LESS
+  FRESH FLAVOURS · WARM HOSPITALITY · MEMORABLE MOMENTS
 </div>
 
 <header>
-  <a href="#home" class="logo" style="text-decoration:none">
-    Travel <span>Diaries.</span>
-    <small>COLLECT MOMENTS, NOT THINGS</small>
-  </a>
+  <a href="#home" class="logo">Saffron <span>& Spice.</span></a>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#packages">Tour Packages</a>
-    <a href="#about">About Us</a>
+    <a href="#categories">Cuisine</a>
+    <a href="#menu">Menu</a>
+    <a href="#story">Our Story</a>
+    <a href="#reservation">Reservations</a>
   </nav>
 
-  <div class="header-actions">
-    <button class="button outline" onclick="showFavorites()">
-      ♡ Saved (<span id="favorite-count">0</span>)
+  <div>
+    <button class="btn secondary" onclick="openCart()">
+      🛒 Cart (<span id="cart-count">0</span>)
     </button>
-    <button class="button primary" onclick="scrollToPackages()">
-      Explore Trips
+    <button class="btn primary"
+      onclick="document.getElementById('reservation').scrollIntoView({behavior:'smooth'})">
+      Book a Table
     </button>
   </div>
 </header>
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="eyebrow">Find Your Somewhere</div>
-    <h1>The world is a book. Go write your story.</h1>
+    <div class="eyebrow">A little spice, a lot of soul</div>
+    <h1>Gather around something delicious.</h1>
     <p>
-      Discover breathtaking places, unforgettable experiences,
-      and thoughtfully planned journeys made for the way you travel.
+      Discover comforting classics, authentic Indian flavours,
+      and chef-inspired dishes made to bring people together.
     </p>
     <div class="hero-buttons">
-      <button class="gold-button" onclick="scrollToPackages()">
-        Explore Destinations →
+      <button class="gold-button"
+        onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        Explore Our Menu →
       </button>
-      <button class="light-button" onclick="scrollToDestinations()">
-        Find Inspiration
+      <button class="btn secondary"
+        onclick="document.getElementById('reservation').scrollIntoView({behavior:'smooth'})">
+        Reserve a Table
       </button>
     </div>
   </div>
 </section>
 
-<section class="search-panel" aria-label="Find a trip">
-  <div class="search-grid">
-    <div class="field">
-      <label for="destination-search">WHERE TO?</label>
-      <input id="destination-search" type="search"
-        placeholder="Search a destination...">
-    </div>
-
-    <div class="field">
-      <label for="travel-date">TRAVEL DATE</label>
-      <input id="travel-date" type="date">
-    </div>
-
-    <div class="field">
-      <label for="travelers">TRAVELERS</label>
-      <select id="travelers">
-        <option value="1">1 Traveler</option>
-        <option value="2" selected>2 Travelers</option>
-        <option value="3">3 Travelers</option>
-        <option value="4">4 Travelers</option>
-        <option value="5">5 Travelers</option>
-        <option value="6">6+ Travelers</option>
-      </select>
-    </div>
-
-    <button class="button primary" onclick="searchTrips()">
-      Search Trips
-    </button>
-  </div>
-</section>
-
-<section class="section" id="destinations">
+<section class="section" id="categories">
   <div class="section-heading">
-    <div class="eyebrow">Places Worth Exploring</div>
-    <h2>Popular Destinations</h2>
-    <p>From peaceful mountain escapes to tropical adventures.</p>
+    <div class="eyebrow">Something for every craving</div>
+    <h2>Explore Our Cuisine</h2>
+    <p>Comfort food, bold flavours and a little something special.</p>
   </div>
 
-  <div class="destination-grid">
-    <article class="destination" onclick="selectDestination('Bali')">
-      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=85"
-        alt="Bali tropical landscape" loading="lazy">
-      <div class="destination-info">
-        <span>ISLAND ESCAPE</span>
-        <h3>Bali, Indonesia</h3>
-        <p>Temples, beaches and tropical sunsets</p>
-      </div>
+  <div class="categories">
+    <article class="category" onclick="chooseCategory('Starters')">
+      <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=700&q=85" alt="Starters">
+      <div class="category-info"><h3>Starters</h3><p>Small bites, big flavour</p></div>
     </article>
 
-    <article class="destination" onclick="selectDestination('Switzerland')">
-      <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=85"
-        alt="Swiss mountain scenery" loading="lazy">
-      <div class="destination-info">
-        <span>ALPINE ADVENTURE</span>
-        <h3>Switzerland</h3>
-        <p>Mountain villages and scenic railways</p>
-      </div>
+    <article class="category" onclick="chooseCategory('Main Course')">
+      <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=85" alt="Indian food">
+      <div class="category-info"><h3>Main Course</h3><p>Hearty meals to savour</p></div>
     </article>
 
-    <article class="destination" onclick="selectDestination('Maldives')">
-      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=85"
-        alt="Maldives tropical sea" loading="lazy">
-      <div class="destination-info">
-        <span>BEACH PARADISE</span>
-        <h3>Maldives</h3>
-        <p>Crystal waters and island living</p>
-      </div>
+    <article class="category" onclick="chooseCategory('Biryani')">
+      <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=700&q=85" alt="Biryani">
+      <div class="category-info"><h3>Biryani</h3><p>Aromatic and satisfying</p></div>
     </article>
 
-    <article class="destination" onclick="selectDestination('Manali')">
-      <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=85"
-        alt="Mountain landscape in India" loading="lazy">
-      <div class="destination-info">
-        <span>MOUNTAIN RETREAT</span>
-        <h3>Manali, India</h3>
-        <p>Himalayan views and cozy escapes</p>
-      </div>
+    <article class="category" onclick="chooseCategory('Desserts')">
+      <img src="https://images.unsplash.com/photo-1551024506-0abba7eeec77?auto=format&fit=crop&w=700&q=85" alt="Desserts">
+      <div class="category-info"><h3>Desserts</h3><p>Save room for sweetness</p></div>
     </article>
   </div>
 </section>
 
-<section class="section package-section" id="packages">
+<section class="section menu-section" id="menu">
   <div class="section-heading">
-    <div class="eyebrow">Handpicked for You</div>
-    <h2>Explore Our Tour Packages</h2>
-    <p>Find your next escape, with packages for different budgets.</p>
+    <div class="eyebrow">Made with care</div>
+    <h2>Our Guest Favourites</h2>
+    <p>Choose your favourites and add them to your demo cart.</p>
   </div>
 
-  <div class="package-tools">
-    <input id="package-search" type="search"
-      placeholder="Search trips or destinations..."
-      oninput="renderPackages()" aria-label="Search packages">
+  <div class="menu-tools">
+    <input id="search" type="search" placeholder="Search dishes..." oninput="renderMenu()">
 
-    <select id="trip-type" onchange="renderPackages()" aria-label="Filter by trip type">
-      <option value="All">All Experiences</option>
-      <option value="Beach">Beach Holidays</option>
-      <option value="Adventure">Adventure</option>
-      <option value="Culture">Culture & Heritage</option>
-      <option value="Romantic">Romantic Getaways</option>
+    <select id="category-filter" onchange="renderMenu()">
+      <option value="All">All Categories</option>
+      <option>Starters</option>
+      <option>Main Course</option>
+      <option>Biryani</option>
+      <option>Desserts</option>
+      <option>Beverages</option>
     </select>
 
-    <select id="price-sort" onchange="renderPackages()" aria-label="Sort by price">
+    <select id="diet-filter" onchange="renderMenu()">
+      <option value="All">Veg & Non-Veg</option>
+      <option value="Veg">Vegetarian</option>
+      <option value="Non-Veg">Non-Vegetarian</option>
+    </select>
+
+    <select id="sort" onchange="renderMenu()">
       <option value="default">Recommended</option>
       <option value="low">Price: Low to High</option>
       <option value="high">Price: High to Low</option>
     </select>
   </div>
 
-  <div class="package-grid" id="package-grid"></div>
+  <div class="menu-grid" id="menu-grid"></div>
 </section>
 
-<section class="section" id="about">
-  <div class="experience">
-    <div class="experience-image">
-      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=85"
-        alt="Beautiful lake surrounded by mountains" loading="lazy">
+<section class="section" id="story">
+  <div class="story">
+    <div>
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=85" alt="Restaurant interior">
     </div>
 
-    <div class="experience-copy">
-      <div class="eyebrow">The Travel Diaries Difference</div>
-      <h2>Every journey deserves a beautiful beginning.</h2>
+    <div>
+      <div class="eyebrow">Our Story</div>
+      <h2>Food tastes better when it brings us together.</h2>
       <p>
-        We believe travel is more than visiting a destination.
-        It is about discovering new cultures, sharing experiences,
-        and creating memories that stay with you.
+        At Saffron & Spice, we believe a great meal is more than
+        what's on the plate. It's the laughter around the table,
+        familiar flavours and the joy of discovering something new.
       </p>
-
-      <div class="feature">
-        <div class="feature-icon">🧭</div>
-        <div>
-          <h3>Thoughtfully Curated Trips</h3>
-          <p>Explore itineraries designed around memorable experiences.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🌍</div>
-        <div>
-          <h3>Destinations for Every Traveler</h3>
-          <p>From peaceful escapes to adventure-filled holidays.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">💙</div>
-        <div>
-          <h3>Travel Your Way</h3>
-          <p>Choose destinations and trips that match your interests.</p>
-        </div>
-      </div>
-
-      <button class="button primary" onclick="scrollToPackages()">
-        Find Your Next Trip →
+      <p>🥬 Fresh ingredients and freshly prepared meals</p>
+      <p>👨‍🍳 Recipes made with care and passion</p>
+      <p>🪔 A welcoming place for families and friends</p>
+      <button class="btn primary"
+        onclick="document.getElementById('reservation').scrollIntoView({behavior:'smooth'})">
+        Come Dine With Us →
       </button>
     </div>
   </div>
 </section>
 
 <section class="stats">
-  <div class="stat">
-    <strong>25+</strong>
-    <span>Destinations to Discover</span>
-  </div>
-  <div class="stat">
-    <strong>50+</strong>
-    <span>Travel Experiences</span>
-  </div>
-  <div class="stat">
-    <strong>4.8/5</strong>
-    <span>Demo Rating</span>
-  </div>
-  <div class="stat">
-    <strong>24/7</strong>
-    <span>Travel Inspiration</span>
-  </div>
+  <div><strong>30+</strong><span>Menu Favourites</span></div>
+  <div><strong>Fresh</strong><span>Ingredients</span></div>
+  <div><strong>7 Days</strong><span>Open Every Week</span></div>
+  <div><strong>Always</strong><span>Made with Care</span></div>
 </section>
 
-<section class="cta">
-  <div class="eyebrow">Your Story Is Waiting</div>
-  <h2>Where will you go next?</h2>
-  <p>Your next unforgettable memory could be just one trip away.</p>
-  <button class="button primary" onclick="scrollToPackages()">
-    Discover Your Journey →
-  </button>
+<section class="reservation" id="reservation">
+  <div class="eyebrow">Your table is waiting</div>
+  <h2>Make it a meal to remember.</h2>
+  <p>Plan a family dinner, date night or celebration.</p>
+
+  <form class="reserve-form" id="reservation-form">
+    <div>
+      <label for="guest-name">Full Name *</label>
+      <input id="guest-name" required placeholder="Enter your name">
+    </div>
+
+    <div>
+      <label for="guest-phone">Phone Number *</label>
+      <input id="guest-phone" type="tel" required
+        pattern="[0-9+() -]{8,18}" placeholder="+91 98765 43210">
+    </div>
+
+    <div>
+      <label for="reserve-date">Reservation Date *</label>
+      <input id="reserve-date" type="date" required>
+    </div>
+
+    <div>
+      <label for="reserve-time">Time *</label>
+      <select id="reserve-time" required>
+        <option value="">Choose time</option>
+        <option>12:00 PM</option>
+        <option>1:00 PM</option>
+        <option>2:00 PM</option>
+        <option>6:00 PM</option>
+        <option>7:00 PM</option>
+        <option>8:00 PM</option>
+        <option>9:00 PM</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="guests">Number of Guests *</label>
+      <select id="guests">
+        <option>1 Guest</option>
+        <option selected>2 Guests</option>
+        <option>3 Guests</option>
+        <option>4 Guests</option>
+        <option>5 Guests</option>
+        <option>6 Guests</option>
+        <option>7+ Guests</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="occasion">Occasion</label>
+      <select id="occasion">
+        <option>Regular Dining</option>
+        <option>Birthday</option>
+        <option>Anniversary</option>
+        <option>Family Gathering</option>
+        <option>Business Dinner</option>
+      </select>
+    </div>
+
+    <button class="btn primary" type="submit">
+      Confirm Demo Reservation
+    </button>
+  </form>
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div>
-      <h3>Travel Diaries.</h3>
-      <p>
-        Inspiring travelers to see more of the world,
-        embrace new experiences, and collect memories.
-      </p>
-    </div>
-
-    <div>
-      <h3>Explore</h3>
-      <a href="#destinations">Destinations</a>
-      <a href="#packages">Tour Packages</a>
-      <a href="#about">Our Story</a>
-    </div>
-
-    <div>
-      <h3>Travel Categories</h3>
-      <a href="#packages">Beach Holidays</a>
-      <a href="#packages">Mountain Adventures</a>
-      <a href="#packages">Cultural Journeys</a>
-    </div>
-  </div>
-
+  <h2>Saffron & Spice.</h2>
+  <p>Good food, warm hospitality and memorable moments.</p>
+  <p>📍 24 Spice Street, Hyderabad | ☎ +91 98765 43210</p>
   <div class="copyright">
-    © 2026 Travel Diaries. All rights reserved.
-    <br>Demo website. Prices, ratings and availability are illustrative.
+    © 2026 Saffron & Spice. All rights reserved.
+    <br>Demo website. No real orders or reservations are sent.
   </div>
 </footer>
 
-<div class="modal-backdrop" id="booking-modal"
-  onclick="backdropClose(event)">
-  <div class="modal" role="dialog" aria-modal="true"
-    aria-labelledby="modal-title">
+<div class="toast" id="toast" role="status"></div>
 
-    <div class="modal-header">
-      <div>
-        <div class="eyebrow">Start Your Journey</div>
-        <h2 id="modal-title">Plan Your Trip</h2>
-      </div>
-      <button class="modal-close" onclick="closeBooking()">✕</button>
-    </div>
-
-    <div class="booking-summary" id="booking-summary"></div>
-
-    <form class="booking-form" id="booking-form">
-      <div>
-        <label for="guest-name">Your Full Name</label>
-        <input id="guest-name" required placeholder="Enter your name">
-      </div>
-
-      <div>
-        <label for="guest-email">Email Address</label>
-        <input id="guest-email" type="email" required
-          placeholder="you@example.com">
-      </div>
-
-      <div>
-        <label for="booking-date">Preferred Travel Date</label>
-        <input id="booking-date" type="date" required>
-      </div>
-
-      <div>
-        <label for="booking-guests">Number of Travelers</label>
-        <select id="booking-guests">
-          <option value="1">1 Traveler</option>
-          <option value="2">2 Travelers</option>
-          <option value="3">3 Travelers</option>
-          <option value="4">4 Travelers</option>
-          <option value="5">5 Travelers</option>
-          <option value="6">6 Travelers</option>
-        </select>
-      </div>
-
-      <div class="booking-summary" id="booking-total"></div>
-
-      <button type="submit" class="button primary">
-        Confirm Demo Booking
-      </button>
-      <p style="font-size:11px;color:#77838a">
-        Demo only. No payment is collected and no real reservation is made.
-      </p>
-    </form>
+<div class="cart-panel" id="cart-panel" onclick="closeCartOutside(event)">
+  <div class="cart-box">
+    <h2>Your Food Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="cart-total" style="margin:15px 0"></h3>
+    <button class="btn secondary" onclick="closeCart()">Continue Browsing</button>
+    <button class="btn primary" onclick="checkout()">Place Demo Order</button>
   </div>
 </div>
 
-<div class="toast" id="toast" role="status"></div>
-
 <script>
-const packages = [
-  {
-    id: 1,
-    name: "Bali Tropical Escape",
-    destination: "Bali, Indonesia",
-    type: "Beach",
-    days: 5,
-    price: 32999,
-    rating: "4.9",
-    tag: "BEST SELLER",
-    image: "photo-1537996194471-e657df975ab4",
-    description: "Explore lush rice terraces, beautiful temples and tropical beaches."
-  },
-  {
-    id: 2,
-    name: "Swiss Alpine Adventure",
-    destination: "Switzerland",
-    type: "Adventure",
-    days: 7,
-    price: 89999,
-    rating: "4.8",
-    tag: "ADVENTURE",
-    image: "photo-1531366936337-7c912a4589a7",
-    description: "Discover alpine villages, mountain views and scenic train journeys."
-  },
-  {
-    id: 3,
-    name: "Maldives Island Retreat",
-    destination: "Maldives",
-    type: "Romantic",
-    days: 4,
-    price: 45999,
-    rating: "4.9",
-    tag: "ROMANTIC",
-    image: "photo-1514282401047-d79a71a590e8",
-    description: "Enjoy turquoise waters, island scenery and relaxing beach days."
-  },
-  {
-    id: 4,
-    name: "Manali Mountain Trails",
-    destination: "Manali, India",
-    type: "Adventure",
-    days: 5,
-    price: 14999,
-    rating: "4.7",
-    tag: "POPULAR",
-    image: "photo-1626621341517-bbf3d9990a23",
-    description: "Experience Himalayan scenery, mountain roads and fresh air."
-  },
-  {
-    id: 5,
-    name: "Jaipur Royal Heritage",
-    destination: "Jaipur, India",
-    type: "Culture",
-    days: 3,
-    price: 9999,
-    rating: "4.6",
-    tag: "CULTURE",
-    image: "photo-1477587458883-47145ed94245",
-    description: "Explore colorful markets, grand forts and Rajasthan's rich heritage."
-  },
-  {
-    id: 6,
-    name: "Kerala Backwater Escape",
-    destination: "Alleppey, India",
-    type: "Romantic",
-    days: 4,
-    price: 17999,
-    rating: "4.8",
-    tag: "RELAX & UNWIND",
-    image: "photo-1602216056096-3b40cc0c9944",
-    description: "Discover tranquil backwaters, tropical greenery and local cuisine."
-  },
-  {
-    id: 7,
-    name: "Goa Coastal Holiday",
-    destination: "Goa, India",
-    type: "Beach",
-    days: 4,
-    price: 12999,
-    rating: "4.7",
-    tag: "BEACH TIME",
-    image: "photo-1512343879784-a960bf40e7f2",
-    description: "Spend your days exploring sandy beaches and coastal towns."
-  },
-  {
-    id: 8,
-    name: "Agra Heritage Journey",
-    destination: "Agra, India",
-    type: "Culture",
-    days: 2,
-    price: 7999,
-    rating: "4.6",
-    tag: "HERITAGE",
-    image: "photo-1564507592333-c60657eea523",
-    description: "Discover iconic architecture and the history of Mughal India."
-  },
-  {
-    id: 9,
-    name: "Santorini Sunset Escape",
-    destination: "Santorini, Greece",
-    type: "Romantic",
-    days: 6,
-    price: 74999,
-    rating: "4.9",
-    tag: "SIGNATURE",
-    image: "photo-1533105079780-92b9be482077",
-    description: "Enjoy whitewashed villages, sea views and unforgettable sunsets."
-  }
+const dishes = [
+  {id:1,name:"Paneer Tikka",category:"Starters",diet:"Veg",price:249,tag:"POPULAR",rating:"4.8",image:"photo-1567188040759-fb8a883dc6d8",desc:"Grilled paneer with peppers and aromatic spices."},
+  {id:2,name:"Chicken 65",category:"Starters",diet:"Non-Veg",price:279,tag:"CHEF'S PICK",rating:"4.7",image:"photo-1604908176997-125f25cc6f3d",desc:"Crispy chicken tossed with spices and curry leaves."},
+  {id:3,name:"Tandoori Mushroom",category:"Starters",diet:"Veg",price:229,tag:"VEG SPECIAL",rating:"4.6",image:"photo-1504545102780-26774c1bb073",desc:"Mushrooms with a smoky tandoori marinade."},
+  {id:4,name:"Paneer Butter Masala",category:"Main Course",diet:"Veg",price:299,tag:"BEST SELLER",rating:"4.9",image:"photo-1631452180519-c014fe946bc7",desc:"Soft paneer in a creamy tomato butter gravy."},
+  {id:5,name:"Andhra Chicken Curry",category:"Main Course",diet:"Non-Veg",price:329,tag:"SPICY FAVOURITE",rating:"4.8",image:"photo-1603894584373-5ac82b2ae398",desc:"A bold curry with warming regional spices."},
+  {id:6,name:"Dal Tadka & Rice",category:"Main Course",diet:"Veg",price:229,tag:"COMFORT FOOD",rating:"4.6",image:"photo-1512621776951-a57141f2eefd",desc:"Homestyle dal served with fragrant rice."},
+  {id:7,name:"Hyderabadi Chicken Biryani",category:"Biryani",diet:"Non-Veg",price:329,tag:"SIGNATURE",rating:"4.9",image:"photo-1563379091339-03246963d96c",desc:"Aromatic basmati rice layered with spiced chicken."},
+  {id:8,name:"Veg Dum Biryani",category:"Biryani",diet:"Veg",price:249,tag:"VEG FAVOURITE",rating:"4.7",image:"photo-1589302168068-964664d93dc0",desc:"Dum-cooked basmati rice with vegetables and herbs."},
+  {id:9,name:"Mutton Dum Biryani",category:"Biryani",diet:"Non-Veg",price:399,tag:"PREMIUM",rating:"4.8",image:"photo-1633945274405-b6c8069047b0",desc:"Slow-cooked mutton and aromatic basmati rice."},
+  {id:10,name:"Gulab Jamun",category:"Desserts",diet:"Veg",price:99,tag:"SWEET CLASSIC",rating:"4.8",image:"photo-1666190092159-3e7b3b7e6b1d",desc:"Soft milk dumplings in cardamom sugar syrup."},
+  {id:11,name:"Chocolate Brownie",category:"Desserts",diet:"Veg",price:149,tag:"CHOCOLATE",rating:"4.7",image:"photo-1606313564200-e75d5e30476c",desc:"A rich chocolate treat to finish your meal."},
+  {id:12,name:"Mango Lassi",category:"Beverages",diet:"Veg",price:119,tag:"REFRESHING",rating:"4.6",image:"photo-1546173159-315724a31696",desc:"A refreshing yoghurt drink blended with mango."}
 ];
 
-let favorites = new Set();
-let selectedPackage = null;
+let cart = {};
 
 function money(amount) {
   return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0
+    style:"currency", currency:"INR", maximumFractionDigits:0
   }).format(amount);
 }
 
-function renderPackages() {
-  const search = document.getElementById("package-search")
-    .value.trim().toLowerCase();
+function renderMenu() {
+  const query = document.getElementById("search").value.toLowerCase().trim();
+  const category = document.getElementById("category-filter").value;
+  const diet = document.getElementById("diet-filter").value;
+  const sort = document.getElementById("sort").value;
 
-  const type = document.getElementById("trip-type").value;
-  const sort = document.getElementById("price-sort").value;
-
-  let list = packages.filter(p =>
-    (p.name + " " + p.destination + " " + p.type)
-      .toLowerCase().includes(search) &&
-    (type === "All" || p.type === type)
+  let list = dishes.filter(d =>
+    (d.name + " " + d.category + " " + d.desc).toLowerCase().includes(query) &&
+    (category === "All" || d.category === category) &&
+    (diet === "All" || d.diet === diet)
   );
 
-  if (sort === "low") list.sort((a, b) => a.price - b.price);
-  if (sort === "high") list.sort((a, b) => b.price - a.price);
+  if (sort === "low") list.sort((a,b) => a.price - b.price);
+  if (sort === "high") list.sort((a,b) => b.price - a.price);
 
-  const container = document.getElementById("package-grid");
+  const grid = document.getElementById("menu-grid");
 
   if (!list.length) {
-    container.innerHTML =
-      '<div class="no-results">No trips found. Try another destination or category.</div>';
+    grid.innerHTML = '<p>No dishes found. Try another search.</p>';
     return;
   }
 
-  container.innerHTML = list.map(p => `
-    <article class="package-card">
-      <div class="package-image">
-        <img
-          src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=800&q=85"
-          alt="${p.destination}"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='https://placehold.co/800x500/e3f0e9/142b3b?text=Travel+Diaries'">
-
-        <span class="package-tag">${p.tag}</span>
-
-        <button
-          class="favorite ${favorites.has(p.id) ? "active" : ""}"
-          aria-label="${favorites.has(p.id) ? "Remove from" : "Add to"} favorites"
-          aria-pressed="${favorites.has(p.id)}"
-          onclick="toggleFavorite(${p.id})">
-          ${favorites.has(p.id) ? "♥" : "♡"}
-        </button>
+  grid.innerHTML = list.map(d => `
+    <article class="food-card">
+      <div class="food-image">
+        <img src="https://images.unsplash.com/${d.image}?auto=format&fit=crop&w=800&q=85"
+          alt="${d.name}" loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/800x500/f4ebdf/38271f?text=Restaurant+Dish'">
+        <span class="tag">${d.tag}</span>
       </div>
-
-      <div class="package-info">
-        <div class="location">📍 ${p.destination}</div>
-        <h3>${p.name}</h3>
-        <div class="package-rating">★ ${p.rating}
-          <span style="color:#77838a">(Demo rating)</span>
+      <div class="food-info">
+        <div class="food-title">
+          <h3>${d.name}</h3>
+          <span class="price">${money(d.price)}</span>
         </div>
-        <p class="package-description">${p.description}</p>
-
-        <div style="font-size:12px;color:#77838a;margin-top:8px">
-          🗓 ${p.days} days · ${p.type}
-        </div>
-
-        <div class="package-bottom">
-          <div class="package-price">
-            <small>Starting from / person</small>
-            <strong>${money(p.price)}</strong>
-          </div>
-          <button class="book-button" onclick="openBooking(${p.id})">
-            View & Book
-          </button>
+        <div class="rating">★ ${d.rating} · ${d.diet}</div>
+        <p>${d.desc}</p>
+        <div class="food-bottom">
+          <small>${d.category}</small>
+          <button class="add-btn" onclick="addToCart(${d.id})">+ Add to Cart</button>
         </div>
       </div>
     </article>
   `).join("");
 }
 
-function toggleFavorite(id) {
-  const p = packages.find(item => item.id === id);
-
-  if (favorites.has(id)) {
-    favorites.delete(id);
-    showToast(p.name + " removed from saved trips.");
-  } else {
-    favorites.add(id);
-    showToast(p.name + " saved to your favorites!");
-  }
-
-  document.getElementById("favorite-count").textContent = favorites.size;
-  renderPackages();
+function chooseCategory(category) {
+  document.getElementById("category-filter").value = category;
+  renderMenu();
+  document.getElementById("menu").scrollIntoView({behavior:"smooth"});
 }
 
-function showFavorites() {
-  if (!favorites.size) {
-    showToast("No saved trips yet. Tap ♡ on a package to save it.");
+function addToCart(id) {
+  cart[id] = (cart[id] || 0) + 1;
+  document.getElementById("cart-count").textContent =
+    Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+  showToast(dishes.find(d => d.id === id).name + " added to cart!");
+}
+
+function openCart() {
+  renderCart();
+  document.getElementById("cart-panel").classList.add("open");
+}
+
+function closeCart() {
+  document.getElementById("cart-panel").classList.remove("open");
+}
+
+function closeCartOutside(event) {
+  if (event.target.id === "cart-panel") closeCart();
+}
+
+function renderCart() {
+  const items = document.getElementById("cart-items");
+  const ids = Object.keys(cart).filter(id => cart[id] > 0);
+  let total = 0;
+
+  if (!ids.length) {
+    items.innerHTML = "<p>Your cart is empty. Add dishes from the menu.</p>";
+    document.getElementById("cart-total").textContent = "";
     return;
   }
 
-  document.getElementById("package-search").value = "";
-  document.getElementById("trip-type").value = "All";
+  items.innerHTML = ids.map(id => {
+    const d = dishes.find(item => item.id === Number(id));
+    total += d.price * cart[id];
+    return `
+      <div class="cart-row">
+        <span>${d.name}<br>${money(d.price)} × ${cart[id]}</span>
+        <span>
+          <button onclick="changeQty(${id},-1)">−</button>
+          ${cart[id]}
+          <button onclick="changeQty(${id},1)">+</button>
+        </span>
+      </div>`;
+  }).join("");
 
-  const saved = packages.filter(p => favorites.has(p.id));
-  document.getElementById("price-sort").value = "default";
-
-  renderPackages();
-
-  // Display only saved packages.
-  document.getElementById("package-grid").innerHTML = saved.map(p => `
-    <article class="package-card">
-      <div class="package-image">
-        <img src="https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=800&q=85"
-          alt="${p.destination}">
-        <button class="favorite active" onclick="toggleFavorite(${p.id})">♥</button>
-      </div>
-      <div class="package-info">
-        <div class="location">📍 ${p.destination}</div>
-        <h3>${p.name}</h3>
-        <p class="package-description">${p.description}</p>
-        <div class="package-bottom">
-          <div class="package-price">
-            <small>Starting from / person</small>
-            <strong>${money(p.price)}</strong>
-          </div>
-          <button class="book-button" onclick="openBooking(${p.id})">View & Book</button>
-        </div>
-      </div>
-    </article>
-  `).join("");
-
-  document.getElementById("packages").scrollIntoView({behavior: "smooth"});
-  showToast("Showing your saved trips.");
+  document.getElementById("cart-total").textContent =
+    "Estimated total: " + money(total);
 }
 
-function scrollToPackages() {
-  document.getElementById("packages").scrollIntoView({behavior: "smooth"});
+function changeQty(id, change) {
+  cart[id] = (cart[id] || 0) + change;
+  if (cart[id] <= 0) delete cart[id];
+
+  document.getElementById("cart-count").textContent =
+    Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+
+  renderCart();
 }
 
-function scrollToDestinations() {
-  document.getElementById("destinations").scrollIntoView({behavior: "smooth"});
-}
+function checkout() {
+  const count = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
 
-function selectDestination(name) {
-  document.getElementById("destination-search").value = name;
-  document.getElementById("package-search").value = name;
-  document.getElementById("trip-type").value = "All";
-  renderPackages();
-  scrollToPackages();
-}
-
-function searchTrips() {
-  const query = document.getElementById("destination-search").value.trim();
-
-  document.getElementById("package-search").value = query;
-  document.getElementById("trip-type").value = "All";
-  renderPackages();
-  scrollToPackages();
-
-  if (query && !packages.some(p =>
-    (p.name + " " + p.destination + " " + p.type)
-      .toLowerCase().includes(query.toLowerCase()))) {
-    showToast("No matching packages. Try another destination.");
-  }
-}
-
-function openBooking(id) {
-  selectedPackage = packages.find(p => p.id === id);
-
-  document.getElementById("modal-title").textContent =
-    "Book " + selectedPackage.name;
-
-  document.getElementById("booking-summary").innerHTML =
-    "<strong>" + selectedPackage.destination + "</strong><br>" +
-    selectedPackage.days + " days · " + selectedPackage.type +
-    "<br>Starting at " + money(selectedPackage.price) + " per person";
-
-  const dateInput = document.getElementById("booking-date");
-  const searchDate = document.getElementById("travel-date").value;
-
-  dateInput.value = searchDate || "";
-  dateInput.min = new Date().toLocaleDateString("en-CA");
-  document.getElementById("booking-guests").value =
-    document.getElementById("travelers").value;
-
-  updateBookingTotal();
-
-  document.getElementById("booking-modal").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function updateBookingTotal() {
-  if (!selectedPackage) return;
-
-  const guests = Number(document.getElementById("booking-guests").value);
-
-  document.getElementById("booking-total").innerHTML =
-    "<strong>Estimated package total: " +
-    money(selectedPackage.price * guests) +
-    "</strong><br><small>For " + guests +
-    " traveler(s). Illustrative price only.</small>";
-}
-
-document.getElementById("booking-guests")
-  .addEventListener("change", updateBookingTotal);
-
-function closeBooking() {
-  document.getElementById("booking-modal").classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-function backdropClose(event) {
-  if (event.target.id === "booking-modal") closeBooking();
-}
-
-document.getElementById("booking-form").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  if (!selectedPackage) return;
-
-  const name = document.getElementById("guest-name").value.trim();
-  const email = document.getElementById("guest-email").value.trim();
-  const date = document.getElementById("booking-date").value;
-  const guests = Number(document.getElementById("booking-guests").value);
-
-  if (!name || !email || !date) {
-    showToast("Please complete all booking fields.");
+  if (!count) {
+    showToast("Your cart is empty!");
     return;
   }
 
-  if (date < new Date().toLocaleDateString("en-CA")) {
-    showToast("Please choose today or a future travel date.");
-    return;
-  }
+  const total = Object.entries(cart).reduce((sum, [id, qty]) =>
+    sum + dishes.find(d => d.id === Number(id)).price * qty, 0);
 
-  const reference = "TD" + Date.now().toString().slice(-7);
-  const total = selectedPackage.price * guests;
+  alert("SAFFRON & SPICE — DEMO ORDER\n\nItems: " + count +
+    "\nEstimated total: " + money(total) +
+    "\n\nDemo only. No real order or payment was made.");
 
-  closeBooking();
-
-  alert(
-    "TRAVEL DIARIES — DEMO BOOKING\n\n" +
-    "Reference: " + reference + "\n" +
-    "Traveler: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Destination: " + selectedPackage.destination + "\n" +
-    "Travel date: " + date + "\n" +
-    "Travelers: " + guests + "\n" +
-    "Estimated total: " + money(total) + "\n\n" +
-    "This is a demonstration only. No real booking has been created and no payment has been collected."
-  );
-
-  this.reset();
-});
+  cart = {};
+  document.getElementById("cart-count").textContent = "0";
+  closeCart();
+  showToast("Demo order completed!");
+}
 
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;
   toast.style.display = "block";
 
-  clearTimeout(window.toastTimeout);
-  window.toastTimeout = setTimeout(() => {
+  clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => {
     toast.style.display = "none";
-  }, 2800);
+  }, 2500);
 }
 
-// Set minimum date to today for the travel search.
 const today = new Date();
 const localToday = new Date(
   today.getTime() - today.getTimezoneOffset() * 60000
-).toISOString().slice(0, 10);
+).toISOString().slice(0,10);
 
-document.getElementById("travel-date").min = localToday;
-document.getElementById("booking-date").min = localToday;
+document.getElementById("reserve-date").min = localToday;
 
-renderPackages();
+document.getElementById("reservation-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const date = document.getElementById("reserve-date").value;
+
+  if (date < localToday) {
+    showToast("Choose today or a future date.");
+    return;
+  }
+
+  const name = document.getElementById("guest-name").value.trim();
+  const phone = document.getElementById("guest-phone").value.trim();
+  const time = document.getElementById("reserve-time").value;
+  const guests = document.getElementById("guests").value;
+
+  alert("SAFFRON & SPICE — DEMO RESERVATION\n\n" +
+    "Name: " + name +
+    "\nPhone: " + phone +
+    "\nDate: " + date +
+    "\nTime: " + time +
+    "\nGuests: " + guests +
+    "\n\nDemo confirmation only. No real reservation was sent.");
+
+  this.reset();
+  document.getElementById("reserve-date").min = localToday;
+  showToast("Demo reservation confirmed!");
+});
+
+renderMenu();
 </script>
 
 </body>
