@@ -8,15 +8,15 @@
 
 <style>
 :root {
-  --blue: #087e8b;
-  --navy: #153448;
-  --mint: #e9f8f6;
-  --green: #26a69a;
+  --blue: #3978d4;
+  --navy: #233b69;
+  --pink: #e875a7;
+  --mint: #fff0f6;
   --white: #ffffff;
-  --light: #f5f9fc;
-  --text: #243746;
-  --muted: #6c7e8c;
-  --border: #e0e9ef;
+  --light: #f4f7ff;
+  --text: #29364f;
+  --muted: #758198;
+  --border: #e5e7f5;
 }
 
 * {
@@ -60,7 +60,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 3px 15px #1534480a;
+  box-shadow: 0 3px 15px #233b6910;
 }
 
 .logo {
@@ -70,7 +70,7 @@ header {
   letter-spacing: -1px;
 }
 
-.logo span { color: var(--blue); }
+.logo span { color: var(--pink); }
 
 .logo small {
   display: block;
@@ -90,7 +90,7 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover { color: var(--blue); }
+nav a:hover { color: var(--pink); }
 
 .btn {
   border: none;
@@ -99,6 +99,7 @@ nav a:hover { color: var(--blue); }
   font-weight: 700;
   font-size: 13px;
   display: inline-block;
+  transition: .2s;
 }
 
 .primary {
@@ -106,7 +107,10 @@ nav a:hover { color: var(--blue); }
   color: white;
 }
 
-.primary:hover { background: var(--navy); }
+.primary:hover {
+  background: var(--navy);
+  transform: translateY(-1px);
+}
 
 .outline {
   background: white;
@@ -123,7 +127,7 @@ nav a:hover { color: var(--blue); }
   align-items: center;
   color: white;
   background:
-    linear-gradient(90deg, #102d43f2 0%, #102d43bd 48%, #102d4320 100%),
+    linear-gradient(90deg, #172c55f2 0%, #233b69bd 48%, #3978d420 100%),
     url("https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1600&q=85")
     center/cover;
 }
@@ -131,14 +135,14 @@ nav a:hover { color: var(--blue); }
 .hero-content { max-width: 610px; }
 
 .eyebrow {
-  color: var(--green);
+  color: var(--pink);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.hero .eyebrow { color: #9af0dc; }
+.hero .eyebrow { color: #ffb8d5; }
 
 .hero h1 {
   font-size: clamp(38px, 5.5vw, 64px);
@@ -150,7 +154,7 @@ nav a:hover { color: var(--blue); }
 .hero p {
   max-width: 490px;
   margin-bottom: 26px;
-  color: #e6f0f5;
+  color: #e6efff;
 }
 
 .hero-actions {
@@ -180,7 +184,7 @@ nav a:hover { color: var(--blue); }
   padding: 22px 15px;
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 10px 35px #1534480b;
+  box-shadow: 0 10px 35px #233b690b;
 }
 
 .quick-card .emoji { font-size: 29px; }
@@ -229,14 +233,15 @@ nav a:hover { color: var(--blue); }
 
 .department:hover {
   transform: translateY(-4px);
-  border-color: var(--green);
-  box-shadow: 0 12px 30px #1534480c;
+  border-color: var(--pink);
+  box-shadow: 0 12px 30px #233b690c;
 }
 
 .dept-icon {
   width: 55px;
   height: 55px;
-  background: var(--mint);
+  background: #ffe3ef;
+  color: var(--blue);
   display: grid;
   place-items: center;
   border-radius: 13px;
@@ -263,6 +268,8 @@ nav a:hover { color: var(--blue); }
   font-size: 12px;
   font-weight: 800;
 }
+
+.department button:hover { color: var(--pink); }
 
 .doctor-section { background: var(--light); }
 
@@ -302,7 +309,7 @@ nav a:hover { color: var(--blue); }
 
 .doctor-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px #15344812;
+  box-shadow: 0 12px 30px #233b6912;
 }
 
 .doctor-card img {
@@ -319,8 +326,8 @@ nav a:hover { color: var(--blue); }
   display: inline-block;
   padding: 4px 9px;
   border-radius: 20px;
-  background: #e8f8ef;
-  color: #16844c;
+  background: #ffe3ef;
+  color: #a72d67;
   font-size: 10px;
   font-weight: 800;
   margin-bottom: 9px;
@@ -383,7 +390,7 @@ nav a:hover { color: var(--blue); }
   position: absolute;
   right: -15px;
   bottom: 20px;
-  background: var(--blue);
+  background: var(--pink);
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -416,7 +423,7 @@ nav a:hover { color: var(--blue); }
 }
 
 .benefit span {
-  color: var(--green);
+  color: var(--pink);
   margin-right: 7px;
 }
 
@@ -432,17 +439,18 @@ nav a:hover { color: var(--blue); }
 
 .stats strong {
   display: block;
-  color: #8de5d1;
+  color: #ffb8d5;
   font-size: 32px;
 }
 
 .stats span { font-size: 12px; }
 
 .appointment {
-  background: var(--mint);
+  background: #fff0f6;
   padding: 40px;
   margin: 60px 6%;
   border-radius: 16px;
+  border: 1px solid #f8d4e4;
 }
 
 .appointment h2 {
@@ -475,7 +483,7 @@ nav a:hover { color: var(--blue); }
 .form-field textarea {
   width: 100%;
   padding: 13px;
-  border: 1px solid #d5e5e5;
+  border: 1px solid #e8ccdc;
   background: white;
   border-radius: 7px;
   outline-color: var(--blue);
@@ -489,7 +497,7 @@ nav a:hover { color: var(--blue); }
 .full { grid-column: 1 / -1; }
 
 footer {
-  background: #102737;
+  background: #172b50;
   color: white;
   padding: 42px 6% 20px;
 }
@@ -502,14 +510,16 @@ footer {
 
 footer h2, footer h3 { margin-bottom: 12px; }
 
+footer h2 span { color: #ffb8d5; }
+
 footer p, footer a {
   display: block;
-  color: #c4d4de;
+  color: #d3dff2;
   font-size: 12px;
   margin: 7px 0;
 }
 
-footer a:hover { color: #8de5d1; }
+footer a:hover { color: #ffb8d5; }
 
 .copyright {
   border-top: 1px solid #ffffff25;
@@ -517,7 +527,7 @@ footer a:hover { color: #8de5d1; }
   padding-top: 18px;
   text-align: center;
   font-size: 11px;
-  color: #c4d4de;
+  color: #d3dff2;
 }
 
 .toast {
@@ -539,7 +549,7 @@ footer a:hover { color: #8de5d1; }
   position: fixed;
   inset: 0;
   z-index: 25;
-  background: #102737a8;
+  background: #172b50a8;
   align-items: center;
   justify-content: center;
   padding: 18px;
@@ -555,6 +565,7 @@ footer a:hover { color: #8de5d1; }
   max-width: 480px;
   max-height: 90vh;
   overflow: auto;
+  border-top: 5px solid var(--pink);
 }
 
 .modal-box h2 { color: var(--navy); }
@@ -607,7 +618,9 @@ footer a:hover { color: #8de5d1; }
 </div>
 
 <header>
-  <a href="#home" class="logo">Care<span>Plus</span><small>HOSPITAL & WELLNESS</small></a>
+  <a href="#home" class="logo">Care<span>Plus</span>
+    <small>HOSPITAL & WELLNESS</small>
+  </a>
 
   <nav>
     <a href="#home">Home</a>
@@ -617,8 +630,9 @@ footer a:hover { color: #8de5d1; }
     <a href="#appointment">Appointments</a>
   </nav>
 
-  <button class="btn primary"
-    onclick="scrollToAppointment()">Book Appointment</button>
+  <button class="btn primary" onclick="scrollToAppointment()">
+    Book Appointment
+  </button>
 </header>
 
 <section class="hero" id="home">
@@ -658,7 +672,7 @@ footer a:hover { color: #8de5d1; }
     <p>Request online</p>
   </article>
   <article class="quick-card">
-    <div class="emoji">💙</div>
+    <div class="emoji">💗</div>
     <h3>Patient First</h3>
     <p>Care with compassion</p>
   </article>
@@ -708,7 +722,7 @@ footer a:hover { color: #8de5d1; }
     </article>
 
     <article class="department">
-      <div class="dept-icon">🩻</div>
+      <div class="dept-icon">🩺</div>
       <h3>General Medicine</h3>
       <p>General consultations and ongoing health management.</p>
       <button onclick="chooseDepartment('General Medicine')">Find a Doctor →</button>
@@ -725,7 +739,7 @@ footer a:hover { color: #8de5d1; }
       <div class="dept-icon">🧪</div>
       <h3>Diagnostics</h3>
       <p>Information about laboratory and diagnostic services.</p>
-      <button onclick="showToast('Please contact the hospital to enquire about diagnostic services.')">Learn More →</button>
+      <button onclick="showToast('Contact the hospital to enquire about diagnostic services.')">Learn More →</button>
     </article>
   </div>
 </section>
@@ -734,7 +748,7 @@ footer a:hover { color: #8de5d1; }
   <div class="heading">
     <div class="eyebrow">Meet our specialists</div>
     <h2>Find the Right Doctor</h2>
-    <p>Browse our sample doctor profiles and request a consultation.</p>
+    <p>Browse sample doctor profiles and request a consultation.</p>
   </div>
 
   <div class="doctor-tools">
@@ -762,7 +776,9 @@ footer a:hover { color: #8de5d1; }
       <img
         src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
         alt="Healthcare professionals working together">
-      <div class="experience"><strong>24/7</strong>Emergency Support</div>
+      <div class="experience">
+        <strong>24/7</strong>Emergency Support
+      </div>
     </div>
 
     <div>
@@ -776,7 +792,7 @@ footer a:hover { color: #8de5d1; }
       <div class="benefit"><span>✓</span> Easy access to department information</div>
       <div class="benefit"><span>✓</span> Convenient appointment request form</div>
       <div class="benefit"><span>✓</span> Simple doctor search and filtering</div>
-      <div class="benefit"><span>✓</span> Responsive design for mobile and desktop</div>
+      <div class="benefit"><span>✓</span> Responsive desktop and mobile design</div>
       <br>
       <button class="btn primary" onclick="scrollToAppointment()">
         Request an Appointment →
@@ -787,7 +803,7 @@ footer a:hover { color: #8de5d1; }
 
 <section class="stats">
   <div><strong>8+</strong><span>Medical Departments</span></div>
-  <div><strong>6+</strong><span>Sample Doctor Profiles</span></div>
+  <div><strong>7+</strong><span>Sample Doctor Profiles</span></div>
   <div><strong>24/7</strong><span>Emergency Information</span></div>
   <div><strong>100%</strong><span>Patient-Focused Design</span></div>
 </section>
@@ -808,8 +824,7 @@ footer a:hover { color: #8de5d1; }
       <div class="form-field">
         <label for="patient-phone">Phone Number *</label>
         <input id="patient-phone" type="tel" required
-          pattern="[0-9+() -]{8,18}"
-          placeholder="+91 98765 43210">
+          pattern="[0-9+() -]{8,18}" placeholder="+91 98765 43210">
       </div>
 
       <div class="form-field">
@@ -871,7 +886,7 @@ footer a:hover { color: #8de5d1; }
       <div class="form-field full">
         <label for="patient-notes">Additional Notes (Optional)</label>
         <textarea id="patient-notes" maxlength="500"
-          placeholder="Optional scheduling notes only. Avoid entering sensitive medical information."></textarea>
+          placeholder="Optional scheduling notes only. Avoid sensitive medical information."></textarea>
       </div>
 
       <div class="full">
@@ -886,11 +901,11 @@ footer a:hover { color: #8de5d1; }
 <footer>
   <div class="footer-grid">
     <div>
-      <h2>CarePlus Hospital</h2>
+      <h2>Care<span style="color:#ffb8d5">Plus</span> Hospital</h2>
       <p>Healthcare information designed to make your next step easier.</p>
       <p>📍 Hyderabad, Telangana, India</p>
       <p>☎ Demo contact: +91 98765 43210</p>
-      <p>For emergencies, call your local emergency service.</p>
+      <p>For emergencies, contact local emergency services.</p>
     </div>
 
     <div>
@@ -911,8 +926,8 @@ footer a:hover { color: #8de5d1; }
 
   <div class="copyright">
     © 2026 CarePlus Hospital — Demo UI for learning and portfolio use.
-    <br>This website is not connected to a real hospital. Doctor profiles,
-    fees and appointment availability are illustrative.
+    <br>Doctor profiles, fees and availability are illustrative.
+    No real appointments are booked.
   </div>
 </footer>
 
@@ -959,7 +974,7 @@ const doctors = [
     experience: "9 years of experience",
     fee: 700,
     image: "photo-1594824476967-48c8b964273f",
-    description: "Women's health and routine gynecology consultations."
+    description: "Women's health and routine consultations."
   },
   {
     id: 4,
@@ -968,7 +983,7 @@ const doctors = [
     experience: "11 years of experience",
     fee: 650,
     image: "photo-1622253692010-333f2da6031d",
-    description: "Bone, joint and mobility-related consultations."
+    description: "Bone, joint and mobility consultations."
   },
   {
     id: 5,
@@ -976,7 +991,7 @@ const doctors = [
     specialty: "Pediatrics",
     experience: "8 years of experience",
     fee: 600,
-    image: "photo-1594824476967-48c8b964273f",
+    image: "photo-1559839734-2b71ea197ec2",
     description: "General healthcare consultations for children."
   },
   {
@@ -986,7 +1001,7 @@ const doctors = [
     experience: "14 years of experience",
     fee: 500,
     image: "photo-1612349317150-e413f6a5b16d",
-    description: "General health consultations and routine check-ups."
+    description: "General consultations and routine check-ups."
   },
   {
     id: 7,
@@ -994,8 +1009,8 @@ const doctors = [
     specialty: "Ophthalmology",
     experience: "7 years of experience",
     fee: 550,
-    image: "photo-1559839734-2b71ea197ec2",
-    description: "Eye health and vision-related consultations."
+    image: "photo-1594824476967-48c8b964273f",
+    description: "Eye health and vision consultations."
   }
 ];
 
@@ -1030,7 +1045,7 @@ function renderDoctors() {
         src="https://images.unsplash.com/${doctor.image}?auto=format&fit=crop&w=700&q=80"
         alt="Illustrative profile image for ${doctor.name}"
         loading="lazy"
-        onerror="this.onerror=null;this.src='https://placehold.co/700x450/e9f8f6/153448?text=Doctor+Profile'">
+        onerror="this.onerror=null;this.src='https://placehold.co/700x450/fff0f6/233b69?text=Doctor+Profile'">
       <div class="doctor-info">
         <span class="available">SAMPLE PROFILE</span>
         <h3>${doctor.name}</h3>
@@ -1105,9 +1120,7 @@ function closeConfirmation() {
 }
 
 document.getElementById("appointment-department")
-  .addEventListener("change", function() {
-    updateDoctorOptions();
-  });
+  .addEventListener("change", updateDoctorOptions);
 
 const dateInput = document.getElementById("appointment-date");
 
