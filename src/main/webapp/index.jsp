@@ -4,19 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CarePlus Hospital | Healthcare & Wellness</title>
+<title>IRONCORE Fitness | Gym</title>
 
 <style>
 :root {
-  --blue: #3978d4;
-  --navy: #233b69;
-  --pink: #e875a7;
-  --mint: #fff0f6;
-  --white: #ffffff;
-  --light: #f4f7ff;
-  --text: #29364f;
-  --muted: #758198;
-  --border: #e5e7f5;
+  --lime: #c8ff3d;
+  --dark: #101210;
+  --panel: #191d19;
+  --muted: #a6ada4;
+  --white: #f7f8f4;
+  --border: #30362f;
 }
 
 * {
@@ -28,175 +25,170 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--white);
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  background: var(--dark);
+  color: var(--white);
   line-height: 1.6;
 }
 
-button, input, select, textarea { font: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select {
+  font: inherit;
+}
+
 button { cursor: pointer; }
-a { text-decoration: none; color: inherit; }
 
 .topbar {
-  background: var(--navy);
-  color: white;
+  background: var(--lime);
+  color: #111;
   padding: 9px 6%;
   display: flex;
   justify-content: space-between;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 10px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #101210f5;
   padding: 18px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 3px 15px #233b6910;
+  gap: 20px;
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--navy);
-  letter-spacing: -1px;
+  font-size: 25px;
+  font-weight: 900;
 }
 
-.logo span { color: var(--pink); }
+.logo span { color: var(--lime); }
 
 .logo small {
   display: block;
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 600;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
 }
 
 nav {
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 22px;
 }
 
 nav a {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-nav a:hover { color: var(--pink); }
+nav a:hover { color: var(--lime); }
 
 .btn {
-  border: none;
-  padding: 12px 18px;
-  border-radius: 7px;
-  font-weight: 700;
-  font-size: 13px;
   display: inline-block;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
   transition: .2s;
 }
 
 .primary {
-  background: var(--blue);
-  color: white;
+  background: var(--lime);
+  color: #111;
 }
 
 .primary:hover {
-  background: var(--navy);
-  transform: translateY(-1px);
+  background: white;
+  transform: translateY(-2px);
 }
 
 .outline {
-  background: white;
-  color: var(--blue);
-  border: 1px solid var(--blue);
+  border: 1px solid white;
+  background: transparent;
+  color: white;
 }
 
 .hero {
-  margin: 20px 3%;
-  min-height: 500px;
-  padding: 55px 7%;
-  border-radius: 18px;
+  min-height: 560px;
   display: flex;
   align-items: center;
-  color: white;
+  padding: 70px 8%;
   background:
-    linear-gradient(90deg, #172c55f2 0%, #233b69bd 48%, #3978d420 100%),
-    url("https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1600&q=85")
+    linear-gradient(90deg, #080a08f5, #101210a8, #10121020),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85")
     center/cover;
 }
 
-.hero-content { max-width: 610px; }
+.hero-content { max-width: 650px; }
 
 .eyebrow {
-  color: var(--pink);
+  color: var(--lime);
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-weight: bold;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-.hero .eyebrow { color: #ffb8d5; }
-
 .hero h1 {
-  font-size: clamp(38px, 5.5vw, 64px);
-  line-height: 1.1;
-  margin: 18px 0;
-  letter-spacing: -1.5px;
+  font-size: clamp(45px, 7vw, 80px);
+  line-height: 1;
+  margin: 20px 0;
+  text-transform: uppercase;
 }
+
+.hero h1 span { color: var(--lime); }
 
 .hero p {
-  max-width: 490px;
-  margin-bottom: 26px;
-  color: #e6efff;
+  color: #d4d9d1;
+  max-width: 500px;
+  margin-bottom: 25px;
 }
 
-.hero-actions {
+.actions {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
-.hero .outline {
-  background: transparent;
-  color: white;
-  border-color: #ffffff90;
-}
-
-.quick-services {
+.quick {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin: -35px 7% 0;
+  gap: 14px;
+  margin: -30px 6% 0;
   position: relative;
-  z-index: 2;
 }
 
-.quick-card {
-  background: white;
+.quick article {
+  background: var(--panel);
+  padding: 22px;
   border: 1px solid var(--border);
-  padding: 22px 15px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 10px 35px #233b690b;
+  border-bottom: 3px solid var(--lime);
 }
 
-.quick-card .emoji { font-size: 29px; }
-
-.quick-card h3 {
-  font-size: 14px;
-  margin: 7px 0 3px;
+.quick strong {
+  display: block;
+  font-size: 28px;
+  color: var(--lime);
 }
 
-.quick-card p {
+.quick span {
   font-size: 11px;
   color: var(--muted);
+  text-transform: uppercase;
 }
 
 .section { padding: 75px 6%; }
@@ -206,231 +198,169 @@ nav a:hover { color: var(--pink); }
   margin-bottom: 35px;
 }
 
-.heading h2 {
-  font-size: clamp(27px, 4vw, 38px);
-  color: var(--navy);
-  margin: 7px 0;
+.heading h2,
+.about h2,
+.join h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+  margin: 10px 0;
+  text-transform: uppercase;
 }
 
 .heading p {
-  color: var(--muted);
   font-size: 14px;
-}
-
-.departments {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.department {
-  padding: 26px 20px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: .2s;
-  background: white;
-}
-
-.department:hover {
-  transform: translateY(-4px);
-  border-color: var(--pink);
-  box-shadow: 0 12px 30px #233b690c;
-}
-
-.dept-icon {
-  width: 55px;
-  height: 55px;
-  background: #ffe3ef;
-  color: var(--blue);
-  display: grid;
-  place-items: center;
-  border-radius: 13px;
-  font-size: 27px;
-  margin-bottom: 16px;
-}
-
-.department h3 {
-  font-size: 17px;
-  margin-bottom: 7px;
-}
-
-.department p {
-  font-size: 12px;
   color: var(--muted);
-  min-height: 58px;
 }
 
-.department button {
-  margin-top: 15px;
-  color: var(--blue);
-  border: none;
-  background: transparent;
-  font-size: 12px;
-  font-weight: 800;
+.programs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.department button:hover { color: var(--pink); }
-
-.doctor-section { background: var(--light); }
-
-.doctor-tools {
+.program {
+  min-height: 290px;
+  padding: 25px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    linear-gradient(0deg, #080a08f5, #080a0840),
+    var(--image) center/cover;
+  border: 1px solid var(--border);
+  transition: .3s;
+}
+
+.program:hover { transform: translateY(-5px); }
+
+.program .number {
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.program h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+
+.program p {
+  color: #ddd;
+  font-size: 13px;
+}
+
+.trainer-section { background: #171a17; }
+
+.tools {
+  display: flex;
   gap: 12px;
   margin-bottom: 25px;
 }
 
-.doctor-tools input,
-.doctor-tools select {
+.tools input,
+.tools select {
+  background: var(--dark);
+  color: white;
   padding: 12px;
   border: 1px solid var(--border);
-  border-radius: 7px;
-  background: white;
+  border-radius: 4px;
 }
 
-.doctor-tools input {
+.tools input {
   flex: 1;
   min-width: 180px;
 }
 
-.doctor-grid {
+.trainer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 20px;
 }
 
-.doctor-card {
-  background: white;
-  border-radius: 13px;
-  overflow: hidden;
+.trainer {
+  background: var(--dark);
   border: 1px solid var(--border);
-  transition: .2s;
 }
 
-.doctor-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px #233b6912;
-}
-
-.doctor-card img {
+.trainer img {
   width: 100%;
-  height: 245px;
+  height: 280px;
   object-fit: cover;
-  object-position: center top;
-  background: var(--mint);
+  display: block;
 }
 
-.doctor-info { padding: 20px; }
+.trainer-info { padding: 20px; }
 
-.available {
+.tag {
   display: inline-block;
-  padding: 4px 9px;
-  border-radius: 20px;
-  background: #ffe3ef;
-  color: #a72d67;
+  background: var(--lime);
+  color: #111;
+  padding: 4px 8px;
   font-size: 10px;
-  font-weight: 800;
-  margin-bottom: 9px;
+  font-weight: bold;
 }
 
-.doctor-info h3 {
-  font-size: 20px;
-  color: var(--navy);
+.trainer h3 {
+  margin-top: 10px;
+  font-size: 21px;
 }
 
-.specialty {
-  color: var(--blue);
-  font-size: 13px;
-  font-weight: 700;
-  margin: 4px 0;
-}
-
-.doctor-info p {
+.trainer p {
   color: var(--muted);
-  font-size: 12px;
-  margin: 9px 0 15px;
+  font-size: 13px;
+  margin: 8px 0 15px;
 }
 
-.doctor-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 14px;
+.trainer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
 }
 
-.fee {
-  font-weight: 800;
-  color: var(--navy);
+.price {
+  color: var(--lime);
+  font-weight: bold;
 }
 
-.doctor-bottom .btn {
-  padding: 9px 12px;
-  font-size: 11px;
-}
+.trainer-bottom .btn { padding: 10px; }
 
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 45px;
   align-items: center;
-  gap: 50px;
 }
 
-.about-image { position: relative; }
-
-.about-image img {
+.about img {
   width: 100%;
   height: 390px;
   object-fit: cover;
-  border-radius: 14px;
-}
-
-.experience {
-  position: absolute;
-  right: -15px;
-  bottom: 20px;
-  background: var(--pink);
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  font-weight: 800;
-  text-align: center;
-}
-
-.experience strong {
-  display: block;
-  font-size: 29px;
-}
-
-.about h2 {
-  color: var(--navy);
-  font-size: clamp(29px, 4vw, 40px);
-  line-height: 1.2;
-  margin: 12px 0;
 }
 
 .about p {
   color: var(--muted);
-  font-size: 14px;
-  margin: 14px 0;
+  margin: 15px 0;
 }
 
 .benefit {
   margin: 10px 0;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .benefit span {
-  color: var(--pink);
-  margin-right: 7px;
+  color: var(--lime);
+  margin-right: 8px;
 }
 
 .stats {
-  background: var(--navy);
-  color: white;
-  padding: 42px 6%;
+  background: var(--lime);
+  color: #111;
+  padding: 40px 6%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
@@ -439,27 +369,24 @@ nav a:hover { color: var(--pink); }
 
 .stats strong {
   display: block;
-  color: #ffb8d5;
-  font-size: 32px;
-}
-
-.stats span { font-size: 12px; }
-
-.appointment {
-  background: #fff0f6;
-  padding: 40px;
-  margin: 60px 6%;
-  border-radius: 16px;
-  border: 1px solid #f8d4e4;
-}
-
-.appointment h2 {
-  color: var(--navy);
   font-size: 34px;
-  margin: 8px 0;
 }
 
-.appointment > p {
+.stats span {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.join {
+  margin: 60px 6%;
+  padding: 40px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--lime);
+}
+
+.join > p {
   color: var(--muted);
   margin-bottom: 25px;
   font-size: 14px;
@@ -471,77 +398,67 @@ nav a:hover { color: var(--pink); }
   gap: 17px;
 }
 
-.form-field label {
+.field label {
   display: block;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: bold;
   margin-bottom: 6px;
 }
 
-.form-field input,
-.form-field select,
-.form-field textarea {
+.field input,
+.field select {
   width: 100%;
   padding: 13px;
-  border: 1px solid #e8ccdc;
-  background: white;
-  border-radius: 7px;
-  outline-color: var(--blue);
-}
-
-.form-field textarea {
-  resize: vertical;
-  min-height: 85px;
+  color: white;
+  background: var(--dark);
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 
 .full { grid-column: 1 / -1; }
 
 footer {
-  background: #172b50;
-  color: white;
-  padding: 42px 6% 20px;
+  background: #080a08;
+  padding: 40px 6% 20px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 35px;
+  gap: 30px;
 }
 
-footer h2, footer h3 { margin-bottom: 12px; }
+footer h3 { margin-bottom: 12px; }
 
-footer h2 span { color: #ffb8d5; }
-
-footer p, footer a {
+footer p,
+footer a {
   display: block;
-  color: #d3dff2;
+  color: var(--muted);
   font-size: 12px;
   margin: 7px 0;
 }
 
-footer a:hover { color: #ffb8d5; }
+footer a:hover { color: var(--lime); }
 
 .copyright {
-  border-top: 1px solid #ffffff25;
-  margin-top: 30px;
+  border-top: 1px solid var(--border);
+  margin-top: 25px;
   padding-top: 18px;
   text-align: center;
+  color: var(--muted);
   font-size: 11px;
-  color: #d3dff2;
 }
 
 .toast {
   display: none;
   position: fixed;
-  right: 20px;
   bottom: 20px;
-  background: var(--navy);
-  color: white;
+  right: 20px;
+  background: var(--lime);
+  color: #111;
   padding: 14px 20px;
-  border-radius: 9px;
+  font-weight: bold;
   z-index: 30;
-  max-width: 90%;
-  box-shadow: 0 8px 25px #0002;
 }
 
 .modal {
@@ -549,7 +466,7 @@ footer a:hover { color: #ffb8d5; }
   position: fixed;
   inset: 0;
   z-index: 25;
-  background: #172b50a8;
+  background: #000b;
   align-items: center;
   justify-content: center;
   padding: 18px;
@@ -558,22 +475,18 @@ footer a:hover { color: #ffb8d5; }
 .modal.open { display: flex; }
 
 .modal-box {
-  background: white;
+  background: var(--panel);
   padding: 28px;
-  border-radius: 14px;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--lime);
   width: 100%;
   max-width: 480px;
-  max-height: 90vh;
-  overflow: auto;
-  border-top: 5px solid var(--pink);
 }
-
-.modal-box h2 { color: var(--navy); }
 
 .modal-box p {
   color: var(--muted);
   font-size: 13px;
-  margin: 8px 0 18px;
+  margin: 12px 0;
 }
 
 .modal-actions {
@@ -582,30 +495,24 @@ footer a:hover { color: #ffb8d5; }
   margin-top: 20px;
 }
 
-@media(max-width:950px) {
+@media(max-width:900px) {
   header { justify-content: center; }
-  .departments { grid-template-columns: repeat(2, 1fr); }
-  .doctor-grid { grid-template-columns: repeat(2, 1fr); }
-  .quick-services { margin-left: 4%; margin-right: 4%; }
+  .programs, .trainer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media(max-width:650px) {
+@media(max-width:620px) {
   .topbar { justify-content: center; text-align: center; }
-  nav { justify-content: center; gap: 13px; }
-  .hero { margin: 10px; padding: 35px 22px; min-height: 440px; }
-  .quick-services { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
-  .section { padding: 48px 5%; }
-  .departments, .doctor-grid, .about { grid-template-columns: 1fr; }
-  .doctor-card img { height: 280px; }
-  .about { gap: 30px; }
-  .about-image img { height: 280px; }
-  .experience { right: 10px; }
+  nav { justify-content: center; gap: 12px; }
+  .hero { padding: 55px 6%; }
+  .quick { grid-template-columns: repeat(2, 1fr); margin: 18px 5% 0; }
+  .section { padding: 50px 5%; }
+  .programs, .trainer-grid, .about { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .appointment { margin: 30px 5%; padding: 23px; }
-  .form-grid { grid-template-columns: 1fr; }
+  .join { margin: 30px 5%; padding: 23px; }
+  .form-grid, .footer-grid { grid-template-columns: 1fr; }
   .full { grid-column: auto; }
-  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
-  .doctor-tools input, .doctor-tools select { width: 100%; }
+  .tools { flex-direction: column; }
+  .tools input, .tools select { width: 100%; }
 }
 </style>
 </head>
@@ -613,286 +520,177 @@ footer a:hover { color: #ffb8d5; }
 <body>
 
 <div class="topbar">
-  <span>✚ Compassionate Care. Better Health.</span>
-  <span>☎ Emergency assistance: 112 (India)</span>
+  <span>⚡ YOUR GOALS. YOUR GRIND. YOUR RESULTS.</span>
+  <span>MON–SAT · 5:00 AM – 11:00 PM</span>
 </div>
 
 <header>
-  <a href="#home" class="logo">Care<span>Plus</span>
-    <small>HOSPITAL & WELLNESS</small>
+  <a href="#home" class="logo">
+    IRON<span>CORE</span>
+    <small>FITNESS CLUB</small>
   </a>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#departments">Departments</a>
-    <a href="#doctors">Our Doctors</a>
-    <a href="#about">About Us</a>
-    <a href="#appointment">Appointments</a>
+    <a href="#programs">Programs</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#about">About</a>
+    <a href="#membership">Membership</a>
   </nav>
 
-  <button class="btn primary" onclick="scrollToAppointment()">
-    Book Appointment
-  </button>
+  <button class="btn primary" onclick="scrollToJoin()">Join The Gym ↗</button>
 </header>
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="eyebrow">Your health, our priority</div>
-    <h1>Expert care.<br>Healthier lives.</h1>
-    <p>
-      Welcome to CarePlus Hospital. Explore medical departments,
-      meet our featured doctors and request an appointment in minutes.
-    </p>
-    <div class="hero-actions">
-      <button class="btn primary" onclick="scrollToAppointment()">
-        Book an Appointment →
-      </button>
-      <button class="btn outline"
-        onclick="document.getElementById('departments').scrollIntoView({behavior:'smooth'})">
-        Explore Services
-      </button>
+    <div class="eyebrow">No shortcuts. Just strength.</div>
+    <h1>Build your<br><span>strongest</span> self.</h1>
+    <p>Train with purpose in a high-energy fitness space built for every level. Get stronger, move better and make progress that lasts.</p>
+    <div class="actions">
+      <button class="btn primary" onclick="scrollToJoin()">Start Your Journey →</button>
+      <a class="btn outline" href="#programs">Explore Programs</a>
     </div>
   </div>
 </section>
 
-<div class="quick-services">
-  <article class="quick-card">
-    <div class="emoji">🩺</div>
-    <h3>Expert Doctors</h3>
-    <p>Explore specialties</p>
-  </article>
-  <article class="quick-card">
-    <div class="emoji">🏥</div>
-    <h3>Medical Departments</h3>
-    <p>Care in one place</p>
-  </article>
-  <article class="quick-card">
-    <div class="emoji">📅</div>
-    <h3>Easy Appointments</h3>
-    <p>Request online</p>
-  </article>
-  <article class="quick-card">
-    <div class="emoji">💗</div>
-    <h3>Patient First</h3>
-    <p>Care with compassion</p>
-  </article>
+<div class="quick">
+  <article><strong>12K+</strong><span>Workouts completed</span></article>
+  <article><strong>15+</strong><span>Expert coaches</span></article>
+  <article><strong>40+</strong><span>Weekly classes</span></article>
+  <article><strong>24/7</strong><span>Member motivation</span></article>
 </div>
 
-<section class="section" id="departments">
+<section class="section" id="programs">
   <div class="heading">
-    <div class="eyebrow">Our medical services</div>
-    <h2>Explore Our Departments</h2>
-    <p>Find a department to help you navigate your healthcare needs.</p>
+    <div class="eyebrow">Find your training style</div>
+    <h2>Made for your goals</h2>
+    <p>Choose a program, show up consistently and build momentum.</p>
   </div>
 
-  <div class="departments">
-    <article class="department">
-      <div class="dept-icon">❤️</div>
-      <h3>Cardiology</h3>
-      <p>Heart health consultations and cardiovascular care.</p>
-      <button onclick="chooseDepartment('Cardiology')">Find a Doctor →</button>
+  <div class="programs">
+    <article class="program" style="--image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80')">
+      <span class="number">01 / STRENGTH</span>
+      <h3>Weight Training</h3>
+      <p>Build strength with progressive training and expert guidance.</p>
     </article>
 
-    <article class="department">
-      <div class="dept-icon">🧠</div>
-      <h3>Neurology</h3>
-      <p>Specialist consultations for nervous system conditions.</p>
-      <button onclick="chooseDepartment('Neurology')">Find a Doctor →</button>
+    <article class="program" style="--image:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80')">
+      <span class="number">02 / CONDITIONING</span>
+      <h3>HIIT & Cardio</h3>
+      <p>Improve stamina with energetic, full-body sessions.</p>
     </article>
 
-    <article class="department">
-      <div class="dept-icon">🦴</div>
-      <h3>Orthopedics</h3>
-      <p>Consultations for bones, joints and mobility concerns.</p>
-      <button onclick="chooseDepartment('Orthopedics')">Find a Doctor →</button>
-    </article>
-
-    <article class="department">
-      <div class="dept-icon">👶</div>
-      <h3>Pediatrics</h3>
-      <p>Healthcare services for infants, children and adolescents.</p>
-      <button onclick="chooseDepartment('Pediatrics')">Find a Doctor →</button>
-    </article>
-
-    <article class="department">
-      <div class="dept-icon">🌸</div>
-      <h3>Gynecology</h3>
-      <p>Women's health consultations and routine care.</p>
-      <button onclick="chooseDepartment('Gynecology')">Find a Doctor →</button>
-    </article>
-
-    <article class="department">
-      <div class="dept-icon">🩺</div>
-      <h3>General Medicine</h3>
-      <p>General consultations and ongoing health management.</p>
-      <button onclick="chooseDepartment('General Medicine')">Find a Doctor →</button>
-    </article>
-
-    <article class="department">
-      <div class="dept-icon">👁️</div>
-      <h3>Ophthalmology</h3>
-      <p>Eye examinations and vision-related consultations.</p>
-      <button onclick="chooseDepartment('Ophthalmology')">Find a Doctor →</button>
-    </article>
-
-    <article class="department">
-      <div class="dept-icon">🧪</div>
-      <h3>Diagnostics</h3>
-      <p>Information about laboratory and diagnostic services.</p>
-      <button onclick="showToast('Contact the hospital to enquire about diagnostic services.')">Learn More →</button>
+    <article class="program" style="--image:url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=900&q=80')">
+      <span class="number">03 / MOBILITY</span>
+      <h3>Yoga & Mobility</h3>
+      <p>Build flexibility and recover with intention.</p>
     </article>
   </div>
 </section>
 
-<section class="section doctor-section" id="doctors">
+<section class="section trainer-section" id="trainers">
   <div class="heading">
-    <div class="eyebrow">Meet our specialists</div>
-    <h2>Find the Right Doctor</h2>
-    <p>Browse sample doctor profiles and request a consultation.</p>
+    <div class="eyebrow">Your team. Your progress.</div>
+    <h2>Meet the coaches</h2>
+    <p>Search our sample trainers and find a style that fits you.</p>
   </div>
 
-  <div class="doctor-tools">
-    <input id="doctor-search" type="search"
-      placeholder="Search doctor or specialty..." oninput="renderDoctors()">
+  <div class="tools">
+    <input id="trainer-search" type="search"
+      placeholder="Search trainer or specialty..."
+      oninput="renderTrainers()">
 
-    <select id="specialty-filter" onchange="renderDoctors()">
-      <option value="All">All Specialties</option>
-      <option>Cardiology</option>
-      <option>Neurology</option>
-      <option>Orthopedics</option>
-      <option>Pediatrics</option>
-      <option>Gynecology</option>
-      <option>General Medicine</option>
-      <option>Ophthalmology</option>
+    <select id="trainer-filter" onchange="renderTrainers()">
+      <option value="All">All programs</option>
+      <option>Strength</option>
+      <option>HIIT & Cardio</option>
+      <option>Yoga & Mobility</option>
     </select>
   </div>
 
-  <div class="doctor-grid" id="doctor-grid"></div>
+  <div class="trainer-grid" id="trainer-grid"></div>
 </section>
 
 <section class="section" id="about">
   <div class="about">
-    <div class="about-image">
-      <img
-        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
-        alt="Healthcare professionals working together">
-      <div class="experience">
-        <strong>24/7</strong>Emergency Support
-      </div>
-    </div>
+    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1100&q=85"
+      alt="Modern gym with strength training equipment">
 
     <div>
-      <div class="eyebrow">About CarePlus</div>
-      <h2>Healthcare built around you.</h2>
-      <p>
-        We believe healthcare should feel welcoming, accessible and
-        patient-focused. Our demo hospital website brings key services,
-        doctor profiles and appointment requests together in one place.
-      </p>
-      <div class="benefit"><span>✓</span> Easy access to department information</div>
-      <div class="benefit"><span>✓</span> Convenient appointment request form</div>
-      <div class="benefit"><span>✓</span> Simple doctor search and filtering</div>
-      <div class="benefit"><span>✓</span> Responsive desktop and mobile design</div>
+      <div class="eyebrow">More than a workout</div>
+      <h2>Show up. Put in work. Level up.</h2>
+      <p>IRONCORE is a gym concept designed around consistency, community and smart training. Whether you're a beginner or experienced athlete, your next step starts here.</p>
+
+      <div class="benefit"><span>✓</span> Training zones for different fitness goals</div>
+      <div class="benefit"><span>✓</span> Friendly coaching and practical guidance</div>
+      <div class="benefit"><span>✓</span> Flexible membership options</div>
+      <div class="benefit"><span>✓</span> Mobile-friendly website design</div>
       <br>
-      <button class="btn primary" onclick="scrollToAppointment()">
-        Request an Appointment →
-      </button>
+      <button class="btn primary" onclick="scrollToJoin()">Find Your Membership →</button>
     </div>
   </div>
 </section>
 
 <section class="stats">
-  <div><strong>8+</strong><span>Medical Departments</span></div>
-  <div><strong>7+</strong><span>Sample Doctor Profiles</span></div>
-  <div><strong>24/7</strong><span>Emergency Information</span></div>
-  <div><strong>100%</strong><span>Patient-Focused Design</span></div>
+  <div><strong>1,200+</strong><span>Active members</span></div>
+  <div><strong>15+</strong><span>Fitness coaches</span></div>
+  <div><strong>40+</strong><span>Weekly sessions</span></div>
+  <div><strong>5.0</strong><span>Commitment mindset</span></div>
 </section>
 
-<section class="appointment" id="appointment">
-  <div class="eyebrow">We are here to help</div>
-  <h2>Request an Appointment</h2>
-  <p>Fill in the form to preview a demo appointment request.</p>
+<section class="join" id="membership">
+  <div class="eyebrow">Your next chapter starts here</div>
+  <h2>Get your membership</h2>
+  <p>Enter your details to preview a membership request. This demo does not send your information.</p>
 
-  <form id="appointment-form">
+  <form id="join-form">
     <div class="form-grid">
-      <div class="form-field">
-        <label for="patient-name">Patient Name *</label>
-        <input id="patient-name" required maxlength="100"
-          placeholder="Enter full name">
+      <div class="field">
+        <label for="member-name">Full name *</label>
+        <input id="member-name" required maxlength="100" placeholder="Enter your name">
       </div>
 
-      <div class="form-field">
-        <label for="patient-phone">Phone Number *</label>
-        <input id="patient-phone" type="tel" required
+      <div class="field">
+        <label for="member-phone">Phone number *</label>
+        <input id="member-phone" type="tel" required
           pattern="[0-9+() -]{8,18}" placeholder="+91 98765 43210">
       </div>
 
-      <div class="form-field">
-        <label for="patient-email">Email Address</label>
-        <input id="patient-email" type="email"
-          placeholder="you@example.com">
+      <div class="field">
+        <label for="member-email">Email address</label>
+        <input id="member-email" type="email" placeholder="you@example.com">
       </div>
 
-      <div class="form-field">
-        <label for="appointment-department">Department *</label>
-        <select id="appointment-department" required>
-          <option value="">Choose department</option>
-          <option>Cardiology</option>
-          <option>Neurology</option>
-          <option>Orthopedics</option>
-          <option>Pediatrics</option>
-          <option>Gynecology</option>
-          <option>General Medicine</option>
-          <option>Ophthalmology</option>
+      <div class="field">
+        <label for="member-program">Preferred program *</label>
+        <select id="member-program" required>
+          <option value="">Choose a program</option>
+          <option>Strength</option>
+          <option>HIIT & Cardio</option>
+          <option>Yoga & Mobility</option>
+          <option>General Fitness</option>
+          <option>Personal Training</option>
         </select>
       </div>
 
-      <div class="form-field">
-        <label for="appointment-doctor">Preferred Doctor</label>
-        <select id="appointment-doctor">
-          <option value="">Any available doctor</option>
+      <div class="field">
+        <label for="member-plan">Membership plan *</label>
+        <select id="member-plan" required>
+          <option value="">Choose a plan</option>
+          <option>Day Pass — ₹299</option>
+          <option>Monthly — ₹1,999</option>
+          <option>Quarterly — ₹5,499</option>
+          <option>Annual — ₹17,999</option>
         </select>
       </div>
 
-      <div class="form-field">
-        <label for="appointment-date">Preferred Date *</label>
-        <input id="appointment-date" type="date" required>
-      </div>
-
-      <div class="form-field">
-        <label for="appointment-time">Preferred Time *</label>
-        <select id="appointment-time" required>
-          <option value="">Choose a time</option>
-          <option>09:00 AM</option>
-          <option>10:00 AM</option>
-          <option>11:00 AM</option>
-          <option>12:00 PM</option>
-          <option>02:00 PM</option>
-          <option>03:00 PM</option>
-          <option>04:00 PM</option>
-          <option>05:00 PM</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="visit-type">Visit Type</label>
-        <select id="visit-type">
-          <option>First Visit</option>
-          <option>Follow-up Visit</option>
-          <option>Routine Check-up</option>
-        </select>
-      </div>
-
-      <div class="form-field full">
-        <label for="patient-notes">Additional Notes (Optional)</label>
-        <textarea id="patient-notes" maxlength="500"
-          placeholder="Optional scheduling notes only. Avoid sensitive medical information."></textarea>
+      <div class="field">
+        <label for="member-start">Preferred start date *</label>
+        <input id="member-start" type="date" required>
       </div>
 
       <div class="full">
-        <button class="btn primary" type="submit">
-          Submit Demo Request →
-        </button>
+        <button class="btn primary" type="submit">Preview Membership Request →</button>
       </div>
     </div>
   </form>
@@ -901,33 +699,31 @@ footer a:hover { color: #ffb8d5; }
 <footer>
   <div class="footer-grid">
     <div>
-      <h2>Care<span style="color:#ffb8d5">Plus</span> Hospital</h2>
-      <p>Healthcare information designed to make your next step easier.</p>
+      <h2 class="logo">IRON<span>CORE</span></h2>
+      <p>Train with purpose. Build strength. Keep showing up.</p>
       <p>📍 Hyderabad, Telangana, India</p>
       <p>☎ Demo contact: +91 98765 43210</p>
-      <p>For emergencies, contact local emergency services.</p>
     </div>
 
     <div>
-      <h3>Quick Links</h3>
-      <a href="#departments">Departments</a>
-      <a href="#doctors">Find a Doctor</a>
-      <a href="#about">About Us</a>
-      <a href="#appointment">Appointments</a>
+      <h3>Explore</h3>
+      <a href="#programs">Training Programs</a>
+      <a href="#trainers">Our Coaches</a>
+      <a href="#about">About IRONCORE</a>
     </div>
 
     <div>
-      <h3>Patient Information</h3>
-      <a href="#appointment">Appointment Requests</a>
-      <a href="#departments">Medical Services</a>
-      <a href="#about">Hospital Information</a>
+      <h3>Get Started</h3>
+      <a href="#membership">Membership Plans</a>
+      <a href="#membership">Request a Visit</a>
+      <a href="#home">Back to Top ↑</a>
     </div>
   </div>
 
   <div class="copyright">
-    © 2026 CarePlus Hospital — Demo UI for learning and portfolio use.
-    <br>Doctor profiles, fees and availability are illustrative.
-    No real appointments are booked.
+    © 2026 IRONCORE Fitness — Demo UI for learning and portfolio use.
+    Trainer profiles, pricing and stats are illustrative.
+    No membership is created.
   </div>
 </footer>
 
@@ -936,10 +732,10 @@ footer a:hover { color: #ffb8d5; }
 <div class="modal" id="confirmation-modal" role="dialog"
   aria-modal="true" aria-labelledby="confirmation-title">
   <div class="modal-box">
-    <h2 id="confirmation-title">Demo Request Preview</h2>
+    <h2 id="confirmation-title">Membership Request Preview</h2>
     <p id="confirmation-details"></p>
-    <p><strong>This is only a front-end demonstration.</strong>
-      No appointment was booked and no information was sent to a hospital.</p>
+    <p><strong>This is a front-end demonstration only.</strong>
+      No membership was created and no information was sent.</p>
     <div class="modal-actions">
       <button class="btn primary" onclick="closeConfirmation()">Done</button>
       <button class="btn outline" onclick="closeConfirmation()">Close</button>
@@ -948,69 +744,33 @@ footer a:hover { color: #ffb8d5; }
 </div>
 
 <script>
-const doctors = [
+const trainers = [
   {
     id: 1,
-    name: "Dr. Ananya Sharma",
-    specialty: "Cardiology",
-    experience: "12 years of experience",
-    fee: 800,
-    image: "photo-1559839734-2b71ea197ec2",
-    description: "Cardiology consultations and heart health assessment."
+    name: "Marcus Reed",
+    specialty: "Strength",
+    experience: "12 years coaching",
+    fee: 799,
+    image: "photo-1567013127542-490d757e51fc",
+    description: "Strength training, lifting technique and progressive programs."
   },
   {
     id: 2,
-    name: "Dr. Rahul Verma",
-    specialty: "Neurology",
-    experience: "10 years of experience",
-    fee: 750,
-    image: "photo-1612349317150-e413f6a5b16d",
-    description: "Neurology consultations and nervous system care."
+    name: "Aisha Patel",
+    specialty: "HIIT & Cardio",
+    experience: "8 years coaching",
+    fee: 699,
+    image: "photo-1549476464-37392f717541",
+    description: "Conditioning sessions focused on stamina and movement."
   },
   {
     id: 3,
-    name: "Dr. Priya Reddy",
-    specialty: "Gynecology",
-    experience: "9 years of experience",
-    fee: 700,
-    image: "photo-1594824476967-48c8b964273f",
-    description: "Women's health and routine consultations."
-  },
-  {
-    id: 4,
-    name: "Dr. Arjun Rao",
-    specialty: "Orthopedics",
-    experience: "11 years of experience",
-    fee: 650,
-    image: "photo-1622253692010-333f2da6031d",
-    description: "Bone, joint and mobility consultations."
-  },
-  {
-    id: 5,
-    name: "Dr. Meera Iyer",
-    specialty: "Pediatrics",
-    experience: "8 years of experience",
-    fee: 600,
-    image: "photo-1559839734-2b71ea197ec2",
-    description: "General healthcare consultations for children."
-  },
-  {
-    id: 6,
-    name: "Dr. Kiran Kumar",
-    specialty: "General Medicine",
-    experience: "14 years of experience",
-    fee: 500,
-    image: "photo-1612349317150-e413f6a5b16d",
-    description: "General consultations and routine check-ups."
-  },
-  {
-    id: 7,
-    name: "Dr. Sneha Rao",
-    specialty: "Ophthalmology",
-    experience: "7 years of experience",
-    fee: 550,
-    image: "photo-1594824476967-48c8b964273f",
-    description: "Eye health and vision consultations."
+    name: "Daniel Brooks",
+    specialty: "Yoga & Mobility",
+    experience: "9 years coaching",
+    fee: 599,
+    image: "photo-1599447421416-3414500d18a5",
+    description: "Mobility, flexibility and recovery-focused sessions."
   }
 ];
 
@@ -1022,39 +782,46 @@ function money(amount) {
   }).format(amount);
 }
 
-function renderDoctors() {
-  const query = document.getElementById("doctor-search")
+function renderTrainers() {
+  const query = document.getElementById("trainer-search")
     .value.toLowerCase().trim();
-  const specialty = document.getElementById("specialty-filter").value;
 
-  const filtered = doctors.filter(doctor =>
-    (doctor.name + " " + doctor.specialty).toLowerCase().includes(query) &&
-    (specialty === "All" || doctor.specialty === specialty)
+  const specialty = document.getElementById("trainer-filter").value;
+
+  const filtered = trainers.filter(trainer =>
+    (trainer.name + " " + trainer.specialty)
+      .toLowerCase().includes(query) &&
+    (specialty === "All" || trainer.specialty === specialty)
   );
 
-  const grid = document.getElementById("doctor-grid");
+  const grid = document.getElementById("trainer-grid");
 
   if (!filtered.length) {
-    grid.innerHTML = "<p>No matching sample profiles. Try another search.</p>";
+    grid.innerHTML = "<p>No matching trainers. Try another search.</p>";
     return;
   }
 
-  grid.innerHTML = filtered.map(doctor => `
-    <article class="doctor-card">
+  grid.innerHTML = filtered.map(trainer => `
+    <article class="trainer">
       <img
-        src="https://images.unsplash.com/${doctor.image}?auto=format&fit=crop&w=700&q=80"
-        alt="Illustrative profile image for ${doctor.name}"
+        src="https://images.unsplash.com/${trainer.image}?auto=format&fit=crop&w=700&q=80"
+        alt="Illustrative fitness trainer"
         loading="lazy"
-        onerror="this.onerror=null;this.src='https://placehold.co/700x450/fff0f6/233b69?text=Doctor+Profile'">
-      <div class="doctor-info">
-        <span class="available">SAMPLE PROFILE</span>
-        <h3>${doctor.name}</h3>
-        <div class="specialty">${doctor.specialty}</div>
-        <p>${doctor.experience}<br>${doctor.description}</p>
-        <div class="doctor-bottom">
-          <span class="fee">${money(doctor.fee)} <small>/ visit</small></span>
-          <button class="btn primary" onclick="bookDoctor(${doctor.id})">
-            Request Visit
+        onerror="this.onerror=null;this.src='https://placehold.co/700x450/191d19/c8ff3d?text=Fitness+Coach'">
+
+      <div class="trainer-info">
+        <span class="tag">Sample coach</span>
+        <h3>${trainer.name}</h3>
+        <p>
+          <strong>${trainer.specialty}</strong><br>
+          ${trainer.experience}<br>
+          ${trainer.description}
+        </p>
+
+        <div class="trainer-bottom">
+          <span class="price">${money(trainer.fee)} <small>/ session</small></span>
+          <button class="btn primary" onclick="selectTrainer(${trainer.id})">
+            Choose Coach
           </button>
         </div>
       </div>
@@ -1062,46 +829,17 @@ function renderDoctors() {
   `).join("");
 }
 
-function chooseDepartment(specialty) {
-  document.getElementById("specialty-filter").value = specialty;
-  document.getElementById("doctor-search").value = "";
-  renderDoctors();
-  document.getElementById("doctors").scrollIntoView({ behavior: "smooth" });
-}
-
-function scrollToAppointment() {
-  document.getElementById("appointment").scrollIntoView({
+function scrollToJoin() {
+  document.getElementById("membership").scrollIntoView({
     behavior: "smooth"
   });
 }
 
-function bookDoctor(id) {
-  const doctor = doctors.find(d => d.id === id);
-
-  document.getElementById("appointment-department").value =
-    doctor.specialty;
-
-  updateDoctorOptions();
-
-  document.getElementById("appointment-doctor").value =
-    String(doctor.id);
-
-  scrollToAppointment();
-  showToast("Selected sample profile: " + doctor.name);
-}
-
-function updateDoctorOptions() {
-  const specialty = document.getElementById("appointment-department").value;
-  const select = document.getElementById("appointment-doctor");
-
-  const availableDoctors = doctors.filter(d =>
-    !specialty || d.specialty === specialty
-  );
-
-  select.innerHTML = '<option value="">Any available doctor</option>' +
-    availableDoctors.map(d =>
-      `<option value="${d.id}">${d.name}</option>`
-    ).join("");
+function selectTrainer(id) {
+  const trainer = trainers.find(item => item.id === id);
+  document.getElementById("member-program").value = trainer.specialty;
+  scrollToJoin();
+  showToast("Selected sample coach: " + trainer.name);
 }
 
 function showToast(message) {
@@ -1116,13 +854,9 @@ function showToast(message) {
 }
 
 function closeConfirmation() {
-  document.getElementById("confirmation-modal").classList.remove("open");
+  document.getElementById("confirmation-modal")
+    .classList.remove("open");
 }
-
-document.getElementById("appointment-department")
-  .addEventListener("change", updateDoctorOptions);
-
-const dateInput = document.getElementById("appointment-date");
 
 function localDateString(date) {
   const year = date.getFullYear();
@@ -1131,44 +865,31 @@ function localDateString(date) {
   return `${year}-${month}-${day}`;
 }
 
-dateInput.min = localDateString(new Date());
+const startInput = document.getElementById("member-start");
+startInput.min = localDateString(new Date());
 
-document.getElementById("appointment-form")
-  .addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("join-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    const selectedDate = dateInput.value;
-    const today = localDateString(new Date());
+  if (startInput.value < localDateString(new Date())) {
+    showToast("Please choose today or a future date.");
+    return;
+  }
 
-    if (selectedDate < today) {
-      showToast("Please select today or a future date.");
-      return;
-    }
+  const details = [
+    "Name: " + document.getElementById("member-name").value.trim(),
+    "Phone: " + document.getElementById("member-phone").value.trim(),
+    "Program: " + document.getElementById("member-program").value,
+    "Plan: " + document.getElementById("member-plan").value,
+    "Preferred start: " + startInput.value
+  ].join("\n");
 
-    const name = document.getElementById("patient-name").value.trim();
-    const phone = document.getElementById("patient-phone").value.trim();
-    const department = document.getElementById("appointment-department").value;
-    const doctorId = document.getElementById("appointment-doctor").value;
-    const doctor = doctors.find(d => String(d.id) === doctorId);
-    const time = document.getElementById("appointment-time").value;
-    const visitType = document.getElementById("visit-type").value;
+  const detailsElement = document.getElementById("confirmation-details");
+  detailsElement.style.whiteSpace = "pre-line";
+  detailsElement.textContent = details;
 
-    const details = [
-      "Patient: " + name,
-      "Phone: " + phone,
-      "Department: " + department,
-      "Doctor: " + (doctor ? doctor.name : "No preference"),
-      "Preferred date: " + selectedDate,
-      "Preferred time: " + time,
-      "Visit type: " + visitType
-    ].join("\n");
-
-    document.getElementById("confirmation-details").style.whiteSpace =
-      "pre-line";
-    document.getElementById("confirmation-details").textContent = details;
-
-    document.getElementById("confirmation-modal").classList.add("open");
-  });
+  document.getElementById("confirmation-modal").classList.add("open");
+});
 
 document.getElementById("confirmation-modal")
   .addEventListener("click", function(event) {
@@ -1179,8 +900,7 @@ document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") closeConfirmation();
 });
 
-renderDoctors();
-updateDoctorOptions();
+renderTrainers();
 </script>
 
 </body>
