@@ -4,16 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IRONCORE Fitness | Gym</title>
+<title>Vindhu Bhojanam | South Indian Restaurant</title>
 
 <style>
 :root {
-  --lime: #c8ff3d;
-  --dark: #101210;
-  --panel: #191d19;
-  --muted: #a6ada4;
-  --white: #f7f8f4;
-  --border: #30362f;
+  --gold: #e6b84a;
+  --orange: #a93624;
+  --dark: #1b100c;
+  --panel: #2a1b14;
+  --cream: #fff6e7;
+  --muted: #d0bba6;
+  --border: #57402c;
+  --green: #405b2b;
 }
 
 * {
@@ -27,24 +29,21 @@ html { scroll-behavior: smooth; }
 body {
   font-family: Arial, sans-serif;
   background: var(--dark);
-  color: var(--white);
+  color: var(--cream);
   line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-button, input, select {
-  font: inherit;
-}
-
+button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 
 .topbar {
-  background: var(--lime);
-  color: #111;
+  background: var(--gold);
+  color: #241207;
   padding: 9px 6%;
   display: flex;
   justify-content: space-between;
@@ -58,33 +57,35 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #101210f5;
+  background: #1b100cf5;
   padding: 18px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
   border-bottom: 1px solid var(--border);
 }
 
 .logo {
   font-size: 25px;
   font-weight: 900;
+  color: var(--gold);
+  line-height: 1.2;
 }
 
-.logo span { color: var(--lime); }
+.logo span { color: var(--cream); }
 
 .logo small {
   display: block;
   font-size: 9px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   color: var(--muted);
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 19px;
   flex-wrap: wrap;
 }
 
@@ -93,7 +94,7 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover { color: var(--lime); }
+nav a:hover { color: var(--gold); }
 
 .btn {
   display: inline-block;
@@ -107,8 +108,8 @@ nav a:hover { color: var(--lime); }
 }
 
 .primary {
-  background: var(--lime);
-  color: #111;
+  background: var(--gold);
+  color: #241207;
 }
 
 .primary:hover {
@@ -117,26 +118,26 @@ nav a:hover { color: var(--lime); }
 }
 
 .outline {
-  border: 1px solid white;
+  border: 1px solid var(--gold);
   background: transparent;
-  color: white;
+  color: var(--cream);
 }
 
 .hero {
-  min-height: 560px;
+  min-height: 590px;
   display: flex;
   align-items: center;
   padding: 70px 8%;
   background:
-    linear-gradient(90deg, #080a08f5, #101210a8, #10121020),
-    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85")
+    linear-gradient(90deg, #1b100cf5, #1b100cb8, #1b100b30),
+    url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=85")
     center/cover;
 }
 
-.hero-content { max-width: 650px; }
+.hero-content { max-width: 690px; }
 
 .eyebrow {
-  color: var(--lime);
+  color: var(--gold);
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -144,17 +145,17 @@ nav a:hover { color: var(--lime); }
 }
 
 .hero h1 {
-  font-size: clamp(45px, 7vw, 80px);
-  line-height: 1;
+  font-size: clamp(43px, 7vw, 78px);
+  line-height: 1.05;
   margin: 20px 0;
   text-transform: uppercase;
 }
 
-.hero h1 span { color: var(--lime); }
+.hero h1 span { color: var(--gold); }
 
 .hero p {
-  color: #d4d9d1;
-  max-width: 500px;
+  color: #f1dfcc;
+  max-width: 540px;
   margin-bottom: 25px;
 }
 
@@ -176,13 +177,13 @@ nav a:hover { color: var(--lime); }
   background: var(--panel);
   padding: 22px;
   border: 1px solid var(--border);
-  border-bottom: 3px solid var(--lime);
+  border-bottom: 3px solid var(--gold);
 }
 
 .quick strong {
   display: block;
-  font-size: 28px;
-  color: var(--lime);
+  font-size: 25px;
+  color: var(--gold);
 }
 
 .quick span {
@@ -200,11 +201,10 @@ nav a:hover { color: var(--lime); }
 
 .heading h2,
 .about h2,
-.join h2 {
+.reservation h2 {
   font-size: clamp(30px, 4vw, 44px);
-  line-height: 1.15;
+  line-height: 1.2;
   margin: 10px 0;
-  text-transform: uppercase;
 }
 
 .heading p {
@@ -212,107 +212,75 @@ nav a:hover { color: var(--lime); }
   color: var(--muted);
 }
 
-.programs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.program {
-  min-height: 290px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background:
-    linear-gradient(0deg, #080a08f5, #080a0840),
-    var(--image) center/cover;
-  border: 1px solid var(--border);
-  transition: .3s;
-}
-
-.program:hover { transform: translateY(-5px); }
-
-.program .number {
-  color: var(--lime);
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.program h3 {
-  font-size: 25px;
-  text-transform: uppercase;
-  margin: 8px 0;
-}
-
-.program p {
-  color: #ddd;
-  font-size: 13px;
-}
-
-.trainer-section { background: #171a17; }
-
-.tools {
+.menu-tools {
   display: flex;
   gap: 12px;
   margin-bottom: 25px;
 }
 
-.tools input,
-.tools select {
-  background: var(--dark);
-  color: white;
+.menu-tools input,
+.menu-tools select {
+  background: var(--panel);
+  color: var(--cream);
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: 4px;
 }
 
-.tools input {
+.menu-tools input {
   flex: 1;
   min-width: 180px;
 }
 
-.trainer-grid {
+.menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
-.trainer {
-  background: var(--dark);
+.food-card {
+  background: var(--panel);
   border: 1px solid var(--border);
+  overflow: hidden;
+  transition: .3s;
 }
 
-.trainer img {
+.food-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.food-card img {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  height: 230px;
   display: block;
+  object-fit: cover;
 }
 
-.trainer-info { padding: 20px; }
+.food-info { padding: 20px; }
 
 .tag {
   display: inline-block;
-  background: var(--lime);
-  color: #111;
+  background: #432d1e;
+  color: var(--gold);
   padding: 4px 8px;
   font-size: 10px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
-.trainer h3 {
+.food-info h3 {
   margin-top: 10px;
   font-size: 21px;
 }
 
-.trainer p {
+.food-info p {
   color: var(--muted);
   font-size: 13px;
   margin: 8px 0 15px;
 }
 
-.trainer-bottom {
+.food-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -322,11 +290,44 @@ nav a:hover { color: var(--lime); }
 }
 
 .price {
-  color: var(--lime);
+  color: var(--gold);
   font-weight: bold;
+  font-size: 18px;
 }
 
-.trainer-bottom .btn { padding: 10px; }
+.special-section { background: #25170f; }
+
+.special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.special-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.special-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.special-card h3 {
+  color: var(--gold);
+  margin: 15px 0 5px;
+  font-size: 22px;
+}
+
+.special-card p {
+  color: var(--muted);
+  font-size: 13px;
+  padding: 0 18px;
+}
 
 .about {
   display: grid;
@@ -337,7 +338,7 @@ nav a:hover { color: var(--lime); }
 
 .about img {
   width: 100%;
-  height: 390px;
+  height: 420px;
   object-fit: cover;
 }
 
@@ -347,19 +348,19 @@ nav a:hover { color: var(--lime); }
 }
 
 .benefit {
-  margin: 10px 0;
+  margin: 12px 0;
   font-size: 13px;
   font-weight: bold;
 }
 
 .benefit span {
-  color: var(--lime);
+  color: var(--gold);
   margin-right: 8px;
 }
 
 .stats {
-  background: var(--lime);
-  color: #111;
+  background: var(--gold);
+  color: #241207;
   padding: 40px 6%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -378,15 +379,15 @@ nav a:hover { color: var(--lime); }
   text-transform: uppercase;
 }
 
-.join {
+.reservation {
   margin: 60px 6%;
   padding: 40px;
   background: var(--panel);
   border: 1px solid var(--border);
-  border-top: 4px solid var(--lime);
+  border-top: 4px solid var(--gold);
 }
 
-.join > p {
+.reservation > p {
   color: var(--muted);
   margin-bottom: 25px;
   font-size: 14px;
@@ -406,19 +407,25 @@ nav a:hover { color: var(--lime); }
 }
 
 .field input,
-.field select {
+.field select,
+.field textarea {
   width: 100%;
   padding: 13px;
-  color: white;
+  color: var(--cream);
   background: var(--dark);
   border: 1px solid var(--border);
   border-radius: 4px;
 }
 
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
 .full { grid-column: 1 / -1; }
 
 footer {
-  background: #080a08;
+  background: #100905;
   padding: 40px 6% 20px;
 }
 
@@ -438,7 +445,7 @@ footer a {
   margin: 7px 0;
 }
 
-footer a:hover { color: var(--lime); }
+footer a:hover { color: var(--gold); }
 
 .copyright {
   border-top: 1px solid var(--border);
@@ -454,8 +461,9 @@ footer a:hover { color: var(--lime); }
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--lime);
-  color: #111;
+  max-width: calc(100% - 40px);
+  background: var(--gold);
+  color: #241207;
   padding: 14px 20px;
   font-weight: bold;
   z-index: 30;
@@ -478,9 +486,11 @@ footer a:hover { color: var(--lime); }
   background: var(--panel);
   padding: 28px;
   border: 1px solid var(--border);
-  border-top: 4px solid var(--lime);
+  border-top: 4px solid var(--gold);
   width: 100%;
   max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal-box p {
@@ -497,22 +507,22 @@ footer a:hover { color: var(--lime); }
 
 @media(max-width:900px) {
   header { justify-content: center; }
-  .programs, .trainer-grid { grid-template-columns: repeat(2, 1fr); }
+  .menu-grid, .special-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media(max-width:620px) {
   .topbar { justify-content: center; text-align: center; }
   nav { justify-content: center; gap: 12px; }
-  .hero { padding: 55px 6%; }
+  .hero { padding: 55px 6%; min-height: 500px; }
   .quick { grid-template-columns: repeat(2, 1fr); margin: 18px 5% 0; }
   .section { padding: 50px 5%; }
-  .programs, .trainer-grid, .about { grid-template-columns: 1fr; }
+  .menu-grid, .special-grid, .about { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .join { margin: 30px 5%; padding: 23px; }
+  .reservation { margin: 30px 5%; padding: 23px; }
   .form-grid, .footer-grid { grid-template-columns: 1fr; }
   .full { grid-column: auto; }
-  .tools { flex-direction: column; }
-  .tools input, .tools select { width: 100%; }
+  .menu-tools { flex-direction: column; }
+  .menu-tools input, .menu-tools select { width: 100%; }
 }
 </style>
 </head>
@@ -520,182 +530,211 @@ footer a:hover { color: var(--lime); }
 <body>
 
 <div class="topbar">
-  <span>⚡ YOUR GOALS. YOUR GRIND. YOUR RESULTS.</span>
-  <span>MON–SAT · 5:00 AM – 11:00 PM</span>
+  <span>🌿 AUTHENTIC SOUTH INDIAN FLAVOURS</span>
+  <span>MON–SUN · 7:00 AM – 11:00 PM</span>
 </div>
 
 <header>
   <a href="#home" class="logo">
-    IRON<span>CORE</span>
-    <small>FITNESS CLUB</small>
+    VINDHU <span>BHOJANAM</span>
+    <small>SOUTH INDIAN RESTAURANT</small>
   </a>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#programs">Programs</a>
-    <a href="#trainers">Trainers</a>
-    <a href="#about">About</a>
-    <a href="#membership">Membership</a>
+    <a href="#menu">Menu</a>
+    <a href="#specials">Specials</a>
+    <a href="#about">Our Story</a>
+    <a href="#reservation">Reservation</a>
   </nav>
 
-  <button class="btn primary" onclick="scrollToJoin()">Join The Gym ↗</button>
+  <button class="btn primary" onclick="scrollToReservation()">Book a Table ↗</button>
 </header>
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="eyebrow">No shortcuts. Just strength.</div>
-    <h1>Build your<br><span>strongest</span> self.</h1>
-    <p>Train with purpose in a high-energy fitness space built for every level. Get stronger, move better and make progress that lasts.</p>
+    <div class="eyebrow">A taste of tradition</div>
+    <h1>From our kitchen<br>to your <span>banana leaf.</span></h1>
+    <p>Celebrate the flavours of South India with traditional Andhra meals, crispy dosas, soft idlis, aromatic biryanis, spicy curries and homemade sweets. Every meal brings a little taste of home.</p>
     <div class="actions">
-      <button class="btn primary" onclick="scrollToJoin()">Start Your Journey →</button>
-      <a class="btn outline" href="#programs">Explore Programs</a>
+      <button class="btn primary" onclick="scrollToMenu()">Explore Our Menu →</button>
+      <button class="btn outline" onclick="scrollToReservation()">Reserve Your Table</button>
     </div>
   </div>
 </section>
 
 <div class="quick">
-  <article><strong>12K+</strong><span>Workouts completed</span></article>
-  <article><strong>15+</strong><span>Expert coaches</span></article>
-  <article><strong>40+</strong><span>Weekly classes</span></article>
-  <article><strong>24/7</strong><span>Member motivation</span></article>
+  <article><strong>South Indian</strong><span>Regional flavours</span></article>
+  <article><strong>Fresh Daily</strong><span>Made to order</span></article>
+  <article><strong>Veg & Non-Veg</strong><span>Something for everyone</span></article>
+  <article><strong>Full of Flavour</strong><span>Traditional recipes</span></article>
 </div>
 
-<section class="section" id="programs">
+<section class="section" id="menu">
   <div class="heading">
-    <div class="eyebrow">Find your training style</div>
-    <h2>Made for your goals</h2>
-    <p>Choose a program, show up consistently and build momentum.</p>
+    <div class="eyebrow">Made with tradition</div>
+    <h2>Our Food Menu</h2>
+    <p>From a hearty breakfast to a traditional Andhra feast, find your favourites.</p>
   </div>
 
-  <div class="programs">
-    <article class="program" style="--image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80')">
-      <span class="number">01 / STRENGTH</span>
-      <h3>Weight Training</h3>
-      <p>Build strength with progressive training and expert guidance.</p>
-    </article>
+  <div class="menu-tools">
+    <input id="food-search" type="search"
+      placeholder="Search dishes..."
+      aria-label="Search dishes"
+      oninput="renderMenu()">
 
-    <article class="program" style="--image:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80')">
-      <span class="number">02 / CONDITIONING</span>
-      <h3>HIIT & Cardio</h3>
-      <p>Improve stamina with energetic, full-body sessions.</p>
-    </article>
-
-    <article class="program" style="--image:url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=900&q=80')">
-      <span class="number">03 / MOBILITY</span>
-      <h3>Yoga & Mobility</h3>
-      <p>Build flexibility and recover with intention.</p>
-    </article>
+    <select id="food-filter" aria-label="Filter dishes"
+      onchange="renderMenu()">
+      <option value="All">All Dishes</option>
+      <option value="Breakfast">Breakfast & Tiffins</option>
+      <option value="Meals">Traditional Meals</option>
+      <option value="Biryani">Biryani</option>
+      <option value="Curries">Curries & Fry</option>
+      <option value="Snacks">Snacks</option>
+      <option value="Desserts">Sweets & Desserts</option>
+      <option value="Drinks">Drinks</option>
+    </select>
   </div>
+
+  <div class="menu-grid" id="menu-grid"></div>
 </section>
 
-<section class="section trainer-section" id="trainers">
+<section class="section special-section" id="specials">
   <div class="heading">
-    <div class="eyebrow">Your team. Your progress.</div>
-    <h2>Meet the coaches</h2>
-    <p>Search our sample trainers and find a style that fits you.</p>
+    <div class="eyebrow">Straight from our kitchen</div>
+    <h2>House Specials</h2>
+    <p>Traditional favourites prepared with aromatic spices and fresh ingredients.</p>
   </div>
 
-<div class="tools">
-  <label for="trainer-search">Search trainer</label>
-  <input
-    id="trainer-search"
-    type="search"
-    placeholder="Search trainer or specialty..."
-    oninput="renderTrainers()"
-  >
+  <div class="special-grid">
+    <article class="special-card">
+      <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+        alt="Traditional Indian thali meal" loading="lazy">
+      <h3>Andhra Bhojanam</h3>
+      <p>A traditional-style spread inspired by Andhra cuisine, with rice, pappu, sambar, pachadi and accompaniments.</p>
+    </article>
 
-  <label for="trainer-filter">Filter by program</label>
-  <select id="trainer-filter" onchange="renderTrainers()">
-    <option value="All">All programs</option>
-    <option>Strength</option>
-    <option>HIIT &amp; Cardio</option>
-    <option>Yoga &amp; Mobility</option>
-  </select>
-</div>
+    <article class="special-card">
+      <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80"
+        alt="South Indian dosa" loading="lazy">
+      <h3>Crispy Masala Dosa</h3>
+      <p>Golden dosa served with potato masala, coconut chutney and sambar.</p>
+    </article>
 
-  <div class="trainer-grid" id="trainer-grid"></div>
+    <article class="special-card">
+      <img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80"
+        alt="Indian biryani" loading="lazy">
+      <h3>Special Biryani</h3>
+      <p>Fragrant basmati rice layered with spices for a satisfying and flavourful meal.</p>
+    </article>
+  </div>
 </section>
 
 <section class="section" id="about">
   <div class="about">
-    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1100&q=85"
-      alt="Modern gym with strength training equipment">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85"
+      alt="Indian food served with traditional accompaniments" loading="lazy">
 
     <div>
-      <div class="eyebrow">More than a workout</div>
-      <h2>Show up. Put in work. Level up.</h2>
-      <p>IRONCORE is a gym concept designed around consistency, community and smart training. Whether you're a beginner or experienced athlete, your next step starts here.</p>
+      <div class="eyebrow">Our story</div>
+      <h2>The warmth of home. The taste of tradition.</h2>
+      <p>Vindhu Bhojanam celebrates the rich culinary traditions of South India. Inspired by the comfort of home-cooked food and the joy of sharing a meal, our restaurant concept brings regional favourites together in one welcoming place.</p>
 
-      <div class="benefit"><span>✓</span> Training zones for different fitness goals</div>
-      <div class="benefit"><span>✓</span> Friendly coaching and practical guidance</div>
-      <div class="benefit"><span>✓</span> Flexible membership options</div>
-      <div class="benefit"><span>✓</span> Mobile-friendly website design</div>
+      <div class="benefit"><span>✓</span> Traditional South Indian favourites</div>
+      <div class="benefit"><span>✓</span> Andhra-inspired meals and curries</div>
+      <div class="benefit"><span>✓</span> Vegetarian and non-vegetarian options</div>
+      <div class="benefit"><span>✓</span> Breakfast, lunch and dinner selections</div>
       <br>
-      <button class="btn primary" onclick="scrollToJoin()">Find Your Membership →</button>
+      <button class="btn primary" onclick="scrollToReservation()">Plan Your Visit →</button>
     </div>
   </div>
 </section>
 
 <section class="stats">
-  <div><strong>1,200+</strong><span>Active members</span></div>
-  <div><strong>15+</strong><span>Fitness coaches</span></div>
-  <div><strong>40+</strong><span>Weekly sessions</span></div>
-  <div><strong>5.0</strong><span>Commitment mindset</span></div>
+  <div><strong>South</strong><span>Indian Cuisine</span></div>
+  <div><strong>Daily</strong><span>Fresh Preparation</span></div>
+  <div><strong>Classic</strong><span>Regional Recipes</span></div>
+  <div><strong>₹79+</strong><span>Illustrative Menu Prices</span></div>
 </section>
 
-<section class="join" id="membership">
-  <div class="eyebrow">Your next chapter starts here</div>
-  <h2>Get your membership</h2>
-  <p>Enter your details to preview a membership request. This demo does not send your information.</p>
+<section class="reservation" id="reservation">
+  <div class="eyebrow">We look forward to serving you</div>
+  <h2>Reserve Your Table</h2>
+  <p>Enter your details to preview a table reservation. This demo does not send your information or make a real booking.</p>
 
-  <form id="join-form">
+  <form id="reservation-form">
     <div class="form-grid">
       <div class="field">
-        <label for="member-name">Full name *</label>
-        <input id="member-name" required maxlength="100" placeholder="Enter your name">
+        <label for="guest-name">Full name *</label>
+        <input id="guest-name" required maxlength="100"
+          autocomplete="name" placeholder="Enter your name">
       </div>
 
       <div class="field">
-        <label for="member-phone">Phone number *</label>
-        <input id="member-phone" type="tel" required
-          pattern="[0-9+() -]{8,18}" placeholder="+91 98765 43210">
+        <label for="guest-phone">Phone number *</label>
+        <input id="guest-phone" type="tel" required
+          pattern="[0-9+() -]{8,18}" autocomplete="tel"
+          placeholder="+91 98765 43210">
       </div>
 
       <div class="field">
-        <label for="member-email">Email address</label>
-        <input id="member-email" type="email" placeholder="you@example.com">
+        <label for="guest-email">Email address</label>
+        <input id="guest-email" type="email"
+          autocomplete="email" placeholder="you@example.com">
       </div>
 
       <div class="field">
-        <label for="member-program">Preferred program *</label>
-        <select id="member-program" required>
-          <option value="">Choose a program</option>
-          <option>Strength</option>
-          <option>HIIT & Cardio</option>
-          <option>Yoga & Mobility</option>
-          <option>General Fitness</option>
-          <option>Personal Training</option>
+        <label for="guest-count">Number of guests *</label>
+        <select id="guest-count" required>
+          <option value="">Select guests</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9+</option>
         </select>
       </div>
 
       <div class="field">
-        <label for="member-plan">Membership plan *</label>
-        <select id="member-plan" required>
-          <option value="">Choose a plan</option>
-          <option>Day Pass — ₹299</option>
-          <option>Monthly — ₹1,999</option>
-          <option>Quarterly — ₹5,499</option>
-          <option>Annual — ₹17,999</option>
-        </select>
+        <label for="booking-date">Reservation date *</label>
+        <input id="booking-date" type="date" required>
       </div>
 
       <div class="field">
-        <label for="member-start">Preferred start date *</label>
-        <input id="member-start" type="date" required>
+        <label for="booking-time">Preferred time *</label>
+        <select id="booking-time" required>
+          <option value="">Choose a time</option>
+          <option>7:00 AM</option>
+          <option>8:00 AM</option>
+          <option>9:00 AM</option>
+          <option>10:00 AM</option>
+          <option>11:00 AM</option>
+          <option>12:00 PM</option>
+          <option>1:00 PM</option>
+          <option>2:00 PM</option>
+          <option>3:00 PM</option>
+          <option>4:00 PM</option>
+          <option>5:00 PM</option>
+          <option>6:00 PM</option>
+          <option>7:00 PM</option>
+          <option>8:00 PM</option>
+          <option>9:00 PM</option>
+          <option>10:00 PM</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label for="guest-notes">Special requests (optional)</label>
+        <textarea id="guest-notes" maxlength="500"
+          placeholder="Dietary preferences, seating or special occasions"></textarea>
       </div>
 
       <div class="full">
-        <button class="btn primary" type="submit">Preview Membership Request →</button>
+        <button class="btn primary" type="submit">Preview Reservation →</button>
       </div>
     </div>
   </form>
@@ -704,31 +743,32 @@ footer a:hover { color: var(--lime); }
 <footer>
   <div class="footer-grid">
     <div>
-      <h2 class="logo">IRON<span>CORE</span></h2>
-      <p>Train with purpose. Build strength. Keep showing up.</p>
+      <h2 class="logo">VINDHU <span>BHOJANAM</span></h2>
+      <p>Traditional South Indian food, served with warmth and love.</p>
       <p>📍 Hyderabad, Telangana, India</p>
-      <p>☎ Demo contact: +91 98765 43210</p>
+      <p>☎ Contact: Add your restaurant phone number</p>
+      <p>🕒 Daily: 7:00 AM – 11:00 PM</p>
     </div>
 
     <div>
       <h3>Explore</h3>
-      <a href="#programs">Training Programs</a>
-      <a href="#trainers">Our Coaches</a>
-      <a href="#about">About IRONCORE</a>
+      <a href="#menu">Food Menu</a>
+      <a href="#specials">House Specials</a>
+      <a href="#about">Our Story</a>
     </div>
 
     <div>
-      <h3>Get Started</h3>
-      <a href="#membership">Membership Plans</a>
-      <a href="#membership">Request a Visit</a>
+      <h3>Visit Us</h3>
+      <a href="#reservation">Reserve a Table</a>
+      <a href="#menu">Explore Dishes</a>
       <a href="#home">Back to Top ↑</a>
     </div>
   </div>
 
   <div class="copyright">
-    © 2026 IRONCORE Fitness — Demo UI for learning and portfolio use.
-    Trainer profiles, pricing and stats are illustrative.
-    No membership is created.
+    © 2026 Vindhu Bhojanam — Restaurant website demo.
+    Menu prices and images are illustrative.
+    No real reservation or payment is processed.
   </div>
 </footer>
 
@@ -737,10 +777,9 @@ footer a:hover { color: var(--lime); }
 <div class="modal" id="confirmation-modal" role="dialog"
   aria-modal="true" aria-labelledby="confirmation-title">
   <div class="modal-box">
-    <h2 id="confirmation-title">Membership Request Preview</h2>
+    <h2 id="confirmation-title">Reservation Preview</h2>
     <p id="confirmation-details"></p>
-    <p><strong>This is a front-end demonstration only.</strong>
-      No membership was created and no information was sent.</p>
+    <p><strong>Demo only:</strong> No table was booked and no information was sent.</p>
     <div class="modal-actions">
       <button class="btn primary" onclick="closeConfirmation()">Done</button>
       <button class="btn outline" onclick="closeConfirmation()">Close</button>
@@ -749,33 +788,114 @@ footer a:hover { color: var(--lime); }
 </div>
 
 <script>
-const trainers = [
+const dishes = [
   {
     id: 1,
-    name: "Marcus Reed",
-    specialty: "Strength",
-    experience: "12 years coaching",
-    fee: 799,
-    image: "photo-1567013127542-490d757e51fc",
-    description: "Strength training, lifting technique and progressive programs."
+    name: "Idli & Sambar",
+    category: "Breakfast",
+    price: 79,
+    image: "photo-1589301760014-d929f3979dbc",
+    description: "Soft steamed idlis served with sambar and coconut chutney.",
+    badge: "South Indian"
   },
   {
     id: 2,
-    name: "Aisha Patel",
-    specialty: "HIIT & Cardio",
-    experience: "8 years coaching",
-    fee: 699,
-    image: "photo-1549476464-37392f717541",
-    description: "Conditioning sessions focused on stamina and movement."
+    name: "Masala Dosa",
+    category: "Breakfast",
+    price: 149,
+    image: "photo-1668236543090-82eba5ee5976",
+    description: "Crispy dosa filled with spiced potato masala and chutneys.",
+    badge: "Popular"
   },
   {
     id: 3,
-    name: "Daniel Brooks",
-    specialty: "Yoga & Mobility",
-    experience: "9 years coaching",
-    fee: 599,
-    image: "photo-1599447421416-3414500d18a5",
-    description: "Mobility, flexibility and recovery-focused sessions."
+    name: "Pesarattu",
+    category: "Breakfast",
+    price: 129,
+    image: "photo-1630383249896-424e482df921",
+    description: "Andhra-style green gram dosa served with ginger chutney.",
+    badge: "Andhra Special"
+  },
+  {
+    id: 4,
+    name: "Andhra Veg Meals",
+    category: "Meals",
+    price: 199,
+    image: "photo-1546833999-b9f581a1996d",
+    description: "A traditional-style meal with rice and assorted accompaniments.",
+    badge: "Traditional"
+  },
+  {
+    id: 5,
+    name: "Andhra Chicken Curry",
+    category: "Curries",
+    price: 299,
+    image: "photo-1603894584373-5ac82b2ae398",
+    description: "Chicken curry inspired by the bold spices of Andhra cuisine.",
+    badge: "Spicy Favourite"
+  },
+  {
+    id: 6,
+    name: "Chicken Dum Biryani",
+    category: "Biryani",
+    price: 299,
+    image: "photo-1563379091339-03246963d51a",
+    description: "Aromatic basmati rice with chicken and fragrant spices.",
+    badge: "Bestseller"
+  },
+  {
+    id: 7,
+    name: "Gutti Vankaya Curry",
+    category: "Curries",
+    price: 229,
+    image: "photo-1631452180519-c014fe946bc7",
+    description: "A traditional-style stuffed brinjal curry inspired by Andhra cooking.",
+    badge: "Regional Favourite"
+  },
+  {
+    id: 8,
+    name: "Mirchi Bajji",
+    category: "Snacks",
+    price: 89,
+    image: "photo-1601050690597-df0568f70950",
+    description: "Crispy chilli fritters, a popular South Indian tea-time snack.",
+    badge: "Tea-Time Snack"
+  },
+  {
+    id: 9,
+    name: "Gulab Jamun",
+    category: "Desserts",
+    price: 99,
+    image: "photo-1666190092159-4a2d5d6b4c90",
+    description: "Soft, syrup-soaked sweets for a delicious finish.",
+    badge: "Sweet Treat"
+  },
+  {
+    id: 10,
+    name: "Filter Coffee",
+    category: "Drinks",
+    price: 49,
+    image: "photo-1570968915860-54d5c301fa9f",
+    description: "A comforting South Indian-style filter coffee.",
+    badge: "Classic"
+  },
+  {
+    id: 11,
+    name: "Curd Rice",
+    category: "Meals",
+    price: 119,
+    image: "photo-1512621776951-a57141f2eefd",
+    description: "A comforting rice dish inspired by a South Indian classic.",
+    badge: "Comfort Food"
+  },
+  {
+    id: 12,
+    name: "Medu Vada",
+    category: "Snacks",
+    price: 89,
+    image: "photo-1601050690117-94f5f6fa8bd7",
+    description: "Crispy golden lentil fritters served with chutney.",
+    badge: "Crispy Favourite"
   }
 ];
 
@@ -787,46 +907,44 @@ function money(amount) {
   }).format(amount);
 }
 
-function renderTrainers() {
-  const query = document.getElementById("trainer-search")
+function renderMenu() {
+  const query = document.getElementById("food-search")
     .value.toLowerCase().trim();
 
-  const specialty = document.getElementById("trainer-filter").value;
+  const category = document.getElementById("food-filter").value;
 
-  const filtered = trainers.filter(trainer =>
-    (trainer.name + " " + trainer.specialty)
-      .toLowerCase().includes(query) &&
-    (specialty === "All" || trainer.specialty === specialty)
+  const filtered = dishes.filter(dish =>
+    (
+      dish.name + " " + dish.category + " " +
+      dish.description + " " + dish.badge
+    ).toLowerCase().includes(query) &&
+    (category === "All" || dish.category === category)
   );
 
-  const grid = document.getElementById("trainer-grid");
+  const grid = document.getElementById("menu-grid");
 
   if (!filtered.length) {
-    grid.innerHTML = "<p>No matching trainers. Try another search.</p>";
+    grid.innerHTML = "<p>No matching dishes found. Try another search.</p>";
     return;
   }
 
-  grid.innerHTML = filtered.map(trainer => `
-    <article class="trainer">
+  grid.innerHTML = filtered.map(dish => `
+    <article class="food-card">
       <img
-        src="https://images.unsplash.com/${trainer.image}?auto=format&fit=crop&w=700&q=80"
-        alt="Illustrative fitness trainer"
+        src="https://images.unsplash.com/${dish.image}?auto=format&fit=crop&w=700&q=80"
+        alt="${dish.name}"
         loading="lazy"
-        onerror="this.onerror=null;this.src='https://placehold.co/700x450/191d19/c8ff3d?text=Fitness+Coach'">
+        onerror="this.onerror=null;this.src='https://placehold.co/700x450/2a1b14/e6b84a?text=South+Indian+Food'">
 
-      <div class="trainer-info">
-        <span class="tag">Sample coach</span>
-        <h3>${trainer.name}</h3>
-        <p>
-          <strong>${trainer.specialty}</strong><br>
-          ${trainer.experience}<br>
-          ${trainer.description}
-        </p>
+      <div class="food-info">
+        <span class="tag">${dish.badge}</span>
+        <h3>${dish.name}</h3>
+        <p>${dish.description}</p>
 
-        <div class="trainer-bottom">
-          <span class="price">${money(trainer.fee)} <small>/ session</small></span>
-          <button class="btn primary" onclick="selectTrainer(${trainer.id})">
-            Choose Coach
+        <div class="food-bottom">
+          <span class="price">${money(dish.price)}</span>
+          <button class="btn primary" onclick="chooseDish(${dish.id})">
+            Enquire
           </button>
         </div>
       </div>
@@ -834,17 +952,21 @@ function renderTrainers() {
   `).join("");
 }
 
-function scrollToJoin() {
-  document.getElementById("membership").scrollIntoView({
+function scrollToMenu() {
+  document.getElementById("menu").scrollIntoView({
     behavior: "smooth"
   });
 }
 
-function selectTrainer(id) {
-  const trainer = trainers.find(item => item.id === id);
-  document.getElementById("member-program").value = trainer.specialty;
-  scrollToJoin();
-  showToast("Selected sample coach: " + trainer.name);
+function scrollToReservation() {
+  document.getElementById("reservation").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function chooseDish(id) {
+  const dish = dishes.find(item => item.id === id);
+  showToast(dish.name + " — " + money(dish.price) + ". Menu enquiry demo.");
 }
 
 function showToast(message) {
@@ -870,31 +992,48 @@ function localDateString(date) {
   return `${year}-${month}-${day}`;
 }
 
-const startInput = document.getElementById("member-start");
-startInput.min = localDateString(new Date());
+const bookingDate = document.getElementById("booking-date");
 
-document.getElementById("join-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+function setBookingDateMinimum() {
+  bookingDate.min = localDateString(new Date());
 
-  if (startInput.value < localDateString(new Date())) {
-    showToast("Please choose today or a future date.");
-    return;
+  if (bookingDate.value && bookingDate.value < bookingDate.min) {
+    bookingDate.value = "";
   }
+}
 
-  const details = [
-    "Name: " + document.getElementById("member-name").value.trim(),
-    "Phone: " + document.getElementById("member-phone").value.trim(),
-    "Program: " + document.getElementById("member-program").value,
-    "Plan: " + document.getElementById("member-plan").value,
-    "Preferred start: " + startInput.value
-  ].join("\n");
+setBookingDateMinimum();
 
-  const detailsElement = document.getElementById("confirmation-details");
-  detailsElement.style.whiteSpace = "pre-line";
-  detailsElement.textContent = details;
+document.getElementById("reservation-form")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
 
-  document.getElementById("confirmation-modal").classList.add("open");
-});
+    setBookingDateMinimum();
+
+    if (bookingDate.value < localDateString(new Date())) {
+      showToast("Please choose today or a future date.");
+      return;
+    }
+
+    const details = [
+      "Name: " + document.getElementById("guest-name").value.trim(),
+      "Phone: " + document.getElementById("guest-phone").value.trim(),
+      "Guests: " + document.getElementById("guest-count").value,
+      "Date: " + bookingDate.value,
+      "Time: " + document.getElementById("booking-time").value,
+      "Special requests: " +
+        (document.getElementById("guest-notes").value.trim() || "None")
+    ].join("\n");
+
+    const detailsElement =
+      document.getElementById("confirmation-details");
+
+    detailsElement.style.whiteSpace = "pre-line";
+    detailsElement.textContent = details;
+
+    document.getElementById("confirmation-modal")
+      .classList.add("open");
+  });
 
 document.getElementById("confirmation-modal")
   .addEventListener("click", function(event) {
@@ -905,7 +1044,7 @@ document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") closeConfirmation();
 });
 
-renderTrainers();
+renderMenu();
 </script>
 
 </body>
