@@ -8,6 +8,7 @@
 <title>Vindhu Bhojanam | South Indian Restaurant</title>
 
 <style>
+
 :root {
   --gold: #e6b84a;
   --orange: #a93624;
@@ -130,9 +131,14 @@ nav a:hover { color: var(--gold); }
   align-items: center;
   padding: 70px 8%;
   background:
-    linear-gradient(90deg, #1b100cf5, #1b100cb8, #1b100b30),
-    url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=85")
-    center/cover;
+    linear-gradient(
+      90deg,
+      rgba(27, 16, 12, 0.90),
+      rgba(27, 16, 12, 0.58),
+      rgba(27, 16, 12, 0.15)
+    ),
+    url("https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
 }
 
 .hero-content { max-width: 690px; }
