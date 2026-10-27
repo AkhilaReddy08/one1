@@ -595,18 +595,23 @@ footer a:hover { color: var(--lime); }
     <p>Search our sample trainers and find a style that fits you.</p>
   </div>
 
-  <div class="tools">
-    <input id="trainer-search" type="search"
-      placeholder="Search trainer or specialty..."
-      oninput="renderTrainers()">
+<div class="tools">
+  <label for="trainer-search">Search trainer</label>
+  <input
+    id="trainer-search"
+    type="search"
+    placeholder="Search trainer or specialty..."
+    oninput="renderTrainers()"
+  >
 
-    <select id="trainer-filter" onchange="renderTrainers()">
-      <option value="All">All programs</option>
-      <option>Strength</option>
-      <option>HIIT & Cardio</option>
-      <option>Yoga & Mobility</option>
-    </select>
-  </div>
+  <label for="trainer-filter">Filter by program</label>
+  <select id="trainer-filter" onchange="renderTrainers()">
+    <option value="All">All programs</option>
+    <option>Strength</option>
+    <option>HIIT &amp; Cardio</option>
+    <option>Yoga &amp; Mobility</option>
+  </select>
+</div>
 
   <div class="trainer-grid" id="trainer-grid"></div>
 </section>
